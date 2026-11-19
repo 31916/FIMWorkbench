@@ -14,7 +14,7 @@ if isempty(cache) || ~isfolder(cache)
         if ok,cache=folder;break;end
     end
     assert(~isempty(cache),'fimwb:SbWeightsPath', ...
-        'SBの重みを読み込むため、英数字のパスにある書き込み可能な作業フォルダを選んでください。');
+        'Choose a writable folder with an ASCII-only path to load the SB network weights.');
     cleanCache=onCleanup(@()removeCache(folder));
 end
 source=fullfile(sourceFolder,filename);target=fullfile(cache,filename);

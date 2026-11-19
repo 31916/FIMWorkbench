@@ -1,36 +1,36 @@
 function window = FIMWorkbench()
 %FIMWorkbench Open a benchmark or create a fault-enabled copy of a Simulink model.
-% MATLABの「アプリ」タブまたは FIMWorkbench コマンドで起動します。
+% Open FIMWorkbench from the MATLAB Apps tab or the Command Window.
 window=uifigure('Name','FIM Workbench','Position',[120 120 640 300]);
 layout=uigridlayout(window,[3 1]);
 layout.RowHeight={68,150,'1x'};
-benchmarks=uipanel(layout,'Title','ARCH-COMP ベンチマーク');
+benchmarks=uipanel(layout,'Title','ARCH-COMP benchmarks');
 benchGrid=uigridlayout(benchmarks,[1 2]);
 benchGrid.ColumnWidth={'1x',160};
 models={'AT','AFC','NN','CC','SC','PM','F16','SB1','SB2','SB3','SB4','SB5'};
 benchmark=uidropdown(benchGrid,'Items',models,'Tag','benchmark');
-uibutton(benchGrid,'Text','ベンチマークを開く','Tag','openBenchmark', ...
+uibutton(benchGrid,'Text','Open benchmark','Tag','openBenchmark', ...
     'ButtonPushedFcn',@(~,~) openModel('benchmark'));
 
-custom=uipanel(layout,'Title','自分のSimulinkモデル');
+custom=uipanel(layout,'Title','Your Simulink model');
 form=uigridlayout(custom,[3 3]);
-form.ColumnWidth={76,'1x',110};
-uilabel(form,'Text','元モデル');
+form.ColumnWidth={100,'1x',110};
+uilabel(form,'Text','Source model');
 source=uieditfield(form,'text','Tag','source','ValueChangedFcn',@(~,~) suggestOutput());
-uibutton(form,'Text','参照…','ButtonPushedFcn',@(~,~) browseSource());
-uilabel(form,'Text','作業用コピー');
+uibutton(form,'Text','Browse...','ButtonPushedFcn',@(~,~) browseSource());
+uilabel(form,'Text','Working copy');
 output=uieditfield(form,'text','Tag','output');
-uibutton(form,'Text','保存先…','ButtonPushedFcn',@(~,~) browseOutput());
+uibutton(form,'Text','Save as...','ButtonPushedFcn',@(~,~) browseOutput());
 buttons=uigridlayout(form,[1 2],'Padding',0);
 buttons.Layout.Column=[1 3];
-uibutton(buttons,'Text','作業用コピーを作成','Tag','build', ...
+uibutton(buttons,'Text','Create working copy','Tag','build', ...
     'ButtonPushedFcn',@(~,~) openModel('build'));
-uibutton(buttons,'Text','保存したコピーを開く…','Tag','reopen', ...
+uibutton(buttons,'Text','Open saved copy...','Tag','reopen', ...
     'ButtonPushedFcn',@(~,~) openModel('reopen'));
 status=uilabel(layout,'Text','','Tag','status');
 
     function browseSource()
-        [name,folder]=uigetfile({'*.slx;*.mdl','Simulink (*.slx, *.mdl)'},'元モデルを選択');
+        [name,folder]=uigetfile({'*.slx;*.mdl','Simulink (*.slx, *.mdl)'},'Select a source model');
         if isequal(name,0),return;end
         source.Value=fullfile(folder,name);
         suggestOutput();
@@ -44,7 +44,7 @@ status=uilabel(layout,'Text','','Tag','status');
 
     function browseOutput()
         [name,folder]=uiputfile({'*.slx;*.mdl','Simulink (*.slx, *.mdl)'}, ...
-            '新しい作業用コピーの保存先',output.Value);
+            'Save the new working copy',output.Value);
         if ~isequal(name,0),output.Value=fullfile(folder,name);end
     end
 
@@ -59,21 +59,21 @@ status=uilabel(layout,'Text','','Tag','status');
                         [~,file]=fimwb.openBenchmark(benchmark.Value);
                     catch err
                         if ~strcmp(err.identifier,'fimwb:SbWeightsPath'),rethrow(err);end
-                        folder=uigetdir(pwd,'SB用に英数字のパスを持つ作業フォルダを選択');
+                        folder=uigetdir(pwd,'Choose a working folder with an ASCII-only path for the SB weights');
                         if isequal(folder,0),return;end
                         [~,file]=fimwb.openBenchmark(benchmark.Value,folder);
                     end
                 case 'build'
-                    assert(isfile(source.Value),'元モデルを選択してください。');
+                    assert(isfile(source.Value),'Select a source model.');
                     file=output.Value;
-                    assert(~isempty(file),'作業用コピーの保存先を指定してください。');
-                    status.Text='注入箇所を調べて作業用コピーを作成しています。';
+                    assert(~isempty(file),'Choose where to save the working copy.');
+                    status.Text='Finding injection sites and creating the working copy...';
                     drawnow limitrate nocallbacks
                     fimwb.build(source.Value,file);
                     fimwb.editor(file);
                 case 'reopen'
                     [name,folder]=uigetfile({'*.slx;*.mdl','Simulink (*.slx, *.mdl)'}, ...
-                        '故障を設定した作業用コピーを選択');
+                        'Select a saved working copy');
                     if isequal(name,0),return;end
                     file=fullfile(folder,name);
                     fimwb.editor(file);
@@ -84,7 +84,7 @@ status=uilabel(layout,'Text','','Tag','status');
         catch err
             status.Text=err.message;
             status.Tooltip=err.message;
-            uialert(window,err.message,'モデルを開けませんでした');
+            uialert(window,err.message,'Could not open model');
         end
     end
 end

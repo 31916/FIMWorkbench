@@ -4,7 +4,7 @@ root=fileparts(fileparts(mfilename('fullpath')));
 if nargin<1,outputFolder=fullfile(fileparts(root),'outputs');end
 if ~isfolder(outputFolder),mkdir(outputFolder);end
 [ok,info]=fileattrib(outputFolder);assert(ok);outputFolder=info.Name;
-release="2.1.0";
+release="2.1.1";
 output=fullfile(outputFolder,"FIMWorkbench-"+release+".mltbx");
 stage=tempname;
 mkdir(fullfile(stage,'verification'));
@@ -34,9 +34,9 @@ opts=matlab.addons.toolbox.ToolboxOptions(stage,"f8182e0c-2ba3-4033-89d4-2c82c5d
 opts.ToolboxName="FIM Workbench";
 opts.ToolboxVersion=release;
 opts.AuthorName="31916";
-opts.Summary="FIMの全15種類の信号故障・演算子置換をSimulinkモデルに注入し、故障ごとにON/OFF・値・適用時間を設定できます。";
-opts.Description="インストール後に「アプリ」タブで FIMWorkbench を開くか、同名のコマンドを実行してください。"+ ...
-    "ARCH-COMP 2026の12モデルを同梱。MATLABとSimulinkが必要です。モデルによってはStateflow、Deep Learning Toolboxなども使用します。";
+opts.Summary="Inject all 15 FIM signal faults and operator mutations into Simulink models. Set each fault's value and active time window.";
+opts.Description="Open FIMWorkbench from the MATLAB Apps tab or the Command Window. "+ ...
+    "Includes 12 ARCH-COMP 2026 benchmark models. Requires MATLAB and Simulink. Individual models may also require Stateflow or Deep Learning Toolbox.";
 opts.MinimumMatlabRelease="R2026a";
 opts.OutputFile=output;
 matlab.addons.toolbox.packageToolbox(opts);

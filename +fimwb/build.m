@@ -18,7 +18,7 @@ assert(~isfile(outputFile),'Output already exists. Use fimwb.setFault to edit it
 if nargin==2
     sites=fimwb.scan(source);
     raw=fimwb.defaultFaults(sites);
-    assert(~isempty(raw),'このモデルには適用可能な故障注入箇所がありません。');
+    assert(~isempty(raw),'No compatible fault injection sites were found in this model.');
 else
     if ischar(configuration)||isStringScalar(configuration)
         configuration=jsondecode(fileread(configuration));

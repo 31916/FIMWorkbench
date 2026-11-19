@@ -1,51 +1,70 @@
 # FIM Workbench
 
-Simulinkモデルの配線と演算ブロックを調べ、選んだ箇所に故障を組み込んだコピーを生成します。設定画面では故障ごとに種類、ON/OFF、値、開始・終了時刻を編集できます。複数箇所へ同時に注入でき、同じ信号に対する複数の変換も設定できます。
+FIM Workbench is a MATLAB add-on for testing how faults affect a Simulink model. Give it a model (`.slx` or `.mdl`) and it generates a separate, editable model with fault switches at compatible signal connections and operator blocks. Each switch starts off. Choose which faults to activate, set their values and time windows, then run the working copy in Simulink with your usual inputs.
 
-## FIMとの関係
+For example, an automatic transmission model takes throttle and brake commands and outputs vehicle speed, engine RPM, and gear. You can run the same driving inputs twice, with and without a throttle fault, to measure its effect.
 
-FIM Workbenchは、Ezio Bartocci、Leonardo Mariani、Dejan Ničković、Drishti Yadavによる **FIM（Fault Injection and Mutation for Simulink）** の故障定義を採用した独立のMATLABアドオンです。これらの故障をSimulinkの標準ブロックで生成し、注入箇所の探索、設定画面、保存をWorkbench側で実装しています。配布アドオンと対象モデルが使うMathWorks製品で実行できます。[FIMの原著論文（ESEC/FSE 2022）](https://doi.org/10.1145/3540250.3558932)・[著者によるFIMの実装](https://gitlab.com/DrishtiYadav/fimtool/-/tree/a110acf2b718eab4cdf65f938203f60009fa0510)
+## Install and run
 
-FIMが定義する**全15種類**（信号故障10種類、演算子置換5種類）を実装しています。さらにWorkbench独自の `gain` と `stuck_at` を加えた計17種類を指定できます。FIMでいう「Stuck-at」は故障直前の値を保持する `hold_last` です。[FIMの故障・演算子の定義](https://gitlab.com/DrishtiYadav/fimtool/-/blob/a110acf2b718eab4cdf65f938203f60009fa0510/FaultInjector_Master/Readme.txt)
+1. Download `FIMWorkbench-2.1.1.mltbx`. Double-click it in the MATLAB Files panel and select **Install**. [Download the installer](https://github.com/31916/FIMWorkbench/releases/download/v2.1.1/FIMWorkbench-2.1.1.mltbx)
+2. Open **FIMWorkbench** from the **Apps** tab, or enter `FIMWorkbench` in the MATLAB Command Window.
+3. To use a bundled model, pick one from the list and select **Open benchmark**. To use your own, open its usual Simulink project or run its initialization script. Choose the **Source model**, give the **Working copy** a new filename, and select **Create working copy**.
+4. In **Fault settings**, choose a fault type, edit its value or replacement operator, set the time window, and select **On**. Select **Run** in Simulink to simulate and **Save model** in the editor to keep your settings. Use **Open saved copy...** to return to your own model.
 
-## インストールして使う
+FIM Workbench requires **MATLAB R2026a or later and Simulink**. Install any additional products the model uses, such as Stateflow or Deep Learning Toolbox. The verification results below were obtained on Linux with R2026a. When the installation path contains non-ASCII characters, Workbench loads the SB network weights from a temporary copy for the current MATLAB session. To uninstall, remove **FIM Workbench** in MATLAB's Add-Ons manager. Working copies live in your own working folder. [MathWorks add-on installation guide](https://www.mathworks.com/help/matlab/matlab_env/get-add-ons.html)
 
-1. `FIMWorkbench-2.1.0.mltbx` をダウンロードし、MATLABの「ファイル」パネルでダブルクリックして「インストール」を選びます。[v2.1.0 のインストーラー](https://github.com/31916/FIMWorkbench/releases/download/v2.1.0/FIMWorkbench-2.1.0.mltbx)
-2. 「アプリ」タブの `FIMWorkbench` を開きます。コマンドウィンドウに `FIMWorkbench` と入力しても同じ画面が開きます。
-3. 同梱モデルは、一覧から `AT` などを選び「ベンチマークを開く」を押します。自分のモデルは、普段使うSimulinkプロジェクトや初期化スクリプトを開いた状態で「元モデル」と新しい「作業用コピー」の保存先を指定し、「作業用コピーを作成」を押します。対応する各箇所に1つずつ、初期状態がOFFの故障を設定します。
-4. 故障設定画面で種類・ON/OFF・値・時間を選び、Simulinkの「実行」を押します。「モデルを保存」で変更を保存します。同梱モデルは同じ一覧から、自分のコピーは「保存したコピーを開く」から再開できます。
+## Try the automatic transmission example
 
-必要な環境はMATLABとSimulinkです。Stateflow、Deep Learning Toolboxなど、モデルが使う追加製品も必要です。パッケージの対象はR2026a以降、検証環境はLinux版R2026aです。インストール先に日本語を含む場合、SBモデルの学習済み重みはMATLABセッション用の一時コピーから読み込みます。削除する場合はMATLABの「アドオン」で「FIM Workbench」を選び、アンインストールします。編集したモデルは各利用者の作業フォルダに保存されます。[MathWorksのインストール手順](https://www.mathworks.com/help/matlab/matlab_env/get-add-ons.html)
-
-## ソースから起動・ビルドする
-
-このリポジトリをクローンし、MATLABの現在のフォルダをリポジトリのルートにします。`FIMWorkbench` を実行すると起動画面が開きます。インストーラーを作る場合は次の2行を実行します。
+Open a fresh working copy of the bundled AT model from the command line.
 
 ~~~matlab
-addpath(fullfile(pwd,'packaging'))
-installer = build_fimworkbench_toolbox(fullfile(pwd,'dist'))
-~~~
-
-`dist/` に生成された `.mltbx` を他の利用者に渡せます。配布版のソースはGitタグ `v2.1.0` で取得できます。
-
-旧版からの更新も同じ手順です。保存済みモデルは「保存したコピーを開く」から再開できます。**新しい種類・箇所を使うときは、元モデルから別名で作業用コピーを生成**してください。同梱のAFCで新しい故障枠を試すには、AFCの作業用モデルを閉じ、`fimwb.openBenchmark('AFC',fullfile(pwd,'AFC_2_1'))` で新しいフォルダを指定します。1.0.0用のスクリプトでは起動コマンドを `FIMWorkbench`、関数の接頭辞を `fimwb.` に変更します。
-
-## テスト済みモデルを開く
-
-インストール後は任意の作業フォルダで実行できます。ソースZIPから使う場合は、このREADMEがあるフォルダをMATLABの現在のフォルダにします。
-
-~~~matlab
-[window, file] = fimwb.openBenchmark('AT');
+[window, file] = fimwb.openBenchmark('AT', fullfile(pwd,'AT_example'));
 open_system(file)
 ~~~
 
-ATの場合は101箇所のチェックボックスが開きます。例えば、箇所「E106_1__51_inport2」はスロットルからエンジンに入る枝です。故障に「bias」、値に「1」を指定してONにすると、この枝でスロットルの値に1を加えます。開始を5、終了を10にすれば、5秒以上10秒未満だけ適用します。Simulinkの実行ボタンで動作を確認できます。
+The editor lists 101 compatible sites. To reproduce a throttle signal stuck at zero, select **E84_1__1_inport2**, the branch from `throttle` to `Engine`. Choose `zero`, set **Start (s)** to `5` and **Stop (s)** to `10`, and select **On**. With the bundled driving inputs, the following values were observed at 9 seconds. Turning the fault off reproduced all three baseline output traces over the full 33-second run. [AT site catalogue](verification/arch2026/AT/sites.json)
 
-「モデルを保存」で作業用コピーに保存します。新しいモデルは全箇所OFFで開き、保存済みのコピーでは前回の設定を読み込みます。ATの既定の保存先はMATLABの個人フォルダ（`userpath`）の `FIMWorkbench/AT/` です。`userpath` が空の環境では `prefdir` を使います。上の `file` は実際の保存先のフルパスです。作業先は第2引数で指定できます。旧ZIPの `work/AT/` に作業用モデルを保存済みの場合は、そのフォルダを指定すれば引き継げます。モデル名には `AT`、`AFC`、`NN`、`CC`、`SC`、`PM`、`F16`、`SB1`～`SB5` を指定できます。各行の故障の適用条件は、その箇所の信号型・実行周期・ブロック種別に従います。
+| Output at 9 s | Baseline | Throttle fault on |
+|---|---:|---:|
+| Vehicle speed | 43.66 mph | 19.63 mph |
+| Engine speed | 2,445 rpm | 600 rpm |
+| Gear | 3 | 2 |
 
-## 自分のモデルと故障の組み合わせ
+With `fimwb.openBenchmark('AT')`, Workbench keeps the editable copy under `FIMWorkbench/AT/` in your MATLAB `userpath`, or under `prefdir` if `userpath` is empty. The second return value, `file`, gives the full path. Reopening the same folder restores saved settings. To use a working copy from an older ZIP distribution, pass its `work/AT/` folder as the second argument.
 
-対象の `.mdl` または `.slx` が通常どおりコンパイルできるように、モデルの初期化スクリプトやデータ辞書、参照ライブラリを準備します。`scan` の `id` を設定ファイルの `site` に使います。`source` と `destinations` で元の配線を、`faults` と `reason` で適用可能な故障と対象外の理由を確認できます。モデルの構造が変わったときは再度スキャンします。
+Other bundled models are `AFC`, `NN`, `CC`, `SC`, `PM`, `F16`, and `SB1` through `SB5`. Available faults depend on the signal type, sample time, dimensions, and block type at each site.
+
+## FIM fault catalogue
+
+Workbench implements the 10 signal faults and five operator mutations from **FIM (Fault Injection and Mutation for Simulink)** by Ezio Bartocci, Leonardo Mariani, Dejan Ničković, and Drishti Yadav. It is an independent implementation that builds the faults from standard Simulink blocks. Workbench provides site discovery, the editor, and model generation. [Research paper (ESEC/FSE 2022)](https://doi.org/10.1145/3540250.3558932) · [Authors' implementation](https://gitlab.com/DrishtiYadav/fimtool/-/tree/a110acf2b718eab4cdf65f938203f60009fa0510) · [Original fault definitions](https://gitlab.com/DrishtiYadav/fimtool/-/blob/a110acf2b718eab4cdf65f938203f60009fa0510/FaultInjector_Master/Readme.txt)
+
+| FIM name | Workbench `type` | Effect or setting |
+|---|---|---|
+| Negate | `negate` | Reverse the sign of the input. |
+| Invert | `invert` | Output 1 for a zero input and 0 for a nonzero input. |
+| Stuck-at 0 | `zero` | Set the signal to zero. |
+| Absolute | `absolute` | Output the absolute value. |
+| Noise | `noise` | Add band-limited white noise. Set its power with `value`, its sample period in seconds with `period`, and its random seed with `seed`. |
+| Bias/Offset | `bias` | Add the signed offset in `value`. |
+| Stuck-at | `hold_last` | Hold the last value before the fault starts. At time zero, use `value` as the initial value. Continuous signals use the previous major solver step. |
+| Time Delay | `delay` | Delay the signal by `value` seconds. The initial output is zero. For discrete signals, use a multiple of the source sample period. |
+| Bit Flip | `bit_flip` | Flip a Boolean signal. |
+| Package Drop | `package_drop` | Replace the signal with `value` while the fault is active. |
+| Relational Operator Replacement (ROR) | `ror` | Select `>`, `<`, `<=`, `>=`, `==`, or `~=`. |
+| Logical Operator Replacement (LOR) | `lor` | Select `AND`, `OR`, `NAND`, `NOR`, `XOR`, or `NXOR` (exclusive NOR). |
+| Sum to Product (S2P) | `s2p` | Replace a sum block with a product. |
+| Product to Sum (P2S) | `p2s` | Replace a product block with a sum. |
+| Arithmetic Sign Replacement (ASR) | `asr` | Set one sign per operand. For two operands, choose `+-`, `--`, `++`, or `-+`. |
+
+JSON and MATLAB configurations accept the original FIM fault names. ROR, LOR, and ASR also accept the original one-based operator numbers in the order shown above. For example, `"type":"LOR","value":6` selects `NXOR`. Workbench adds two more types, for a total of 17. Use `gain` to multiply by a factor, or `stuck_at` to hold a user-specified constant.
+
+Faults are active from `start` (inclusive) to `stop` (exclusive), in seconds. The default is the whole simulation. Leave **Stop (s)** blank in the editor or omit `stop` in JSON to keep the fault active until simulation ends. For a fixed duration, set `stop` to the start time plus the duration.
+
+For a logical replacement, open **AFC** and select `O1688`. Choose `XOR` from the replacement menu and select **On**. The equivalent JSON fault for a five-second window is `{"site":"O1688","type":"lor","enabled":true,"value":"XOR","start":5,"stop":10}`. The menu lists alternatives compatible with the selected inputs. For example, a scalar, single-input `NOT` supports `AND` and `OR`. Single-input vector reductions offer replacements that preserve the output shape.
+
+## Use your own model and combine faults
+
+Make sure the source model compiles with its usual initialization scripts, data dictionaries, and referenced libraries. Run `fimwb.scan` to get the site IDs used in a configuration. The `source` and `destinations` fields identify the wiring. The `faults` and `reason` fields show the available faults and the reason for an exclusion. Scan again after changing the model structure.
 
 ~~~matlab
 tool = fileparts(which('FIMWorkbench'));
@@ -62,7 +81,7 @@ fimwb.build(src,fullfile(tool,'examples','at-combination.json'),file)
 fimwb.editor(file)
 ~~~
 
-同じ箇所を複数行に指定すると**記載順**に適用します。例えば下の2行をともにONにすると、出力は `(入力 + 1) × 1.25` になります。別の `site` を追加すれば各箇所で同時に働きます。分岐前の共通信号に加えた変化は各枝へ伝わり、枝固有の故障はその後に適用されます。演算ブロックには1つの置換枠があり、その種類と演算子を切り替えられます。
+Choose a new output filename for `build`. The sample configuration targets `E106_1__51_inport2`, the **brake-to-Vehicle** branch. When both entries below are on, Workbench applies them in order and the signal becomes `(input + 1) * 1.25`. Entries at different sites can be active together. A fault on the common stem reaches all branches, and branch-specific faults then act on their respective connections. An operator block has one replacement slot. [Sample configuration](examples/at-combination.json)
 
 ~~~json
 {
@@ -73,7 +92,7 @@ fimwb.editor(file)
 }
 ~~~
 
-`build` の出力には新しいファイル名を指定します。生成後はMATLABから個別に変更することもできます。下の `2` は設定ファイルの2行目の番号です。
+You can change a slot from MATLAB between simulation runs. Slot `2` below corresponds to the second fault in the configuration.
 
 ~~~matlab
 load_system(file)
@@ -82,9 +101,11 @@ fimwb.setFault('my_at',1,struct('start',2,'stop',5))
 save_system('my_at')
 ~~~
 
-## 適用可能な全箇所へ自動生成する
+Workbench scans the active Simulink hierarchy, including subsystem ports, editable wiring under masks and library links, common stems, and individual branches. To test the internals of a referenced model, supply that model as the source. Bias and gain support integer signals up to 32 bits, with results rounded and saturated to the source type. Compatible real vectors support elementwise transformations such as bias and gain.
 
-故障ごとの値を配列で指定すると、箇所と値の組み合わせを自動列挙します。`plan` は設定を返し、`sweep` は各設定を1つずつ適用したモデルを生成してコンパイルします。`sweep` の第4引数で生成する設定番号を絞れます。全件を生成する呼び出しは次のとおりです。
+## Generate a fault campaign
+
+Specify the values to try in a profile. `plan` enumerates compatible single-fault configurations and reports excluded settings. `sweep` generates and compiles a model for each selected case. Supply a fourth argument to `sweep` to run a subset. The example below generates every planned case. [Included profiles](examples/profiles.json)
 
 ~~~matlab
 profiles = fullfile(tool,'examples','profiles.json');
@@ -92,45 +113,42 @@ profiles = fullfile(tool,'examples','profiles.json');
 results = fimwb.sweep(src,profiles,fullfile(out,'sweep'));
 ~~~
 
-モデル、設定JSON、チェックサムは設定ごとのフォルダに保存します。再実行時は照合済みのモデルを再利用し、結果行に `compiled`、`reused`、または `failed` と理由を残します。複数故障をまとめる場合は、選んだ設定を `fimwb.build(src,struct('faults',cases([i,j])),newFile)` へ渡せます。個別モデルと全箇所モデルは、どちらも `fimwb.editor` で開けます。
+Each case has a folder containing the model, configuration JSON, and checksums. Repeating the sweep reuses verified outputs. Results record `compiled`, `reused`, or `failed` and any error message. To combine selected faults, pass `struct('faults',cases([i,j]))` to `fimwb.build` with the source and a new output path. Open either kind of generated model with `fimwb.editor`.
 
-## 指定できる故障
+## Build from source or upgrade
 
-| FIMでの名称 | 設定の `type` | 動作・値 |
-|---|---|---|
-| Negate | `negate` | 符号を反転 |
-| Invert | `invert` | 0なら1、非ゼロなら0 |
-| Stuck-at 0 | `zero` | 0に固定 |
-| Absolute | `absolute` | 絶対値を出力 |
-| Noise | `noise` | 帯域制限付きホワイトノイズを加算。`value` はパワー、`period` は標本周期（秒）、`seed` は乱数のシード |
-| Bias/Offset | `bias` | 指定した正または負の値を加算 |
-| Stuck-at | `hold_last` | 開始直前の値を保持。時刻0から有効なら初期値は `value`。連続系では直前のソルバーの主要ステップの値 |
-| Time Delay | `delay` | 指定秒数の遅延。初期出力は0。離散信号では元の周期の整数倍 |
-| Bit Flip | `bit_flip` | ブール信号の真偽を反転 |
-| Package Drop | `package_drop` | 指定した値で出力を置換 |
-| ROR | `ror` | 比較演算子を `>`、`<`、`<=`、`>=`、`==`、`~=` から選択 |
-| LOR | `lor` | 論理演算子を `AND`、`OR`、`NAND`、`NOR`、`XOR`、`NXOR`（排他的論理和の否定）から選択 |
-| S2P | `s2p` | 和を積に置換 |
-| P2S | `p2s` | 積を和に置換 |
-| ASR | `asr` | 入力ごとの符号を置換。2入力では `+-`、`--`、`++`、`-+` |
+Clone the repository, set the MATLAB current folder to its root, and run `FIMWorkbench`. To build the installer, run the following commands from the same folder.
 
-JSONやMATLABでは表のFIM名をそのまま `type` に指定できます。演算子は名前に加えて原版の番号でも指定できます。例えば `{"type":"LOR","value":6}` の置換先は `NXOR` です。番号は上表の並びの左から順に1から始まります。Workbench独自の `gain` は信号に指定の倍率を掛け、`stuck_at` は指定した値に固定します。
+~~~matlab
+addpath(fullfile(pwd,'packaging'))
+installer = build_fimworkbench_toolbox(fullfile(pwd,'dist'))
+~~~
 
-LORを試すには、AFCの故障設定画面で `O1688` の行を選び、画面下の置換先で `XOR` を選んで「ON」にします。JSONでは `{"site":"O1688","type":"lor","enabled":true,"value":"XOR","start":5,"stop":10}` で同じ箇所を5秒以上10秒未満だけ切り替えられます。画面には、その入力で使えて元の演算子と異なる置換先が表示されます。例えば1入力・スカラーの `NOT` は `AND` または `OR` に置換できます。1入力のベクトルを論理集約するブロックでは、出力形状を保てる置換を選べます。
+Distribute the `.mltbx` file from `dist/`. The source for this release is tagged `v2.1.1`.
 
-有効期間の既定はシミュレーション開始から終了までです。`start` と `stop` は秒単位で、終了の空欄は期限なしです。一定の時間だけ注入するときは、終了に開始時刻と持続時間の和を指定します。整数へのバイアス・ゲインは32ビットまでの整数型で扱い、計算後に元の型へ丸めて飽和させます。実数ベクトルはバイアス・ゲインなどの要素ごとの変換に対応します。スキャンは現在アクティブなSimulink階層の配線を扱います。サブシステムの入出力、マスクやリンク内の編集可能な配線、分岐前、接続先ごとの枝を区別します。モデル参照先の内部を試す場合は、その参照モデルを入力に指定します。
+Install an update the same way as a new release. **Open saved copy...** reopens models with their saved settings. To pick up injection sites added since a working copy was created, generate a fresh copy from the source with a new filename. For a fresh AFC benchmark, close any open AFC working copy and run `fimwb.openBenchmark('AFC',fullfile(pwd,'AFC_new'))` with a new folder. Scripts written for 1.0.0 should use the `FIMWorkbench` launcher and the `fimwb.` function prefix.
 
-## ARCH-COMPでの検証
+## ARCH-COMP verification
 
-検証対象はARCH-COMP 2026の反例探索部門です。8系統のうちSBを5モデルに展開した計12モデルです。PMは原著者が公開した単一LRL入力・PACE_COUNT出力の `Model1_Scenario1_Faulty` を比較元に使いました。SB1～SB5は大会向けに選定された5つのSimulinkモデルと対応する学習済み重みを使い、検証コピーでは著者環境の絶対パスを同梱した重みのファイル名に張り替えています。F16の公式実行入口はMATLABのODEなので、シミュレーションごとにODEを呼ぶSimulinkブロックを用い、その観測出力1箇所を検証しました。[2026年部門報告](https://easychair.org/publications/paper/DtZ3/open)・[公式モデル](https://gitlab.com/goranf/ARCH-COMP/-/tree/2238327987e2e3b81f9bcc38b2ad250013deba04/models/FALS)・[PMの配布元](https://github.com/3MD3/3MD3/blob/5a1688de66b1974f6f07362495ccc0cfba957124/Model1/Scenario1.m)・[大会用SBの配布元](https://github.com/lyudeyun/FalBenchGen_ARCHCOMP25/tree/4d4729f428780a8a01bc0173873506c8d71a9f38)
+The suite covers all 12 models in the **2026 ARCH-COMP Falsification category**, counting the five SB models separately. PM uses the authors' `Model1_Scenario1_Faulty` baseline with its LRL input and PACE_COUNT output. The SB copies load the five competition models and their trained weights using bundled filenames. For F16, a Simulink block calls the official MATLAB ODE with the project's R2026a compatibility code. F16 coverage is limited to its single observation signal. [Competition report](https://easychair.org/publications/paper/DtZ3/open) · [ARCH models](https://gitlab.com/goranf/ARCH-COMP/-/tree/2238327987e2e3b81f9bcc38b2ad250013deba04/models/FALS) · [PM source](https://github.com/3MD3/3MD3/blob/5a1688de66b1974f6f07362495ccc0cfba957124/Model1/Scenario1.m) · [SB source](https://github.com/lyudeyun/FalBenchGen_ARCHCOMP25/tree/4d4729f428780a8a01bc0173873506c8d71a9f38)
 
-- **全箇所の設置確認**　抽出した967候補中、設定を保存・再コンパイルしても残る923箇所にそれぞれ独立した故障枠を設置しました。モデルごとに全枠を同時にOFFにし、規定時間の全出力と時刻列を元モデルと照合しました。制御用の接続など34箇所と、SBの予測ブロックが再生成する内部配線10箇所を対象外としました。各除外理由と、各箇所に割り当てた枠番号・モデルファイル名は `verification/all_sites/<モデル>/sites.csv` にあります。
-- **ON時の波形確認**　各モデルで同一入力を使い、全OFF、バイアスのみ、ゲインのみ、2故障同時、数値変更、再び全OFFを検証しました。ネイティブSimulinkの11モデルでは内部の接続先だけへの注入と、内部・出力の同時注入も検証しました。比較は指定した故障変換式と時刻列に対して行っています。全105比較の最大絶対誤差は0でした。[モデル別の結果](verification/results.csv)
-- **編集画面の確認**　12モデルそれぞれで作業用コピーを開き、故障種類の切替、チェックボックス、数値変更、入力エラーの取り消し、シミュレーション、保存後の再読込を確認しました。[画面操作の結果](verification/editor.csv)
-- **設定の列挙**　同梱のプロファイルで12,957件の単一故障設定を列挙しました。各モデルの `fault_plan.csv` が設定の一覧、`verification/arch2026/<モデル>/traces.mat` が代表設定で実際に比較した波形です。
-- **論理演算子の置換**　12モデルのうち、AFCの5箇所で計22通りのLORを適用できました。各設定を編集画面からONにして実行し、元のSimulinkブロックを直接置換した参照モデルと比較しました。置換箇所の出力112,200点とモデル出力1,072,588点はすべて一致しました。[LORの全設定と比較結果](verification/lor.csv)
-- **故障別の確認**　合成モデルでFIMの15種類とWorkbench独自の2種類を検証しました。LORは6演算子を2入力の全真理値で、RORは6演算子を、ASRは2入力の4符号列を検証しました。故障の併用、時間窓、配列信号も含む53比較の最大絶対誤差は、単精度のノイズ強度試験の約4.77×10⁻⁷でした。[故障別の結果](verification/fault_types/results.csv)
+| Check | Recorded result |
+|---|---|
+| Site installation | 923 of 967 candidates retained an independent fault slot after saving and recompiling. With all slots off, every model reproduced its original output values and time vectors over the full run. The other 44 candidates comprised 34 unsupported connections and 10 internal SB wires regenerated by prediction blocks. Each model's `verification/all_sites/<model>/sites.csv` records the slot or exclusion reason. |
+| Active faults | All 105 representative trace checks had zero maximum absolute error against the expected transformation. Cases included bias, gain, combinations, retuning and disabling faults, and internal injections on the 11 native Simulink models. [Per-model results](verification/results.csv) |
+| Editor | Tested fault selection, activation, value editing, rollback of invalid input, simulation, saving, and reopening on all 12 models. [Editor results](verification/editor.csv) |
+| Campaign size | The bundled profiles enumerate 12,957 single-fault settings. Each model's `fault_plan.csv` lists the cases. The `verification/arch2026/<model>/traces.mat` files contain recorded waveforms for the representative simulations. |
+| Logical replacements | All 22 applicable replacements at five AFC sites matched direct changes to the original Simulink logical operator across 112,200 local output samples and 1,072,588 model output samples. [LOR results](verification/lor.csv) |
+| Fault semantics | Synthetic models exercised all 15 FIM types and the two Workbench extensions, including all six LOR truth tables for two inputs, six ROR alternatives, four two-input ASR sign patterns, combined faults, time windows, and array signals. The largest absolute error across 53 comparisons was about 4.77 × 10⁻⁷ in the single-precision noise power test. [Fault-type results](verification/fault_types/results.csv) |
 
-検証環境はLinux上のMATLAB R2026a・Simulinkです。Stateflow、Deep Learning Toolboxなど、各ベンチマークが使う製品も必要です。F16には本プロジェクトのR2026a互換処理を使用します。モデルを一から再取得する場合は、シェルで `python3 benchmarks/fetch_sources.py --project /path/to/project` を実行します。取得元のコミットとSHA-256を固定してあり、付属済みのファイルは同じコマンドで照合できます。
+To reproduce the checks, add the benchmark scripts to your MATLAB path with `addpath(fullfile(fileparts(which('FIMWorkbench')),'benchmarks'))`. Give each run a fresh output directory.
 
-新しい保存先で再試験するには、MATLABで `addpath(fullfile(fileparts(which('FIMWorkbench')),'benchmarks'))` を実行し、`run_arch_suite(新しい保存先)` で代表設定、`check_all_sites(新しい保存先)` で全箇所の設置と全OFF、`test_fault_types(新しい保存先)` で故障の種類と順序を検証できます。`verify_arch_lor(出力CSVのパス)` は各LOR設定を元のブロックを直接変更したモデルと照合します。各試験には別々の保存先を指定します。
+| MATLAB call | What it checks |
+|---|---|
+| `run_arch_suite(outputFolder)` | Representative fault configurations and output traces on all 12 models |
+| `check_all_sites(outputFolder)` | Installation of every compatible site and all-off behavior |
+| `test_fault_types(outputFolder)` | Fault semantics, parameters, and application order |
+| `verify_editor(outputCsv)` | Model editing and persistence on all 12 benchmarks |
+| `verify_arch_lor(outputCsv)` | Every applicable LOR setting against a direct block replacement |
+
+The source lock records the upstream commits and SHA-256 hashes. From a source checkout, run `python3 benchmarks/fetch_sources.py` to verify the bundled files. When fetching missing project-specific inputs, use `--project /path/to/project` to point to the project containing the original dependencies. [Source lock](benchmarks/source-lock.json)
