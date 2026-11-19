@@ -1,0 +1,104 @@
+# Simulinkモデルの故障注入ツール
+
+モデルの配線と演算ブロックを調べ、選んだ箇所に故障を組み込んだコピーを生成します。設定画面では故障ごとに種類、ON/OFF、値、開始・終了時刻を編集できます。複数箇所へ同時に注入でき、同じ信号に対する複数の変換も設定できます。
+
+## インストールして使う
+
+1. 受け取った `GRFaultInjector-1.0.0.mltbx` を、MATLABの「ファイル」パネルでダブルクリックし、「インストール」を選びます。共有するファイルはこの1つです。
+2. 「アプリ」タブの `GRFaultInjector` を開きます。コマンドウィンドウに `GRFaultInjector` と入力しても同じ画面が開きます。
+3. 同梱モデルは、一覧から `AT` などを選び「ベンチマークを開く」を押します。自分のモデルは、普段使うSimulinkプロジェクトや初期化スクリプトを開いた状態で「元モデル」と新しい「作業用コピー」の保存先を指定し、「作業用コピーを作成」を押します。対応する各箇所に1つずつ、初期状態がOFFの故障を設定します。
+4. 故障設定画面で種類・ON/OFF・値・時間を選び、Simulinkの「実行」を押します。「モデルを保存」で変更を保存します。同梱モデルは同じ一覧から、自分のコピーは「保存したコピーを開く」から再開できます。
+
+必要な環境はMATLABとSimulinkです。Stateflow、Deep Learning Toolboxなど、モデルが使う追加製品も必要です。パッケージの対象はR2026a以降、検証環境はLinux版R2026aです。インストール先に日本語を含む場合、SBモデルの学習済み重みはMATLABセッション用の一時コピーから読み込みます。削除する場合はMATLABの「アドオン」で「GR Fault Injector」を選び、アンインストールします。編集したモデルは各利用者の作業フォルダに保存されます。[MathWorksのインストール手順](https://www.mathworks.com/help/matlab/matlab_env/get-add-ons.html)
+
+## テスト済みモデルを開く
+
+インストール後は任意の作業フォルダで実行できます。ソースZIPから使う場合は、このREADMEがあるフォルダをMATLABの現在のフォルダにします。
+
+~~~matlab
+[window, file] = grfi.openBenchmark('AT');
+open_system(file)
+~~~
+
+ATの場合は101箇所のチェックボックスが開きます。例えば、箇所「E106_1__51_inport2」はスロットルからエンジンに入る枝です。故障に「bias」、値に「1」を指定してONにすると、この枝でスロットルの値に1を加えます。開始を5、終了を10にすれば、5秒以上10秒未満だけ適用します。Simulinkの実行ボタンで動作を確認できます。
+
+「モデルを保存」で作業用コピーに保存します。初回は全箇所OFF、2回目以降は保存した設定で開きます。ATの既定の保存先はMATLABの個人フォルダ（`userpath`）の `GRFaultInjector/AT/` です。`userpath` が空の環境では `prefdir` を使います。上の `file` は実際の保存先のフルパスです。作業先は第2引数で指定できます。旧ZIPの `work/AT/` に作業用モデルを保存済みの場合は、そのフォルダを指定すれば引き継げます。モデル名には `AT`、`AFC`、`NN`、`CC`、`SC`、`PM`、`F16`、`SB1`～`SB5` を指定できます。各行の故障の適用条件は、その箇所の信号型・実行周期・ブロック種別に従います。
+
+## 自分のモデルと故障の組み合わせ
+
+対象の `.mdl` または `.slx` が通常どおりコンパイルできるように、モデルの初期化スクリプトやデータ辞書、参照ライブラリを準備します。`scan` の `id` を設定ファイルの `site` に使います。`source` と `destinations` で元の配線を、`faults` と `reason` で適用可能な故障と対象外の理由を確認できます。モデルの構造が変わったときは再度スキャンします。
+
+~~~matlab
+tool = fileparts(which('GRFaultInjector'));
+addpath(tool, fullfile(tool,'verification','sources','at_data'))
+src = fullfile(tool,'verification','sources','ARCH','transmission','Autotrans_shift.mdl');
+sites = grfi.scan(src);
+list = struct2table(sites,'AsArray',true);
+disp(list(:,{'id','kind','source','dataType','reason'}))
+
+out = fullfile(pwd,'work');
+if ~isfolder(out), mkdir(out); end
+file = fullfile(out,'my_at.mdl');
+grfi.build(src,fullfile(tool,'examples','at-combination.json'),file)
+grfi.editor(file)
+~~~
+
+同じ箇所を複数行に指定すると**記載順**に適用します。例えば下の2行をともにONにすると、出力は `(入力 + 1) × 1.25` になります。別の `site` を追加すれば各箇所で同時に働きます。分岐前の共通信号に加えた変化は各枝へ伝わり、枝固有の故障はその後に適用されます。演算ブロックには1つの置換枠があり、その種類と演算子を切り替えられます。
+
+~~~json
+{
+  "faults": [
+    {"site":"E106_1__51_inport2","type":"bias","enabled":true,"value":1},
+    {"site":"E106_1__51_inport2","type":"gain","enabled":false,"value":1.25}
+  ]
+}
+~~~
+
+`build` の出力には新しいファイル名を指定します。生成後はMATLABから個別に変更することもできます。下の `2` は設定ファイルの2行目の番号です。
+
+~~~matlab
+load_system(file)
+grfi.setFault('my_at',2,struct('enabled',true,'value',1.5))
+grfi.setFault('my_at',1,struct('start',2,'stop',5))
+save_system('my_at')
+~~~
+
+## 適用可能な全箇所へ自動生成する
+
+故障ごとの値を配列で指定すると、箇所と値の組み合わせを自動列挙します。`plan` は設定を返し、`sweep` は各設定を1つずつ適用したモデルを生成してコンパイルします。`sweep` の第4引数で生成する設定番号を絞れます。全件を生成する呼び出しは次のとおりです。
+
+~~~matlab
+profiles = fullfile(tool,'examples','profiles.json');
+[cases, excluded] = grfi.plan(src,profiles);
+results = grfi.sweep(src,profiles,fullfile(out,'sweep'));
+~~~
+
+モデル、設定JSON、チェックサムは設定ごとのフォルダに保存します。再実行時は照合済みのモデルを再利用し、結果行に `compiled`、`reused`、または `failed` と理由を残します。複数故障をまとめる場合は、選んだ設定を `grfi.build(src,struct('faults',cases([i,j])),newFile)` へ渡せます。個別モデルと全箇所モデルは、どちらも `grfi.editor` で開けます。
+
+## 指定できる故障
+
+| 種類 | 指定する値・動作 |
+|---|---|
+| `bias`、`gain` | 加算量、倍率。単位は注入点の信号に従う |
+| `noise` | `value` はSimulinkの帯域制限付きホワイトノイズのパワー。`period` は標本周期（秒）、`seed` は乱数seed |
+| `delay` | 遅延秒数。初期出力は0。離散信号では元の周期の整数倍 |
+| `package_drop`、`stuck_at`、`zero` | 期間中に指定値へ置換、設定値への固着、0への固定 |
+| `hold_last` | 開始直前の値を保持。時刻0から有効な場合の初期値は `value`。連続系では直前のソルバーの主要ステップを参照 |
+| `negate`、`absolute`、`invert`、`bit_flip` | 符号反転、絶対値、ゼロ判定による0/1反転、論理信号のビット反転 |
+| `asr`、`s2p`、`p2s`、`ror` | 加減算の符号列（例 `"+-"`）、和から積、積から和、比較演算子の置換（例 `">="`） |
+
+有効期間の既定はシミュレーション開始から終了までです。`start` と `stop` は秒単位で、終了の空欄は期限なしです。整数へのバイアス・ゲインは32ビットまでの整数型で扱い、計算後に元の型へ丸めて飽和させます。実数ベクトルはバイアス・ゲインなどの要素ごとの変換に対応します。スキャンは現在アクティブなSimulink階層の配線を扱います。サブシステムの入出力、マスクやリンク内の編集可能な配線、分岐前、接続先ごとの枝を区別します。モデル参照先の内部を試す場合は、その参照モデルを入力に指定します。
+
+## ARCH-COMPでの検証
+
+前回のAT実験と同じ2026年の反例探索部門を採用しました。8系統のうちSBを5モデルに展開した計12モデルです。PMは原著者が公開した単一LRL入力・PACE_COUNT出力の `Model1_Scenario1_Faulty` を比較元に使いました。SB1～SB5は大会向けに選定された5つのSimulinkモデルと対応する学習済み重みを使い、検証コピーでは著者環境の絶対パスを同梱した重みのファイル名に張り替えています。F16の公式実行入口はMATLABのODEなので、シミュレーションごとにODEを呼ぶSimulinkブロックを用い、その観測出力1箇所を検証しました。[2026年部門報告](https://easychair.org/publications/paper/DtZ3/open)・[公式モデル](https://gitlab.com/goranf/ARCH-COMP/-/tree/2238327987e2e3b81f9bcc38b2ad250013deba04/models/FALS)・[PMの配布元](https://github.com/3MD3/3MD3/blob/5a1688de66b1974f6f07362495ccc0cfba957124/Model1/Scenario1.m)・[大会用SBの配布元](https://github.com/lyudeyun/FalBenchGen_ARCHCOMP25/tree/4d4729f428780a8a01bc0173873506c8d71a9f38)
+
+- **全箇所の設置確認**　抽出した962候補中、設定を保存・再コンパイルしても残る918箇所にそれぞれ独立した故障枠を設置しました。モデルごとに全枠を同時にOFFにし、規定時間の全出力と時刻列を元モデルと照合しました。制御用の接続など34箇所と、SBの予測ブロックが再生成する内部配線10箇所を対象外としました。各除外理由と、各箇所に割り当てた枠番号・モデルファイル名は `verification/all_sites/<モデル>/sites.csv` にあります。
+- **ON時の波形確認**　各モデルで同一入力を使い、全OFF、バイアスのみ、ゲインのみ、2故障同時、数値変更、再び全OFFを検証しました。ネイティブSimulinkの11モデルでは内部の接続先だけへの注入と、内部・出力の同時注入も検証しました。比較は指定した故障変換式と時刻列に対して行っています。全105比較の最大絶対誤差は0でした。[モデル別の結果](verification/results.csv)
+- **編集画面の確認**　12モデルそれぞれで作業用コピーを開き、故障種類の切替、チェックボックス、数値変更、入力エラーの取り消し、シミュレーション、保存後の再読込を確認しました。[画面操作の結果](verification/editor.csv)
+- **設定の列挙**　同梱のプロファイルで12,100件の単一故障設定を列挙しました。各モデルの `fault_plan.csv` が設定の一覧、`verification/arch2026/<モデル>/traces.mat` が代表設定で実際に比較した波形です。
+- **故障別の確認**　合成テストモデルで全16種類、同一箇所での適用順、分岐前・個別枝・演算子を併用した場合を検証しました。離散・連続それぞれの遅延と保持を含む20比較の最大絶対誤差はノイズ強度を変更した試験の約2.22×10⁻¹⁶でした。[故障別の結果](verification/fault_types/results.csv)
+
+検証環境はLinux上のMATLAB R2026a・Simulinkです。Stateflow、Deep Learning Toolboxなど、各ベンチマークが使う製品も必要です。F16には本プロジェクトのR2026a互換処理を使用します。モデルを一から再取得する場合は、シェルで `python3 benchmarks/fetch_sources.py --project /path/to/GR` を実行します。取得元のコミットとSHA-256を固定してあり、付属済みのファイルは同じコマンドで照合できます。
+
+新しい保存先で再試験するには、MATLABで `addpath(fullfile(fileparts(which('GRFaultInjector')),'benchmarks'))` を実行し、`run_arch_suite(新しい保存先)` で代表設定、`check_all_sites(新しい保存先)` で全箇所の設置と全OFF、`test_fault_types(新しい保存先)` で故障の種類と順序を検証できます。各試験には別々の保存先を指定します。

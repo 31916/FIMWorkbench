@@ -1,0 +1,18 @@
+[
+  {"type":"bias","values":[-1,1]},
+  {"type":"gain","values":[0.5,2]},
+  {"type":"noise","values":[0.01,0.1],"seed":41,"period":0.1},
+  {"type":"delay","values":[0.1,0.2]},
+  {"type":"package_drop","values":[0,1],"start":1,"stop":2},
+  {"type":"stuck_at","values":[0,1]},
+  {"type":"hold_last","values":[0],"start":1},
+  {"type":"zero"},
+  {"type":"negate"},
+  {"type":"absolute"},
+  {"type":"invert"},
+  {"type":"bit_flip"},
+  {"type":"asr","values":["++","+-","-+","--"]},
+  {"type":"s2p"},
+  {"type":"p2s"},
+  {"type":"ror","values":["<","<=",">",">=","==","~="]}
+]

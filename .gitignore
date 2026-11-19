@@ -1,0 +1,10 @@
+/dist/
+/work/
+/verification/run_*/
+*.mltbx
+*.asv
+*.autosave
+*.slxc
+slprj/
+__pycache__/
+*.pyc

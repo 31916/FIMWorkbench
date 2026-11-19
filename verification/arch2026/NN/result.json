@@ -1,0 +1,70 @@
+{
+  "id": "NN",
+  "status": "PASS",
+  "scope": "native Simulink",
+  "source": "/home/harry_31916/Documents/GR/model_fault_tool/verification/sources/ARCH/neural/narmamaglev_v1.slx",
+  "source_sha256": "4168d0d8c52fe1dc792a1d6468ac95f5520b6aafccaa20f3475b0efbaf7e1611",
+  "variant": "/home/harry_31916/Documents/GR/model_fault_tool/verification/arch2026/NN/fi_nn.slx",
+  "horizon": 40,
+  "candidates": 127,
+  "compatible": 127,
+  "sink_site": "E88_1__108_inport1",
+  "internal_site": "E107_1__7_inport1",
+  "checks": [
+    {
+      "name": "all_off",
+      "samples_compared": 44006,
+      "max_abs_error": 0,
+      "fault_change": 0
+    },
+    {
+      "name": "bias_only",
+      "samples_compared": 44006,
+      "max_abs_error": 0,
+      "fault_change": 0.25000000000000022
+    },
+    {
+      "name": "gain_only",
+      "samples_compared": 44006,
+      "max_abs_error": 0,
+      "fault_change": 3.3245862921711193
+    },
+    {
+      "name": "bias_then_gain",
+      "samples_compared": 44006,
+      "max_abs_error": 0,
+      "fault_change": 3.8245862921711193
+    },
+    {
+      "name": "retuned_both",
+      "samples_compared": 44006,
+      "max_abs_error": 0,
+      "fault_change": 1.4747931460855597
+    },
+    {
+      "name": "disabled_again",
+      "samples_compared": 44006,
+      "max_abs_error": 0,
+      "fault_change": 0
+    },
+    {
+      "name": "internal_only",
+      "samples_compared": 4001,
+      "max_abs_error": 0,
+      "fault_change": 0.015625
+    },
+    {
+      "name": "internal_and_output_local",
+      "samples_compared": 4001,
+      "max_abs_error": 0,
+      "fault_change": 0.015625
+    },
+    {
+      "name": "internal_and_output",
+      "samples_compared": 44006,
+      "max_abs_error": 0,
+      "fault_change": 1.4747931460855597
+    }
+  ],
+  "matlab": "26.1.0.3346908 (R2026a) Update 5"
+}

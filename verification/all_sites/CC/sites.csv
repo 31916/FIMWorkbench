@@ -1,0 +1,37 @@
+site,kind,fault,status,model,slot,reason
+E1::102_1__1::106_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,1,
+E1::106_2__1::90_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,2,
+E1_1__21_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,3,
+E1_1__30_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,4,
+E20::93_1__20::99_inport2,endpoint,bias,off_verified,all_cc_0001_0026.mdl,5,
+E20::94_1__20::99_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,6,
+E20::99_2__20::95_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,7,
+E20_1__1_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,8,
+E20_1__29_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,9,
+E21::102_1__21::106_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,10,
+E21::106_2__21::90_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,11,
+E21_1__23_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,12,
+E21_1__31_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,13,
+E23::102_1__23::107_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,14,
+E23::107_2__23::103_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,15,
+E23_1__25_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,16,
+E23_1__32_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,17,
+E25::102_1__25::106_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,18,
+E25::106_2__25::90_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,19,
+E25_1__37_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,20,
+E35_1__20_inport1,endpoint,bias,off_verified,all_cc_0001_0026.mdl,21,
+E36_1__20_inport2,endpoint,bias,off_verified,all_cc_0001_0026.mdl,22,
+T1_1,stem,bias,off_verified,all_cc_0001_0026.mdl,23,
+T20_1,stem,bias,off_verified,all_cc_0001_0026.mdl,24,
+T21_1,stem,bias,off_verified,all_cc_0001_0026.mdl,25,
+T23_1,stem,bias,off_verified,all_cc_0001_0026.mdl,26,
+E1::106_1__1::107_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E1::107_1__1::108_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E20::100_1__20::101_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E20::99_1__20::100_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E21::106_1__21::107_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E21::107_1__21::108_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E23::107_1__23::108_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E23::108_1__23::109_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E25::106_1__25::107_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call
+E25::107_1__25::108_inport1,endpoint,,excluded,,0,unsupported signal type: fcn_call

@@ -1,0 +1,10 @@
+* text=auto
+*.m text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.slx binary
+*.mat binary
+
+# Keep upstream checksums and recorded simulation results intact on checkout.
+verification/** -text !eol

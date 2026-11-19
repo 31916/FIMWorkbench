@@ -1,0 +1,8 @@
+{
+  "sourceSha256": "a83d977ad6bb95420855c7df9b35cab33fc97c1e2b163fc052871967d44650c4",
+  "faults": [
+    {"site":"E106_1__51_inport2","type":"bias","enabled":true,"value":1},
+    {"site":"E106_1__51_inport2","type":"gain","enabled":false,"value":1.25},
+    {"site":"E51_1__80_inport1","type":"bias","enabled":false,"value":-0.5}
+  ]
+}

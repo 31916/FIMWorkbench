@@ -1,0 +1,312 @@
+[
+  {
+    "id": "E1_1__2_inport1",
+    "kind": "endpoint",
+    "source": "Input",
+    "port": 1,
+    "destinations": {
+      "path": "StatefulPredict",
+      "port": 1,
+      "kind": "inport",
+      "sid": "2"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E2:322_1__2:377_inport1",
+    "kind": "endpoint",
+    "source": "StatefulPredict/sequenceinput",
+    "port": 1,
+    "destinations": {
+      "path": "StatefulPredict/MLFB",
+      "port": 1,
+      "kind": "inport",
+      "sid": "2:377"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E2:377::1_1__2:377::25_inport1",
+    "kind": "endpoint",
+    "source": "StatefulPredict/MLFB/in_1",
+    "port": 1,
+    "destinations": {
+      "path": "StatefulPredict/MLFB/ SFunction ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "2:377::25"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [],
+    "reason": "prediction block regenerates this MATLAB Function implementation wire; use the boundary port"
+  },
+  {
+    "id": "E2:377::25_1__2:377::26_inport1",
+    "kind": "endpoint",
+    "source": "StatefulPredict/MLFB/ SFunction ",
+    "port": 1,
+    "destinations": {
+      "path": "StatefulPredict/MLFB/ Demux ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "2:377::26"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E2:377::25_2__2:377::5_inport1",
+    "kind": "endpoint",
+    "source": "StatefulPredict/MLFB/ SFunction ",
+    "port": 2,
+    "destinations": {
+      "path": "StatefulPredict/MLFB/out_1_predict",
+      "port": 1,
+      "kind": "inport",
+      "sid": "2:377::5"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "single",
+    "dimensions": [
+      1,
+      2
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [],
+    "reason": "prediction block regenerates this MATLAB Function implementation wire; use the boundary port"
+  },
+  {
+    "id": "E2:377::26_1__2:377::27_inport1",
+    "kind": "endpoint",
+    "source": "StatefulPredict/MLFB/ Demux ",
+    "port": 1,
+    "destinations": {
+      "path": "StatefulPredict/MLFB/ Terminator ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "2:377::27"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E2:377_1__2:375_inport1",
+    "kind": "endpoint",
+    "source": "StatefulPredict/MLFB",
+    "port": 1,
+    "destinations": {
+      "path": "StatefulPredict/regressionoutput",
+      "port": 1,
+      "kind": "inport",
+      "sid": "2:375"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "single",
+    "dimensions": [
+      1,
+      2
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E2_1__3_inport1",
+    "kind": "endpoint",
+    "source": "StatefulPredict",
+    "port": 1,
+    "destinations": {
+      "path": "Demux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "3"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "single",
+    "dimensions": [
+      1,
+      2
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E3_1__4_inport1",
+    "kind": "endpoint",
+    "source": "Demux",
+    "port": 1,
+    "destinations": {
+      "path": "Output1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "single",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E3_2__5_inport1",
+    "kind": "endpoint",
+    "source": "Demux",
+    "port": 2,
+    "destinations": {
+      "path": "Output2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "5"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "single",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      1,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  }
+]

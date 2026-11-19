@@ -1,0 +1,37 @@
+{
+  "id": "E1_1__2_inport1",
+  "kind": "endpoint",
+  "source": "Measurement",
+  "port": 1,
+  "destinations": {
+    "path": "RecordedValue",
+    "port": 1,
+    "kind": "inport",
+    "sid": "2"
+  },
+  "operandCount": 0,
+  "originalOperator": "",
+  "dataType": "double",
+  "dimensions": [
+    1,
+    1
+  ],
+  "sampleTime": [
+    0.01,
+    0
+  ],
+  "faults": [
+    "bias",
+    "gain",
+    "negate",
+    "absolute",
+    "invert",
+    "stuck_at",
+    "zero",
+    "package_drop",
+    "noise",
+    "delay",
+    "hold_last"
+  ],
+  "reason": ""
+}

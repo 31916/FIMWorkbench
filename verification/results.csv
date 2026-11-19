@@ -1,0 +1,13 @@
+model,horizon_seconds,candidates,installed_off_verified,excluded,planned_settings,trace_checks,maximum_absolute_error,editor_verified,active_test,tested_scope,ready_model
+AT,33,104,101,3,1497,9,0,PASS,PASS,native Simulink,verification/all_sites/AT/all_at_0001_0101.mdl
+AFC,51,369,360,9,4660,9,0,PASS,PASS,native Simulink,verification/all_sites/AFC/all_afc_0001_0360.slx
+NN,40,127,127,0,1611,9,0,PASS,PASS,native Simulink,verification/all_sites/NN/all_nn_0001_0127.slx
+CC,100,36,26,10,442,9,0,PASS,PASS,native Simulink,verification/all_sites/CC/all_cc_0001_0026.mdl
+SC,35,193,193,0,2586,9,0,PASS,PASS,native Simulink,verification/all_sites/SC/all_sc_0001_0193.slx
+PM,10,82,80,2,957,9,0,PASS,PASS,native Simulink,verification/all_sites/PM/all_pm_0001_0080.slx
+F16,15,1,1,0,17,6,0,PASS,PASS,official ODE executed by Simulink; observation signal only,verification/all_sites/F16/all_f16_0001_0001.slx
+SB1,24,10,6,4,66,9,0,PASS,PASS,native Simulink,verification/all_sites/SB1/all_sb1_0001_0006.slx
+SB2,24,8,4,4,52,9,0,PASS,PASS,native Simulink,verification/all_sites/SB2/all_sb2_0001_0004.slx
+SB3,24,10,6,4,66,9,0,PASS,PASS,native Simulink,verification/all_sites/SB3/all_sb3_0001_0006.slx
+SB4,24,12,8,4,80,9,0,PASS,PASS,native Simulink,verification/all_sites/SB4/all_sb4_0001_0008.slx
+SB5,24,10,6,4,66,9,0,PASS,PASS,native Simulink,verification/all_sites/SB5/all_sb5_0001_0006.slx

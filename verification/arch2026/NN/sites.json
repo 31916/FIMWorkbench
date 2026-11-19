@@ -1,0 +1,4488 @@
+[
+  {
+    "id": "E100_1__92_inport2",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Viscous Friction",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Division2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "92"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E101_1__91_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/mass",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Division1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "91"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E101_1__92_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/mass",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Division2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "92"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E107_1__7_inport1",
+    "kind": "endpoint",
+    "source": "Ref",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller",
+      "port": 1,
+      "kind": "inport",
+      "sid": "7"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E109_1__88_inport1",
+    "kind": "endpoint",
+    "source": "Zero-Order\nHold",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)",
+      "port": 1,
+      "kind": "inport",
+      "sid": "88"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E10_1__39_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Constant",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "39"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E112_1__110_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Sum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Plant_Approx",
+      "port": 1,
+      "kind": "inport",
+      "sid": "110"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E113_1__112_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Product1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Sum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "112"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E11_1__44_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Constant1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "44"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E12_1__33_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Constant2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch",
+      "port": 2,
+      "kind": "inport",
+      "sid": "33"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E13_1__34_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Constant3",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "34"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E14_1__35_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Constant4",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "35"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E15_1__49_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Constant5",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "49"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16_1__54_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Constant6",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum3",
+      "port": 2,
+      "kind": "inport",
+      "sid": "54"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E17_1__36_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Constant7",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch3",
+      "port": 2,
+      "kind": "inport",
+      "sid": "36"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E18_1__23_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Discrete State-Space4",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Matrix\nGain",
+      "port": 1,
+      "kind": "inport",
+      "sid": "23"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      4
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E18_1__24_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Discrete State-Space4",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Matrix\nGain1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "24"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      4
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E19_1__33_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Fcn",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch",
+      "port": 1,
+      "kind": "inport",
+      "sid": "33"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E20_1__34_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Fcn1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "34"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E21_1__35_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Fcn2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "35"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E22_1__36_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Fcn3",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "36"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E23_1__39_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Matrix\nGain",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "39"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E24_1__49_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Matrix\nGain1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "49"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E25_1__44_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Matrix\nGain2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "44"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E26_1__54_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Matrix\nGain3",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "54"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E27_1__112_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Matrix\nGain5",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Sum1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "112"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E27_1__32_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Matrix\nGain5",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "32"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E28_1__113_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Matrix\nGain8",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Product1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "113"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E28_1__30_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Matrix\nGain8",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "30"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E29_1__18_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Mux",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Discrete State-Space4",
+      "port": 1,
+      "kind": "inport",
+      "sid": "18"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      2
+    ],
+    "sampleTime": [
+      [
+        0,
+        0
+      ],
+      [
+        0.01,
+        0
+      ]
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E30_1__21_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Product",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Fcn2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "21"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E30_1__35_inport3",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Product",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch2",
+      "port": 3,
+      "kind": "inport",
+      "sid": "35"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E31_1__38_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Saturation1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Zero-Order\nHold",
+      "port": 1,
+      "kind": "inport",
+      "sid": "38"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E32_1__30_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "30"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E33_1__37_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Switch",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Unit Delay4",
+      "port": 1,
+      "kind": "inport",
+      "sid": "37"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E34_1__29_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Switch1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "29"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E35_1__31_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Switch2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Saturation1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "31"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E36_1__32_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Switch3",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "32"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E37_1__29_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Unit Delay4",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Mux",
+      "port": 2,
+      "kind": "inport",
+      "sid": "29"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E38_1__113_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Zero-Order\nHold",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Product1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "113"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E38_1__19_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Zero-Order\nHold",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Fcn",
+      "port": 1,
+      "kind": "inport",
+      "sid": "19"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E38_1__33_inport3",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Zero-Order\nHold",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch",
+      "port": 3,
+      "kind": "inport",
+      "sid": "33"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E38_1__87_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Zero-Order\nHold",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Control Signal",
+      "port": 1,
+      "kind": "inport",
+      "sid": "87"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E39_1__65_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig",
+      "port": 1,
+      "kind": "inport",
+      "sid": "65"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E40_1__42_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum/In1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum/netsum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "42"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E41_1__42_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum/In2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum/netsum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "42"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E42_1__43_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum/netsum",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "43"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E44_1__59_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/purelin",
+      "port": 1,
+      "kind": "inport",
+      "sid": "59"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E45_1__47_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum1/In1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum1/netsum1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "47"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E46_1__47_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum1/In2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum1/netsum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "47"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E47_1__48_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum1/netsum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum1/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "48"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E49_1__76_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "76"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E50_1__52_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum2/In1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum2/netsum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "52"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E51_1__52_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum2/In2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum2/netsum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "52"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E52_1__53_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum2/netsum",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum2/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "53"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E54_1__62_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum3",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/purelin1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "62"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E55_1__57_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum3/In1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum3/netsum1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "57"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E56_1__57_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum3/In2",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum3/netsum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "57"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E57_1__58_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/netsum3/netsum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum3/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "58"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E59_1__27_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/purelin",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Matrix\nGain5",
+      "port": 1,
+      "kind": "inport",
+      "sid": "27"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E60_1__61_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/purelin/n",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/purelin/a",
+      "port": 1,
+      "kind": "inport",
+      "sid": "61"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E62_1__28_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/purelin1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Matrix\nGain8",
+      "port": 1,
+      "kind": "inport",
+      "sid": "28"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E63_1__64_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/purelin1/n",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/purelin1/a",
+      "port": 1,
+      "kind": "inport",
+      "sid": "64"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E65_1__25_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Matrix\nGain2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "25"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E66_1__68_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/n",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/Gain",
+      "port": 1,
+      "kind": "inport",
+      "sid": "68"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E67_1__71_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/Exp",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "71"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E68_1__67_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/Gain",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/Exp",
+      "port": 1,
+      "kind": "inport",
+      "sid": "67"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E69_1__72_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/Gain1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/Sum1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "72"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E70_1__69_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/Reciprocal",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/Gain1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "69"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E71_1__70_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/Reciprocal",
+      "port": 1,
+      "kind": "inport",
+      "sid": "70"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E72_1__75_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/Sum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/a",
+      "port": 1,
+      "kind": "inport",
+      "sid": "75"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E73_1__71_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/one",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "71"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E74_1__72_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig/one1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig/Sum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "72"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E76_1__26_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Matrix\nGain3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "26"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E77_1__79_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/n",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/Gain",
+      "port": 1,
+      "kind": "inport",
+      "sid": "79"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E78_1__82_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/Exp",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "82"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E79_1__78_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/Gain",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/Exp",
+      "port": 1,
+      "kind": "inport",
+      "sid": "78"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E7_1__109_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller",
+    "port": 1,
+    "destinations": {
+      "path": "Zero-Order\nHold",
+      "port": 1,
+      "kind": "inport",
+      "sid": "109"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E7_2__114_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller",
+    "port": 2,
+    "destinations": {
+      "path": "NNPos",
+      "port": 1,
+      "kind": "inport",
+      "sid": "114"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E80_1__83_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/Gain1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/Sum1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "83"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E81_1__80_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/Reciprocal",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/Gain1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "80"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E82_1__81_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/Reciprocal",
+      "port": 1,
+      "kind": "inport",
+      "sid": "81"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E83_1__86_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/Sum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/a",
+      "port": 1,
+      "kind": "inport",
+      "sid": "86"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      9
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E84_1__82_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/one",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "82"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E85_1__83_inport2",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/tansig1/one1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/tansig1/Sum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "83"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E88_1__108_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)",
+    "port": 1,
+    "destinations": {
+      "path": "Pos",
+      "port": 1,
+      "kind": "inport",
+      "sid": "108"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E88_1__7_inport2",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller",
+      "port": 2,
+      "kind": "inport",
+      "sid": "7"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E89_1__96_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Current",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Sign",
+      "port": 1,
+      "kind": "inport",
+      "sid": "96"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E89_1__97_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Current",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Square Law",
+      "port": 1,
+      "kind": "inport",
+      "sid": "97"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_1__22_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Reference",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Fcn3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "22"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_1__36_inport3",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Reference",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch3",
+      "port": 3,
+      "kind": "inport",
+      "sid": "36"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E90_1__93_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Division",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Gain",
+      "port": 1,
+      "kind": "inport",
+      "sid": "93"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E91_1__98_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Division1",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "98"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E92_1__98_inport3",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Division2",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Sum",
+      "port": 3,
+      "kind": "inport",
+      "sid": "98"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E93_1__91_inport2",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Gain",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Division1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "91"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E94_1__98_inport2",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Gravity",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "98"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E95_1__102_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Position",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Output",
+      "port": 1,
+      "kind": "inport",
+      "sid": "102"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E95_1__90_inport3",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Position",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Division",
+      "port": 3,
+      "kind": "inport",
+      "sid": "90"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E96_1__90_inport2",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Sign",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Division",
+      "port": 2,
+      "kind": "inport",
+      "sid": "90"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E97_1__90_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Square Law",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Division",
+      "port": 1,
+      "kind": "inport",
+      "sid": "90"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E98_1__99_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Velocity",
+      "port": 1,
+      "kind": "inport",
+      "sid": "99"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E99_1__100_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Velocity",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Viscous Friction",
+      "port": 1,
+      "kind": "inport",
+      "sid": "100"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E99_1__95_inport1",
+    "kind": "endpoint",
+    "source": "Plant\n(Magnet Levitation)/Velocity",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Position",
+      "port": 1,
+      "kind": "inport",
+      "sid": "95"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E9_1__20_inport1",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Plant Output",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Fcn1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "20"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E9_1__34_inport3",
+    "kind": "endpoint",
+    "source": "NARMA-L2 Controller/Plant Output",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Switch1",
+      "port": 3,
+      "kind": "inport",
+      "sid": "34"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O112",
+    "kind": "operator",
+    "source": "NARMA-L2 Controller/Sum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Plant_Approx",
+      "port": 1,
+      "kind": "inport",
+      "sid": "110"
+    },
+    "operandCount": 2,
+    "originalOperator": "++",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O113",
+    "kind": "operator",
+    "source": "NARMA-L2 Controller/Product1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Sum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "112"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O30",
+    "kind": "operator",
+    "source": "NARMA-L2 Controller/Product",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "NARMA-L2 Controller/Fcn2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "21"
+      },
+      {
+        "path": "NARMA-L2 Controller/Switch2",
+        "port": 3,
+        "kind": "inport",
+        "sid": "35"
+      }
+    ],
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O32",
+    "kind": "operator",
+    "source": "NARMA-L2 Controller/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "30"
+    },
+    "operandCount": 2,
+    "originalOperator": "+-",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O47",
+    "kind": "operator",
+    "source": "NARMA-L2 Controller/netsum1/netsum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum1/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "48"
+    },
+    "operandCount": 2,
+    "originalOperator": "++",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O57",
+    "kind": "operator",
+    "source": "NARMA-L2 Controller/netsum3/netsum1",
+    "port": 1,
+    "destinations": {
+      "path": "NARMA-L2 Controller/netsum3/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "58"
+    },
+    "operandCount": 2,
+    "originalOperator": "++",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O90",
+    "kind": "operator",
+    "source": "Plant\n(Magnet Levitation)/Division",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Gain",
+      "port": 1,
+      "kind": "inport",
+      "sid": "93"
+    },
+    "operandCount": 3,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O91",
+    "kind": "operator",
+    "source": "Plant\n(Magnet Levitation)/Division1",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "98"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O92",
+    "kind": "operator",
+    "source": "Plant\n(Magnet Levitation)/Division2",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Sum",
+      "port": 3,
+      "kind": "inport",
+      "sid": "98"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O98",
+    "kind": "operator",
+    "source": "Plant\n(Magnet Levitation)/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Plant\n(Magnet Levitation)/Velocity",
+      "port": 1,
+      "kind": "inport",
+      "sid": "99"
+    },
+    "operandCount": 3,
+    "originalOperator": "+--",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T101_1",
+    "kind": "stem",
+    "source": "Plant\n(Magnet Levitation)/mass",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Plant\n(Magnet Levitation)/Division1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "91"
+      },
+      {
+        "path": "Plant\n(Magnet Levitation)/Division2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "92"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T18_1",
+    "kind": "stem",
+    "source": "NARMA-L2 Controller/Discrete State-Space4",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "NARMA-L2 Controller/Matrix\nGain",
+        "port": 1,
+        "kind": "inport",
+        "sid": "23"
+      },
+      {
+        "path": "NARMA-L2 Controller/Matrix\nGain1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "24"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      4
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T27_1",
+    "kind": "stem",
+    "source": "NARMA-L2 Controller/Matrix\nGain5",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "NARMA-L2 Controller/Sum",
+        "port": 2,
+        "kind": "inport",
+        "sid": "32"
+      },
+      {
+        "path": "NARMA-L2 Controller/Sum1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "112"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T28_1",
+    "kind": "stem",
+    "source": "NARMA-L2 Controller/Matrix\nGain8",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "NARMA-L2 Controller/Product1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "113"
+      },
+      {
+        "path": "NARMA-L2 Controller/Product",
+        "port": 2,
+        "kind": "inport",
+        "sid": "30"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T30_1",
+    "kind": "stem",
+    "source": "NARMA-L2 Controller/Product",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "NARMA-L2 Controller/Fcn2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "21"
+      },
+      {
+        "path": "NARMA-L2 Controller/Switch2",
+        "port": 3,
+        "kind": "inport",
+        "sid": "35"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T38_1",
+    "kind": "stem",
+    "source": "NARMA-L2 Controller/Zero-Order\nHold",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "NARMA-L2 Controller/Control Signal",
+        "port": 1,
+        "kind": "inport",
+        "sid": "87"
+      },
+      {
+        "path": "NARMA-L2 Controller/Product1",
+        "port": 2,
+        "kind": "inport",
+        "sid": "113"
+      },
+      {
+        "path": "NARMA-L2 Controller/Fcn",
+        "port": 1,
+        "kind": "inport",
+        "sid": "19"
+      },
+      {
+        "path": "NARMA-L2 Controller/Switch",
+        "port": 3,
+        "kind": "inport",
+        "sid": "33"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T88_1",
+    "kind": "stem",
+    "source": "Plant\n(Magnet Levitation)",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Pos",
+        "port": 1,
+        "kind": "inport",
+        "sid": "108"
+      },
+      {
+        "path": "NARMA-L2 Controller",
+        "port": 2,
+        "kind": "inport",
+        "sid": "7"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T89_1",
+    "kind": "stem",
+    "source": "Plant\n(Magnet Levitation)/Current",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Plant\n(Magnet Levitation)/Square Law",
+        "port": 1,
+        "kind": "inport",
+        "sid": "97"
+      },
+      {
+        "path": "Plant\n(Magnet Levitation)/Sign",
+        "port": 1,
+        "kind": "inport",
+        "sid": "96"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T8_1",
+    "kind": "stem",
+    "source": "NARMA-L2 Controller/Reference",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "NARMA-L2 Controller/Fcn3",
+        "port": 1,
+        "kind": "inport",
+        "sid": "22"
+      },
+      {
+        "path": "NARMA-L2 Controller/Switch3",
+        "port": 3,
+        "kind": "inport",
+        "sid": "36"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.01,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T95_1",
+    "kind": "stem",
+    "source": "Plant\n(Magnet Levitation)/Position",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Plant\n(Magnet Levitation)/Output",
+        "port": 1,
+        "kind": "inport",
+        "sid": "102"
+      },
+      {
+        "path": "Plant\n(Magnet Levitation)/Division",
+        "port": 3,
+        "kind": "inport",
+        "sid": "90"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T99_1",
+    "kind": "stem",
+    "source": "Plant\n(Magnet Levitation)/Velocity",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Plant\n(Magnet Levitation)/Position",
+        "port": 1,
+        "kind": "inport",
+        "sid": "95"
+      },
+      {
+        "path": "Plant\n(Magnet Levitation)/Viscous Friction",
+        "port": 1,
+        "kind": "inport",
+        "sid": "100"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T9_1",
+    "kind": "stem",
+    "source": "NARMA-L2 Controller/Plant Output",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "NARMA-L2 Controller/Fcn1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "20"
+      },
+      {
+        "path": "NARMA-L2 Controller/Switch1",
+        "port": 3,
+        "kind": "inport",
+        "sid": "34"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "id": "SB2",
+  "status": "PASS",
+  "scope": "native Simulink",
+  "source": "/home/harry_31916/Documents/GR/model_fault_tool/verification/arch2026/SB2/phi2_m1_vr01_k2_2.slx",
+  "source_sha256": "712e205ded5e5c921f088ccd8969d55c49f7fdcda6357fbc11322bd02b5adf29",
+  "variant": "/home/harry_31916/Documents/GR/model_fault_tool/verification/arch2026/SB2/fi_sb2.slx",
+  "horizon": 24,
+  "candidates": 8,
+  "compatible": 4,
+  "sink_site": "E2_1__3_inport1",
+  "internal_site": "E1_1__2_inport1",
+  "checks": [
+    {
+      "name": "all_off",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 0
+    },
+    {
+      "name": "bias_only",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 0.25
+    },
+    {
+      "name": "gain_only",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 52.585762023925781
+    },
+    {
+      "name": "bias_then_gain",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 53.085762023925781
+    },
+    {
+      "name": "retuned_both",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 26.105384826660156
+    },
+    {
+      "name": "disabled_again",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 0
+    },
+    {
+      "name": "internal_only",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 0.015625
+    },
+    {
+      "name": "internal_and_output_local",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 0.015625
+    },
+    {
+      "name": "internal_and_output",
+      "samples_compared": 25,
+      "max_abs_error": 0,
+      "fault_change": 25.467536926269531
+    }
+  ],
+  "matlab": "26.1.0.3346908 (R2026a) Update 5"
+}

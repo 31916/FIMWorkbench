@@ -1,0 +1,3859 @@
+[
+  {
+    "id": "E106_1__107_inport2",
+    "kind": "endpoint",
+    "source": "brake",
+    "port": 1,
+    "destinations": {
+      "path": "Scope2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "107"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E106_1__51_inport2",
+    "kind": "endpoint",
+    "source": "brake",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle",
+      "port": 2,
+      "kind": "inport",
+      "sid": "51"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16::1_1__16::36_inport1",
+    "kind": "endpoint",
+    "source": "ShiftLogic/speed",
+    "port": 1,
+    "destinations": {
+      "path": "ShiftLogic/ SFunction ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "16::36"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16::2_1__16::36_inport2",
+    "kind": "endpoint",
+    "source": "ShiftLogic/up_th",
+    "port": 1,
+    "destinations": {
+      "path": "ShiftLogic/ SFunction ",
+      "port": 2,
+      "kind": "inport",
+      "sid": "16::36"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16::36_1__16::37_inport1",
+    "kind": "endpoint",
+    "source": "ShiftLogic/ SFunction ",
+    "port": 1,
+    "destinations": {
+      "path": "ShiftLogic/ Demux ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "16::37"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E16::36_2__16::6_inport1",
+    "kind": "endpoint",
+    "source": "ShiftLogic/ SFunction ",
+    "port": 2,
+    "destinations": {
+      "path": "ShiftLogic/gear",
+      "port": 1,
+      "kind": "inport",
+      "sid": "16::6"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16::37_1__16::7_inport1",
+    "kind": "endpoint",
+    "source": "ShiftLogic/ Demux ",
+    "port": 1,
+    "destinations": {
+      "path": "ShiftLogic/CALC_TH()",
+      "port": 1,
+      "kind": "inport",
+      "sid": "16::7"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E16::3_1__16::36_inport3",
+    "kind": "endpoint",
+    "source": "ShiftLogic/down_th",
+    "port": 1,
+    "destinations": {
+      "path": "ShiftLogic/ SFunction ",
+      "port": 3,
+      "kind": "inport",
+      "sid": "16::36"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16_1__104_inport1",
+    "kind": "endpoint",
+    "source": "ShiftLogic",
+    "port": 1,
+    "destinations": {
+      "path": "gear",
+      "port": 1,
+      "kind": "inport",
+      "sid": "104"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16_1__105_inport1",
+    "kind": "endpoint",
+    "source": "ShiftLogic",
+    "port": 1,
+    "destinations": {
+      "path": "Scope",
+      "port": 1,
+      "kind": "inport",
+      "sid": "105"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16_1__17_inport1",
+    "kind": "endpoint",
+    "source": "ShiftLogic",
+    "port": 1,
+    "destinations": {
+      "path": "ThresholdCalculation",
+      "port": 1,
+      "kind": "inport",
+      "sid": "17"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16_1__25_inport2",
+    "kind": "endpoint",
+    "source": "ShiftLogic",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission",
+      "port": 2,
+      "kind": "inport",
+      "sid": "25"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E16_2__17_trigger3",
+    "kind": "endpoint",
+    "source": "ShiftLogic",
+    "port": 2,
+    "destinations": {
+      "path": "ThresholdCalculation",
+      "port": 3,
+      "kind": "trigger",
+      "sid": "17"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [],
+    "reason": "control port: trigger"
+  },
+  {
+    "id": "E17_1__16_inport3",
+    "kind": "endpoint",
+    "source": "ThresholdCalculation",
+    "port": 1,
+    "destinations": {
+      "path": "ShiftLogic",
+      "port": 3,
+      "kind": "inport",
+      "sid": "16"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E17_2__16_inport2",
+    "kind": "endpoint",
+    "source": "ThresholdCalculation",
+    "port": 2,
+    "destinations": {
+      "path": "ShiftLogic",
+      "port": 2,
+      "kind": "inport",
+      "sid": "16"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E18_1__21_inport2",
+    "kind": "endpoint",
+    "source": "ThresholdCalculation/gear",
+    "port": 1,
+    "destinations": {
+      "path": "ThresholdCalculation/interp_down",
+      "port": 2,
+      "kind": "inport",
+      "sid": "21"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      -1,
+      -1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E18_1__22_inport2",
+    "kind": "endpoint",
+    "source": "ThresholdCalculation/gear",
+    "port": 1,
+    "destinations": {
+      "path": "ThresholdCalculation/interp_up",
+      "port": 2,
+      "kind": "inport",
+      "sid": "22"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      -1,
+      -1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E19_1__21_inport1",
+    "kind": "endpoint",
+    "source": "ThresholdCalculation/throttle",
+    "port": 1,
+    "destinations": {
+      "path": "ThresholdCalculation/interp_down",
+      "port": 1,
+      "kind": "inport",
+      "sid": "21"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      -1,
+      -1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E19_1__22_inport1",
+    "kind": "endpoint",
+    "source": "ThresholdCalculation/throttle",
+    "port": 1,
+    "destinations": {
+      "path": "ThresholdCalculation/interp_up",
+      "port": 1,
+      "kind": "inport",
+      "sid": "22"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      -1,
+      -1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E1_1__105_inport2",
+    "kind": "endpoint",
+    "source": "Engine",
+    "port": 1,
+    "destinations": {
+      "path": "Scope",
+      "port": 2,
+      "kind": "inport",
+      "sid": "105"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E1_1__25_inport1",
+    "kind": "endpoint",
+    "source": "Engine",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission",
+      "port": 1,
+      "kind": "inport",
+      "sid": "25"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E1_1__79_inport1",
+    "kind": "endpoint",
+    "source": "Engine",
+    "port": 1,
+    "destinations": {
+      "path": "RPM",
+      "port": 1,
+      "kind": "inport",
+      "sid": "79"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E21_1__23_inport1",
+    "kind": "endpoint",
+    "source": "ThresholdCalculation/interp_down",
+    "port": 1,
+    "destinations": {
+      "path": "ThresholdCalculation/down_th",
+      "port": 1,
+      "kind": "inport",
+      "sid": "23"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      -1,
+      -1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E22_1__24_inport1",
+    "kind": "endpoint",
+    "source": "ThresholdCalculation/interp_up",
+    "port": 1,
+    "destinations": {
+      "path": "ThresholdCalculation/up_th",
+      "port": 1,
+      "kind": "inport",
+      "sid": "24"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      -1,
+      -1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E25_1__1_inport1",
+    "kind": "endpoint",
+    "source": "Transmission",
+    "port": 1,
+    "destinations": {
+      "path": "Engine",
+      "port": 1,
+      "kind": "inport",
+      "sid": "1"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E25_2__51_inport1",
+    "kind": "endpoint",
+    "source": "Transmission",
+    "port": 2,
+    "destinations": {
+      "path": "Vehicle",
+      "port": 1,
+      "kind": "inport",
+      "sid": "51"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E26_1__29_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/Ne",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter",
+      "port": 1,
+      "kind": "inport",
+      "sid": "29"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E27_1__40_inport2",
+    "kind": "endpoint",
+    "source": "Transmission/gear",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio",
+      "port": 2,
+      "kind": "inport",
+      "sid": "40"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E28_1__40_inport3",
+    "kind": "endpoint",
+    "source": "Transmission/Nout",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio",
+      "port": 3,
+      "kind": "inport",
+      "sid": "40"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E29_1__49_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/Ti",
+      "port": 1,
+      "kind": "inport",
+      "sid": "49"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E29_2__40_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter",
+    "port": 2,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio",
+      "port": 1,
+      "kind": "inport",
+      "sid": "40"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E2_1__6_inport1",
+    "kind": "endpoint",
+    "source": "Engine/Ti",
+    "port": 1,
+    "destinations": {
+      "path": "Engine/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "6"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E30_1__34_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/Ne",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Quotient",
+      "port": 1,
+      "kind": "inport",
+      "sid": "34"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E30_1__35_inport2",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/Ne",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/SpeedRatio",
+      "port": 2,
+      "kind": "inport",
+      "sid": "35"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E31_1__35_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/Nin",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/SpeedRatio",
+      "port": 1,
+      "kind": "inport",
+      "sid": "35"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E32_1__34_inport2",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/FactorK",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Quotient",
+      "port": 2,
+      "kind": "inport",
+      "sid": "34"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E33_1__37_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/Impeller",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Turbine",
+      "port": 1,
+      "kind": "inport",
+      "sid": "37"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E33_1__38_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/Impeller",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Ti",
+      "port": 1,
+      "kind": "inport",
+      "sid": "38"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E34_1__33_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/Quotient",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Impeller",
+      "port": 1,
+      "kind": "inport",
+      "sid": "33"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E35_1__32_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/SpeedRatio",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/FactorK",
+      "port": 1,
+      "kind": "inport",
+      "sid": "32"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E35_1__36_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/SpeedRatio",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/TorqueRatio",
+      "port": 1,
+      "kind": "inport",
+      "sid": "36"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E36_1__37_inport2",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/TorqueRatio",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Turbine",
+      "port": 2,
+      "kind": "inport",
+      "sid": "37"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E37_1__39_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TorqueConverter/Turbine",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Tt",
+      "port": 1,
+      "kind": "inport",
+      "sid": "39"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E3_1__4_inport1",
+    "kind": "endpoint",
+    "source": "Engine/Throttle",
+    "port": 1,
+    "destinations": {
+      "path": "Engine/EngineTorque",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E40_1__50_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/Tout",
+      "port": 1,
+      "kind": "inport",
+      "sid": "50"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E40_2__29_inport2",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio",
+    "port": 2,
+    "destinations": {
+      "path": "Transmission/TorqueConverter",
+      "port": 2,
+      "kind": "inport",
+      "sid": "29"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E41_1__45_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio/Tin",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "45"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E42_1__44_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio/gear",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Look-Up\nTable",
+      "port": 1,
+      "kind": "inport",
+      "sid": "44"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E43_1__46_inport2",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio/Nout",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Product1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "46"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E44_1__45_inport2",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio/Look-Up\nTable",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "45"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E44_1__46_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio/Look-Up\nTable",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Product1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "46"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E45_1__47_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio/Product",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Tout",
+      "port": 1,
+      "kind": "inport",
+      "sid": "47"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E46_1__48_inport1",
+    "kind": "endpoint",
+    "source": "Transmission/TransmissionRatio/Product1",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Nin",
+      "port": 1,
+      "kind": "inport",
+      "sid": "48"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4_1__6_inport2",
+    "kind": "endpoint",
+    "source": "Engine/EngineTorque",
+    "port": 1,
+    "destinations": {
+      "path": "Engine/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "6"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E51_1__105_inport3",
+    "kind": "endpoint",
+    "source": "Vehicle",
+    "port": 1,
+    "destinations": {
+      "path": "Scope",
+      "port": 3,
+      "kind": "inport",
+      "sid": "105"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E51_1__16_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle",
+    "port": 1,
+    "destinations": {
+      "path": "ShiftLogic",
+      "port": 1,
+      "kind": "inport",
+      "sid": "16"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E51_1__80_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle",
+    "port": 1,
+    "destinations": {
+      "path": "speed",
+      "port": 1,
+      "kind": "inport",
+      "sid": "80"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E51_2__25_inport3",
+    "kind": "endpoint",
+    "source": "Vehicle",
+    "port": 2,
+    "destinations": {
+      "path": "Transmission",
+      "port": 3,
+      "kind": "inport",
+      "sid": "25"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E52_1__54_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/OutputTorque",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Final\nDrive\nRatio1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "54"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E53_1__61_inport2",
+    "kind": "endpoint",
+    "source": "Vehicle/BrakeTorque",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Sum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "61"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E54_1__60_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/Final\nDrive\nRatio1",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "60"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E55_1__66_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/FinalDriveRatio2",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/TransmissionRPM",
+      "port": 1,
+      "kind": "inport",
+      "sid": "66"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E56_1__64_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/LinearSpeed",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/mph",
+      "port": 1,
+      "kind": "inport",
+      "sid": "64"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E57_1__61_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/RoadLoad",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Sum1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "61"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E58_1__59_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/Sign",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/SignedLoad",
+      "port": 1,
+      "kind": "inport",
+      "sid": "59"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E59_1__60_inport2",
+    "kind": "endpoint",
+    "source": "Vehicle/SignedLoad",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "60"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E5_1__4_inport2",
+    "kind": "endpoint",
+    "source": "Engine/Integrator",
+    "port": 1,
+    "destinations": {
+      "path": "Engine/EngineTorque",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E5_1__8_inport1",
+    "kind": "endpoint",
+    "source": "Engine/Integrator",
+    "port": 1,
+    "destinations": {
+      "path": "Engine/Ne",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E60_1__62_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Vehicle\nInertia",
+      "port": 1,
+      "kind": "inport",
+      "sid": "62"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E61_1__59_inport2",
+    "kind": "endpoint",
+    "source": "Vehicle/Sum1",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/SignedLoad",
+      "port": 2,
+      "kind": "inport",
+      "sid": "59"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E62_1__63_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/Vehicle\nInertia",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Wheel\nSpeed",
+      "port": 1,
+      "kind": "inport",
+      "sid": "63"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E63_1__55_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/Wheel\nSpeed",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/FinalDriveRatio2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "55"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E63_1__56_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/Wheel\nSpeed",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/LinearSpeed",
+      "port": 1,
+      "kind": "inport",
+      "sid": "56"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E64_1__57_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/mph",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/RoadLoad",
+      "port": 1,
+      "kind": "inport",
+      "sid": "57"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E64_1__58_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/mph",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Sign",
+      "port": 1,
+      "kind": "inport",
+      "sid": "58"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E64_1__65_inport1",
+    "kind": "endpoint",
+    "source": "Vehicle/mph",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/VehicleSpeed",
+      "port": 1,
+      "kind": "inport",
+      "sid": "65"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E6_1__7_inport1",
+    "kind": "endpoint",
+    "source": "Engine/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Engine/engine + impeller\ninertia",
+      "port": 1,
+      "kind": "inport",
+      "sid": "7"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E7_1__5_inport1",
+    "kind": "endpoint",
+    "source": "Engine/engine + impeller\ninertia",
+    "port": 1,
+    "destinations": {
+      "path": "Engine/Integrator",
+      "port": 1,
+      "kind": "inport",
+      "sid": "5"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E84_1__107_inport1",
+    "kind": "endpoint",
+    "source": "throttle",
+    "port": 1,
+    "destinations": {
+      "path": "Scope2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "107"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E84_1__17_inport2",
+    "kind": "endpoint",
+    "source": "throttle",
+    "port": 1,
+    "destinations": {
+      "path": "ThresholdCalculation",
+      "port": 2,
+      "kind": "inport",
+      "sid": "17"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E84_1__1_inport2",
+    "kind": "endpoint",
+    "source": "throttle",
+    "port": 1,
+    "destinations": {
+      "path": "Engine",
+      "port": 2,
+      "kind": "inport",
+      "sid": "1"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O34",
+    "kind": "operator",
+    "source": "Transmission/TorqueConverter/Quotient",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Impeller",
+      "port": 1,
+      "kind": "inport",
+      "sid": "33"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O35",
+    "kind": "operator",
+    "source": "Transmission/TorqueConverter/SpeedRatio",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Transmission/TorqueConverter/TorqueRatio",
+        "port": 1,
+        "kind": "inport",
+        "sid": "36"
+      },
+      {
+        "path": "Transmission/TorqueConverter/FactorK",
+        "port": 1,
+        "kind": "inport",
+        "sid": "32"
+      }
+    ],
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O37",
+    "kind": "operator",
+    "source": "Transmission/TorqueConverter/Turbine",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TorqueConverter/Tt",
+      "port": 1,
+      "kind": "inport",
+      "sid": "39"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O45",
+    "kind": "operator",
+    "source": "Transmission/TransmissionRatio/Product",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Tout",
+      "port": 1,
+      "kind": "inport",
+      "sid": "47"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O46",
+    "kind": "operator",
+    "source": "Transmission/TransmissionRatio/Product1",
+    "port": 1,
+    "destinations": {
+      "path": "Transmission/TransmissionRatio/Nin",
+      "port": 1,
+      "kind": "inport",
+      "sid": "48"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O59",
+    "kind": "operator",
+    "source": "Vehicle/SignedLoad",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "60"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O6",
+    "kind": "operator",
+    "source": "Engine/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Engine/engine + impeller\ninertia",
+      "port": 1,
+      "kind": "inport",
+      "sid": "7"
+    },
+    "operandCount": 2,
+    "originalOperator": "-+",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O60",
+    "kind": "operator",
+    "source": "Vehicle/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/Vehicle\nInertia",
+      "port": 1,
+      "kind": "inport",
+      "sid": "62"
+    },
+    "operandCount": 2,
+    "originalOperator": "+-",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O61",
+    "kind": "operator",
+    "source": "Vehicle/Sum1",
+    "port": 1,
+    "destinations": {
+      "path": "Vehicle/SignedLoad",
+      "port": 2,
+      "kind": "inport",
+      "sid": "59"
+    },
+    "operandCount": 2,
+    "originalOperator": "++",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T106_1",
+    "kind": "stem",
+    "source": "brake",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Vehicle",
+        "port": 2,
+        "kind": "inport",
+        "sid": "51"
+      },
+      {
+        "path": "Scope2",
+        "port": 2,
+        "kind": "inport",
+        "sid": "107"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T16_1",
+    "kind": "stem",
+    "source": "ShiftLogic",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Transmission",
+        "port": 2,
+        "kind": "inport",
+        "sid": "25"
+      },
+      {
+        "path": "ThresholdCalculation",
+        "port": 1,
+        "kind": "inport",
+        "sid": "17"
+      },
+      {
+        "path": "gear",
+        "port": 1,
+        "kind": "inport",
+        "sid": "104"
+      },
+      {
+        "path": "Scope",
+        "port": 1,
+        "kind": "inport",
+        "sid": "105"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T18_1",
+    "kind": "stem",
+    "source": "ThresholdCalculation/gear",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "ThresholdCalculation/interp_up",
+        "port": 2,
+        "kind": "inport",
+        "sid": "22"
+      },
+      {
+        "path": "ThresholdCalculation/interp_down",
+        "port": 2,
+        "kind": "inport",
+        "sid": "21"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      -1,
+      -1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T19_1",
+    "kind": "stem",
+    "source": "ThresholdCalculation/throttle",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "ThresholdCalculation/interp_up",
+        "port": 1,
+        "kind": "inport",
+        "sid": "22"
+      },
+      {
+        "path": "ThresholdCalculation/interp_down",
+        "port": 1,
+        "kind": "inport",
+        "sid": "21"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      -1,
+      -1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T1_1",
+    "kind": "stem",
+    "source": "Engine",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Transmission",
+        "port": 1,
+        "kind": "inport",
+        "sid": "25"
+      },
+      {
+        "path": "RPM",
+        "port": 1,
+        "kind": "inport",
+        "sid": "79"
+      },
+      {
+        "path": "Scope",
+        "port": 2,
+        "kind": "inport",
+        "sid": "105"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T30_1",
+    "kind": "stem",
+    "source": "Transmission/TorqueConverter/Ne",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Transmission/TorqueConverter/SpeedRatio",
+        "port": 2,
+        "kind": "inport",
+        "sid": "35"
+      },
+      {
+        "path": "Transmission/TorqueConverter/Quotient",
+        "port": 1,
+        "kind": "inport",
+        "sid": "34"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T33_1",
+    "kind": "stem",
+    "source": "Transmission/TorqueConverter/Impeller",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Transmission/TorqueConverter/Turbine",
+        "port": 1,
+        "kind": "inport",
+        "sid": "37"
+      },
+      {
+        "path": "Transmission/TorqueConverter/Ti",
+        "port": 1,
+        "kind": "inport",
+        "sid": "38"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T35_1",
+    "kind": "stem",
+    "source": "Transmission/TorqueConverter/SpeedRatio",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Transmission/TorqueConverter/TorqueRatio",
+        "port": 1,
+        "kind": "inport",
+        "sid": "36"
+      },
+      {
+        "path": "Transmission/TorqueConverter/FactorK",
+        "port": 1,
+        "kind": "inport",
+        "sid": "32"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T44_1",
+    "kind": "stem",
+    "source": "Transmission/TransmissionRatio/Look-Up\nTable",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Transmission/TransmissionRatio/Product1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "46"
+      },
+      {
+        "path": "Transmission/TransmissionRatio/Product",
+        "port": 2,
+        "kind": "inport",
+        "sid": "45"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.04,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T51_1",
+    "kind": "stem",
+    "source": "Vehicle",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "ShiftLogic",
+        "port": 1,
+        "kind": "inport",
+        "sid": "16"
+      },
+      {
+        "path": "speed",
+        "port": 1,
+        "kind": "inport",
+        "sid": "80"
+      },
+      {
+        "path": "Scope",
+        "port": 3,
+        "kind": "inport",
+        "sid": "105"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T5_1",
+    "kind": "stem",
+    "source": "Engine/Integrator",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Engine/EngineTorque",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4"
+      },
+      {
+        "path": "Engine/Ne",
+        "port": 1,
+        "kind": "inport",
+        "sid": "8"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T63_1",
+    "kind": "stem",
+    "source": "Vehicle/Wheel\nSpeed",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Vehicle/LinearSpeed",
+        "port": 1,
+        "kind": "inport",
+        "sid": "56"
+      },
+      {
+        "path": "Vehicle/FinalDriveRatio2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "55"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T64_1",
+    "kind": "stem",
+    "source": "Vehicle/mph",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Vehicle/VehicleSpeed",
+        "port": 1,
+        "kind": "inport",
+        "sid": "65"
+      },
+      {
+        "path": "Vehicle/Sign",
+        "port": 1,
+        "kind": "inport",
+        "sid": "58"
+      },
+      {
+        "path": "Vehicle/RoadLoad",
+        "port": 1,
+        "kind": "inport",
+        "sid": "57"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T84_1",
+    "kind": "stem",
+    "source": "throttle",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Engine",
+        "port": 2,
+        "kind": "inport",
+        "sid": "1"
+      },
+      {
+        "path": "ThresholdCalculation",
+        "port": 2,
+        "kind": "inport",
+        "sid": "17"
+      },
+      {
+        "path": "Scope2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "107"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  }
+]

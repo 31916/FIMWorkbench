@@ -1,0 +1,2737 @@
+[
+  {
+    "id": "E570_1__602_inport1",
+    "kind": "endpoint",
+    "source": "LRL_input",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion",
+      "port": 1,
+      "kind": "inport",
+      "sid": "602"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E573_1__587_inport1",
+    "kind": "endpoint",
+    "source": "Constant1",
+    "port": 1,
+    "destinations": {
+      "path": "Multiply3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "587"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E574_1__609_inport1",
+    "kind": "endpoint",
+    "source": "Constant2",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion7",
+      "port": 1,
+      "kind": "inport",
+      "sid": "609"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E575_1__580_inport1",
+    "kind": "endpoint",
+    "source": "Constant3",
+    "port": 1,
+    "destinations": {
+      "path": "Multiply",
+      "port": 1,
+      "kind": "inport",
+      "sid": "580"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E576_1__618_inport1",
+    "kind": "endpoint",
+    "source": "Constant4",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion6",
+      "port": 1,
+      "kind": "inport",
+      "sid": "618"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E577_1__612_inport1",
+    "kind": "endpoint",
+    "source": "Constant5",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion10",
+      "port": 1,
+      "kind": "inport",
+      "sid": "612"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E578_1__619_inport1",
+    "kind": "endpoint",
+    "source": "Constant6",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion9",
+      "port": 1,
+      "kind": "inport",
+      "sid": "619"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E579_1__620_inport1",
+    "kind": "endpoint",
+    "source": "Constant7",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion11",
+      "port": 1,
+      "kind": "inport",
+      "sid": "620"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E580_1__8_inport8",
+    "kind": "endpoint",
+    "source": "Multiply",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 8,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E581_1__606_inport1",
+    "kind": "endpoint",
+    "source": "Constant8",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion4",
+      "port": 1,
+      "kind": "inport",
+      "sid": "606"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E582_1__586_inport1",
+    "kind": "endpoint",
+    "source": "Constant9",
+    "port": 1,
+    "destinations": {
+      "path": "Multiply2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "586"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E583_1__604_inport1",
+    "kind": "endpoint",
+    "source": "Constant10",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "604"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E584_1__585_inport1",
+    "kind": "endpoint",
+    "source": "Constant11",
+    "port": 1,
+    "destinations": {
+      "path": "Multiply1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "585"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E585_1__616_inport1",
+    "kind": "endpoint",
+    "source": "Multiply1",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion8",
+      "port": 1,
+      "kind": "inport",
+      "sid": "616"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E586_1__615_inport1",
+    "kind": "endpoint",
+    "source": "Multiply2",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "615"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E587_1__614_inport1",
+    "kind": "endpoint",
+    "source": "Multiply3",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion5",
+      "port": 1,
+      "kind": "inport",
+      "sid": "614"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E595_1__603_inport1",
+    "kind": "endpoint",
+    "source": "Divide",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "603"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E595_1__8_inport1",
+    "kind": "endpoint",
+    "source": "Divide",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E596_1__595_inport1",
+    "kind": "endpoint",
+    "source": "BPM",
+    "port": 1,
+    "destinations": {
+      "path": "Divide",
+      "port": 1,
+      "kind": "inport",
+      "sid": "595"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E602_1__595_inport2",
+    "kind": "endpoint",
+    "source": "Data Type Conversion",
+    "port": 1,
+    "destinations": {
+      "path": "Divide",
+      "port": 2,
+      "kind": "inport",
+      "sid": "595"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E602_1__622_inport1",
+    "kind": "endpoint",
+    "source": "Data Type Conversion",
+    "port": 1,
+    "destinations": {
+      "path": "Data Type Conversion12",
+      "port": 1,
+      "kind": "inport",
+      "sid": "622"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E603_1__572_inport1",
+    "kind": "endpoint",
+    "source": "Data Type Conversion1",
+    "port": 1,
+    "destinations": {
+      "path": "Period",
+      "port": 1,
+      "kind": "inport",
+      "sid": "572"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E604_1__8_inport5",
+    "kind": "endpoint",
+    "source": "Data Type Conversion2",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 5,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E606_1__8_inport3",
+    "kind": "endpoint",
+    "source": "Data Type Conversion4",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 3,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E609_1__8_inport7",
+    "kind": "endpoint",
+    "source": "Data Type Conversion7",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 7,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E612_1__8_inport10",
+    "kind": "endpoint",
+    "source": "Data Type Conversion10",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 10,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E614_1__8_inport2",
+    "kind": "endpoint",
+    "source": "Data Type Conversion5",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 2,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E615_1__8_inport4",
+    "kind": "endpoint",
+    "source": "Data Type Conversion3",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 4,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E616_1__8_inport6",
+    "kind": "endpoint",
+    "source": "Data Type Conversion8",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 6,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E618_1__8_inport9",
+    "kind": "endpoint",
+    "source": "Data Type Conversion6",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 9,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E619_1__8_inport11",
+    "kind": "endpoint",
+    "source": "Data Type Conversion9",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 11,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "boolean",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bit_flip",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E620_1__8_inport12",
+    "kind": "endpoint",
+    "source": "Data Type Conversion11",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow",
+      "port": 12,
+      "kind": "inport",
+      "sid": "8"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "boolean",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bit_flip",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E622_1__597_inport1",
+    "kind": "endpoint",
+    "source": "Data Type Conversion12",
+    "port": 1,
+    "destinations": {
+      "path": "LRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "597"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E623_1__621_inport1",
+    "kind": "endpoint",
+    "source": "Data Type Conversion13",
+    "port": 1,
+    "destinations": {
+      "path": "PACE_COUNT",
+      "port": 1,
+      "kind": "inport",
+      "sid": "621"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::109_1__8::325_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/Period",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::111_1__8::325_inport2",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/AAmplitude",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 2,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::112_1__8::325_inport3",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/APW",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 3,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::118_1__8::325_inport7",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/VPW",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 7,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::119_1__8::325_inport6",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/VAmplitude",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 6,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::168_1__8::325_inport10",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/Mode",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 10,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::173_1__8::325_inport4",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ASensitivity",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 4,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::174_1__8::325_inport5",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ARP",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 5,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::175_1__8::325_inport8",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/VSensitivity",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 8,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::176_1__8::325_inport9",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/VRP",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 9,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::177_1__8::325_inport11",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ATR_CMP_DETECT",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 11,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "boolean",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bit_flip",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::178_1__8::325_inport12",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/VENT_CMP_DETECT",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ SFunction ",
+      "port": 12,
+      "kind": "inport",
+      "sid": "8::325"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "boolean",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bit_flip",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_10__8::167_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 10,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/PACE_GND_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::167"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_11__8::125_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 11,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ATR_GND_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::125"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_12__8::124_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 12,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/VENT_GND_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::124"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_13__8::169_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 13,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/FRONTEND_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::169"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_14__8::170_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 14,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/RED_LED",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::170"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_15__8::171_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 15,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/GREEN_LED",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::171"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_16__8::172_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 16,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/BLUE_LED",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::172"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_17__8::324_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 17,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/PACE_COUNT",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::324"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_1__8::326_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ Demux ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::326"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E8::325_2__8::122_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 2,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/PACE_CHARGE_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::122"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_3__8::180_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 3,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/VENT_CMP_REF_PWM",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::180"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_4__8::165_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 4,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/Z_ATR_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::165"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_5__8::131_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 5,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/PACING_REF_PWM",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::131"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_6__8::179_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 6,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ATR_CMP_REF_PWM",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::179"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_7__8::166_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 7,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/Z_VENT_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::166"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_8__8::127_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 8,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ATR_PACE_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::127"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::325_9__8::126_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ SFunction ",
+    "port": 9,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/VENT_PACE_CTRL",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::126"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8::326_1__8::327_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow/ Demux ",
+    "port": 1,
+    "destinations": {
+      "path": "Pacemaker System Stateflow/ Terminator ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "8::327"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E8_10__592_inport6",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 10,
+    "destinations": {
+      "path": "Scope",
+      "port": 6,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_11__592_inport7",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 11,
+    "destinations": {
+      "path": "Scope",
+      "port": 7,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_12__592_inport8",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 12,
+    "destinations": {
+      "path": "Scope",
+      "port": 8,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_13__592_inport9",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 13,
+    "destinations": {
+      "path": "Scope",
+      "port": 9,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_14__592_inport10",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 14,
+    "destinations": {
+      "path": "Scope",
+      "port": 10,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_15__592_inport11",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 15,
+    "destinations": {
+      "path": "Scope",
+      "port": 11,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_16__623_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 16,
+    "destinations": {
+      "path": "Data Type Conversion13",
+      "port": 1,
+      "kind": "inport",
+      "sid": "623"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_1__598_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 1,
+    "destinations": {
+      "path": "Scope1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "598"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_2__598_inport2",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 2,
+    "destinations": {
+      "path": "Scope1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "598"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_3__598_inport3",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 3,
+    "destinations": {
+      "path": "Scope1",
+      "port": 3,
+      "kind": "inport",
+      "sid": "598"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_4__598_inport4",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 4,
+    "destinations": {
+      "path": "Scope1",
+      "port": 4,
+      "kind": "inport",
+      "sid": "598"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_5__592_inport1",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 5,
+    "destinations": {
+      "path": "Scope",
+      "port": 1,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_6__592_inport2",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 6,
+    "destinations": {
+      "path": "Scope",
+      "port": 2,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_7__592_inport3",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 7,
+    "destinations": {
+      "path": "Scope",
+      "port": 3,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_8__592_inport4",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 8,
+    "destinations": {
+      "path": "Scope",
+      "port": 4,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E8_9__592_inport5",
+    "kind": "endpoint",
+    "source": "Pacemaker System Stateflow",
+    "port": 9,
+    "destinations": {
+      "path": "Scope",
+      "port": 5,
+      "kind": "inport",
+      "sid": "592"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T595_1",
+    "kind": "stem",
+    "source": "Divide",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Data Type Conversion1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "603"
+      },
+      {
+        "path": "Pacemaker System Stateflow",
+        "port": 1,
+        "kind": "inport",
+        "sid": "8"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T602_1",
+    "kind": "stem",
+    "source": "Data Type Conversion",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Data Type Conversion12",
+        "port": 1,
+        "kind": "inport",
+        "sid": "622"
+      },
+      {
+        "path": "Divide",
+        "port": 2,
+        "kind": "inport",
+        "sid": "595"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "uint16",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0.001,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "sourceSha256": "3d78e8ad8ecffd10381a416e404277420a5b9c54bcf31d1770d030466d61fca6",
+  "faults": [
+    {
+      "site": "E623_1__621_inport1",
+      "type": "bias",
+      "enabled": true,
+      "value": -1
+    },
+    {
+      "site": "E623_1__621_inport1",
+      "type": "gain",
+      "enabled": true,
+      "value": 1.5
+    },
+    {
+      "site": "E570_1__602_inport1",
+      "type": "bias",
+      "enabled": true,
+      "value": 0.015625
+    }
+  ]
+}

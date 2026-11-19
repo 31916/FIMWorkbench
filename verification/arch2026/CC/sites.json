@@ -1,0 +1,1246 @@
+[
+  {
+    "id": "E1::102_1__1::106_inport1",
+    "kind": "endpoint",
+    "source": "Car 2/y_in",
+    "port": 1,
+    "destinations": {
+      "path": "Car 2/ SFunction ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "1::106"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E1::106_1__1::107_inport1",
+    "kind": "endpoint",
+    "source": "Car 2/ SFunction ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 2/ Demux ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "1::107"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E1::106_2__1::90_inport1",
+    "kind": "endpoint",
+    "source": "Car 2/ SFunction ",
+    "port": 2,
+    "destinations": {
+      "path": "Car 2/y_out",
+      "port": 1,
+      "kind": "inport",
+      "sid": "1::90"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E1::107_1__1::108_inport1",
+    "kind": "endpoint",
+    "source": "Car 2/ Demux ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 2/ Terminator ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "1::108"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E1_1__21_inport1",
+    "kind": "endpoint",
+    "source": "Car 2",
+    "port": 1,
+    "destinations": {
+      "path": "Car 3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "21"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E1_1__30_inport1",
+    "kind": "endpoint",
+    "source": "Car 2",
+    "port": 1,
+    "destinations": {
+      "path": "Out2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "30"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E20::100_1__20::101_inport1",
+    "kind": "endpoint",
+    "source": "Car 1/ Demux ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 1/ Terminator ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "20::101"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E20::93_1__20::99_inport2",
+    "kind": "endpoint",
+    "source": "Car 1/Brake",
+    "port": 1,
+    "destinations": {
+      "path": "Car 1/ SFunction ",
+      "port": 2,
+      "kind": "inport",
+      "sid": "20::99"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E20::94_1__20::99_inport1",
+    "kind": "endpoint",
+    "source": "Car 1/Throttle",
+    "port": 1,
+    "destinations": {
+      "path": "Car 1/ SFunction ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "20::99"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E20::99_1__20::100_inport1",
+    "kind": "endpoint",
+    "source": "Car 1/ SFunction ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 1/ Demux ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "20::100"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E20::99_2__20::95_inport1",
+    "kind": "endpoint",
+    "source": "Car 1/ SFunction ",
+    "port": 2,
+    "destinations": {
+      "path": "Car 1/y_out",
+      "port": 1,
+      "kind": "inport",
+      "sid": "20::95"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E20_1__1_inport1",
+    "kind": "endpoint",
+    "source": "Car 1",
+    "port": 1,
+    "destinations": {
+      "path": "Car 2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "1"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E20_1__29_inport1",
+    "kind": "endpoint",
+    "source": "Car 1",
+    "port": 1,
+    "destinations": {
+      "path": "Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "29"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E21::102_1__21::106_inport1",
+    "kind": "endpoint",
+    "source": "Car 3/y_in",
+    "port": 1,
+    "destinations": {
+      "path": "Car 3/ SFunction ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "21::106"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E21::106_1__21::107_inport1",
+    "kind": "endpoint",
+    "source": "Car 3/ SFunction ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 3/ Demux ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "21::107"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E21::106_2__21::90_inport1",
+    "kind": "endpoint",
+    "source": "Car 3/ SFunction ",
+    "port": 2,
+    "destinations": {
+      "path": "Car 3/y_out",
+      "port": 1,
+      "kind": "inport",
+      "sid": "21::90"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E21::107_1__21::108_inport1",
+    "kind": "endpoint",
+    "source": "Car 3/ Demux ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 3/ Terminator ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "21::108"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E21_1__23_inport1",
+    "kind": "endpoint",
+    "source": "Car 3",
+    "port": 1,
+    "destinations": {
+      "path": "Car 4",
+      "port": 1,
+      "kind": "inport",
+      "sid": "23"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E21_1__31_inport1",
+    "kind": "endpoint",
+    "source": "Car 3",
+    "port": 1,
+    "destinations": {
+      "path": "Out3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "31"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E23::102_1__23::107_inport1",
+    "kind": "endpoint",
+    "source": "Car 4/y_in",
+    "port": 1,
+    "destinations": {
+      "path": "Car 4/ SFunction ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "23::107"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E23::107_1__23::108_inport1",
+    "kind": "endpoint",
+    "source": "Car 4/ SFunction ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 4/ Demux ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "23::108"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E23::107_2__23::103_inport1",
+    "kind": "endpoint",
+    "source": "Car 4/ SFunction ",
+    "port": 2,
+    "destinations": {
+      "path": "Car 4/y_out",
+      "port": 1,
+      "kind": "inport",
+      "sid": "23::103"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E23::108_1__23::109_inport1",
+    "kind": "endpoint",
+    "source": "Car 4/ Demux ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 4/ Terminator ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "23::109"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E23_1__25_inport1",
+    "kind": "endpoint",
+    "source": "Car 4",
+    "port": 1,
+    "destinations": {
+      "path": "Car 5",
+      "port": 1,
+      "kind": "inport",
+      "sid": "25"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E23_1__32_inport1",
+    "kind": "endpoint",
+    "source": "Car 4",
+    "port": 1,
+    "destinations": {
+      "path": "Out4",
+      "port": 1,
+      "kind": "inport",
+      "sid": "32"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E25::102_1__25::106_inport1",
+    "kind": "endpoint",
+    "source": "Car 5/y_in",
+    "port": 1,
+    "destinations": {
+      "path": "Car 5/ SFunction ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "25::106"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E25::106_1__25::107_inport1",
+    "kind": "endpoint",
+    "source": "Car 5/ SFunction ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 5/ Demux ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "25::107"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E25::106_2__25::90_inport1",
+    "kind": "endpoint",
+    "source": "Car 5/ SFunction ",
+    "port": 2,
+    "destinations": {
+      "path": "Car 5/y_out",
+      "port": 1,
+      "kind": "inport",
+      "sid": "25::90"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E25::107_1__25::108_inport1",
+    "kind": "endpoint",
+    "source": "Car 5/ Demux ",
+    "port": 1,
+    "destinations": {
+      "path": "Car 5/ Terminator ",
+      "port": 1,
+      "kind": "inport",
+      "sid": "25::108"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "fcn_call",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [],
+    "reason": "unsupported signal type: fcn_call"
+  },
+  {
+    "id": "E25_1__37_inport1",
+    "kind": "endpoint",
+    "source": "Car 5",
+    "port": 1,
+    "destinations": {
+      "path": "Out5",
+      "port": 1,
+      "kind": "inport",
+      "sid": "37"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E35_1__20_inport1",
+    "kind": "endpoint",
+    "source": "In1",
+    "port": 1,
+    "destinations": {
+      "path": "Car 1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "20"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E36_1__20_inport2",
+    "kind": "endpoint",
+    "source": "In2",
+    "port": 1,
+    "destinations": {
+      "path": "Car 1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "20"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T1_1",
+    "kind": "stem",
+    "source": "Car 2",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Out2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "30"
+      },
+      {
+        "path": "Car 3",
+        "port": 1,
+        "kind": "inport",
+        "sid": "21"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T20_1",
+    "kind": "stem",
+    "source": "Car 1",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Out1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "29"
+      },
+      {
+        "path": "Car 2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "1"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T21_1",
+    "kind": "stem",
+    "source": "Car 3",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Out3",
+        "port": 1,
+        "kind": "inport",
+        "sid": "31"
+      },
+      {
+        "path": "Car 4",
+        "port": 1,
+        "kind": "inport",
+        "sid": "23"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T23_1",
+    "kind": "stem",
+    "source": "Car 4",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Car 5",
+        "port": 1,
+        "kind": "inport",
+        "sid": "25"
+      },
+      {
+        "path": "Out4",
+        "port": 1,
+        "kind": "inport",
+        "sid": "32"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  }
+]

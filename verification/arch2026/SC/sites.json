@@ -1,0 +1,6926 @@
+[
+  {
+    "id": "E193_1__223_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Pressure Setpoint1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Sum2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "223"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E195_1__97_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Bus\nSelector1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "97"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      -2,
+      6,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E196_1__215_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Fs",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "215"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E197_1__208_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Tcw",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "208"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      2,
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E197_1__216_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Tcw",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "216"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      2,
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E198_1__218_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Fcw",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum6",
+      "port": 1,
+      "kind": "inport",
+      "sid": "218"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E199_1__217_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/1//Cp",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "217"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E200_1__206_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/1//Mcw",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Integrator1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "206"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E201:54_1__201:55_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Actuator/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Actuator/State Space",
+      "port": 1,
+      "kind": "inport",
+      "sid": "201:55"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E201:55_1__201:56_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Actuator/State Space",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Actuator/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "201:56"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E201_1__202_inport6",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Actuator",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+      "port": 6,
+      "kind": "inport",
+      "sid": "202"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E201_1__211_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Actuator",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Product1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "211"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E201_1__219_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Actuator",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/U",
+      "port": 1,
+      "kind": "inport",
+      "sid": "219"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E202_1__222_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Bus\nCreator1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/y",
+      "port": 1,
+      "kind": "inport",
+      "sid": "222"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      -2,
+      6,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E203_1__202_inport3",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Divide",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+      "port": 3,
+      "kind": "inport",
+      "sid": "202"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E203_1__215_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Divide",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "215"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E204_1__218_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Fcw Setpoint",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum6",
+      "port": 2,
+      "kind": "inport",
+      "sid": "218"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E205_1__207_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Integrator",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Lambda",
+      "port": 1,
+      "kind": "inport",
+      "sid": "207"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E205_1__209_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Integrator",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/P-T",
+      "port": 1,
+      "kind": "inport",
+      "sid": "209"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E205_1__221_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Integrator",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/sensor",
+      "port": 1,
+      "kind": "inport",
+      "sid": "221"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E206_1__202_inport5",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Integrator1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+      "port": 5,
+      "kind": "inport",
+      "sid": "202"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E206_1__208_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Integrator1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Mux",
+      "port": 2,
+      "kind": "inport",
+      "sid": "208"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E206_1__216_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Integrator1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "216"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E207_1__203_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Lambda",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Divide",
+      "port": 1,
+      "kind": "inport",
+      "sid": "203"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E208_1__220_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Mux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/dTm",
+      "port": 1,
+      "kind": "inport",
+      "sid": "220"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      [
+        0,
+        0
+      ],
+      [
+        null,
+        0
+      ]
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E209_1__202_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/P-T",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "202"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E209_1__208_inport3",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/P-T",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Mux",
+      "port": 3,
+      "kind": "inport",
+      "sid": "208"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E209_1__210_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/P-T",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "210"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E210_1__213_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/R//V",
+      "port": 1,
+      "kind": "inport",
+      "sid": "213"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E211_1__217_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Product1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum3",
+      "port": 2,
+      "kind": "inport",
+      "sid": "217"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E212_1__199_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Product2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/1//Cp",
+      "port": 1,
+      "kind": "inport",
+      "sid": "199"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E212_1__202_inport4",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Product2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+      "port": 4,
+      "kind": "inport",
+      "sid": "202"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E212_1__203_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Product2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Divide",
+      "port": 2,
+      "kind": "inport",
+      "sid": "203"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E213_1__205_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/R//V",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Integrator",
+      "port": 1,
+      "kind": "inport",
+      "sid": "205"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E214_1__201_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Saturation",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Actuator",
+      "port": 1,
+      "kind": "inport",
+      "sid": "201"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E215_1__210_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "210"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E216_1__211_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Sum2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Product1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "211"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E217_1__200_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Sum3",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/1//Mcw",
+      "port": 1,
+      "kind": "inport",
+      "sid": "200"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E218_1__214_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/Sum6",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Saturation",
+      "port": 1,
+      "kind": "inport",
+      "sid": "214"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E219_1__212_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/U",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Product2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "212"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E220_1__212_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/dTm",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Product2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "212"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E221:54_1__221:55_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/sensor/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/sensor/State Space",
+      "port": 1,
+      "kind": "inport",
+      "sid": "221:55"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E221:55_1__221:56_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/sensor/State Space",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/sensor/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "221:56"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E221_1__202_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Steam Condenser1/sensor",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "202"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E223_1__4106_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Sum2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4106"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E224_1__195_inport3",
+    "kind": "endpoint",
+    "source": "Subsystem/Sum3",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1",
+      "port": 3,
+      "kind": "inport",
+      "sid": "195"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E225_1__195_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Tcw1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "195"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      2,
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E231_1__4333_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem",
+    "port": 1,
+    "destinations": {
+      "path": "T",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4333"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E231_2__4334_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem",
+    "port": 2,
+    "destinations": {
+      "path": "Fcw",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4334"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E231_3__4335_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem",
+    "port": 3,
+    "destinations": {
+      "path": "Q",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4335"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E231_4__4336_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem",
+    "port": 4,
+    "destinations": {
+      "path": "pressure",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4336"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E232_1__195_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "195"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4029_1__4029_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4029"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4029_1__4073_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4073"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4030_1__4032_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/p{1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4032"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4031_1__4036_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/a{1} ",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4036"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4032_1__4049_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4049"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4033_1__4034_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 1/p{1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 1/mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4034"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4034_1__4035_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 1/mux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 1/pd{1,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4035"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4036_1__4059_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4059"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4037_1__4038_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/p{1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Demux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4038"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4038_1__4043_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Demux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4043"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4038_2__4042_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Demux",
+    "port": 2,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4042"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4038_3__4041_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Demux",
+    "port": 3,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4041"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4039_1__4047_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4047"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4040_1__4047_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/mux",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4047"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4041_1__4039_inport3",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux",
+      "port": 3,
+      "kind": "inport",
+      "sid": "4039"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4041_1__4044_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4044"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4042_1__4039_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4039"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4042_1__4045_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn4",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4045"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4043_1__4039_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4039"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4043_1__4046_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn5",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4046"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4044_1__4040_inport3",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn3",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux1",
+      "port": 3,
+      "kind": "inport",
+      "sid": "4040"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4045_1__4040_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn4",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4040"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4046_1__4040_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn5",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4040"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4047_1__4048_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/mux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/pd{1,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4048"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4049_1__4070_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/netsum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4070"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4050_1__4055_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/pd{1,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4055"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4050_1__4056_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/pd{1,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4056"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4050_1__4057_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/pd{1,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4057"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4051_1__4055_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/IW{1,1}(1,:)'",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4055"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4052_1__4056_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/IW{1,1}(2,:)'",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4056"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4053_1__4057_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/IW{1,1}(3,:)'",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4057"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4054_1__4058_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/Mux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/iz{1,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4058"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4055:395_1__4055:403_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1/Dot Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4055:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4055:397_1__4055:403_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1/In2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1/Dot Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4055:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4055:403_1__4055:396_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1/Dot Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4055:396"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4055_1__4054_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/Mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4054"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4056:395_1__4056:403_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2/Dot Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4056:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4056:397_1__4056:403_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2/In2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2/Dot Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4056:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4056:403_1__4056:396_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2/Dot Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4056:396"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4056_1__4054_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/Mux",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4054"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4057:395_1__4057:403_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3/Dot Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4057:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4057:397_1__4057:403_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3/In2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3/Dot Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4057:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4057:403_1__4057:396_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3/Dot Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4057:396"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4057_1__4054_inport3",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/Mux",
+      "port": 3,
+      "kind": "inport",
+      "sid": "4054"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4059_1__4070_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/netsum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4070"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4060_1__4065_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/ad{1,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4065"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4060_1__4066_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/ad{1,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4066"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4060_1__4067_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/ad{1,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4067"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4061_1__4065_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/IW{1,1}(1,:)'",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4065"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4062_1__4066_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/IW{1,1}(2,:)'",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4066"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4063_1__4067_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/IW{1,1}(3,:)'",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4067"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4064_1__4068_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/Mux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/lz{1,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4068"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4065:395_1__4065:403_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1/Dot Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4065:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4065:397_1__4065:403_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1/In2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1/Dot Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4065:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4065:403_1__4065:396_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1/Dot Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4065:396"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4065_1__4064_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/Mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4064"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4066:395_1__4066:403_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2/Dot Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4066:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4066:397_1__4066:403_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2/In2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2/Dot Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4066:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4066:403_1__4066:396_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2/Dot Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4066:396"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4066_1__4064_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/Mux",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4064"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4067:395_1__4067:403_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3/Dot Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4067:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4067:397_1__4067:403_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3/In2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3/Dot Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4067:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4067:403_1__4067:396_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3/Dot Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4067:396"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4067_1__4064_inport3",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/Mux",
+      "port": 3,
+      "kind": "inport",
+      "sid": "4064"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4069_1__4070_inport3",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/b{1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/netsum",
+      "port": 3,
+      "kind": "inport",
+      "sid": "4070"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4070_1__4071_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/netsum",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4071"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:317_1__4071:319_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/n",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Gain",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4071:319"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:319_1__4071:386_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Gain",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Exp",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4071:386"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:320_1__4071:323_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Gain1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Sum1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4071:323"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:322_1__4071:387_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Reciprocal",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4071:387"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:323_1__4071:326_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Sum1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/a",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4071:326"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:324_1__4071:322_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/one",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Sum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4071:322"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:325_1__4071:323_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/one1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Sum1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4071:323"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:386_1__4071:322_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Exp",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Sum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4071:322"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071:387_1__4071:320_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Reciprocal",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig/Gain1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4071:320"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4071_1__4072_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/tansig",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/a{1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4072"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4073_1__4093_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4093"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4074_1__4075_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/a{1} ",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/Delays 1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4075"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4075_1__4079_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/Delays 1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4079"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4076_1__4077_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/Delays 1/p{2}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/Delays 1/mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4077"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4077_1__4078_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/Delays 1/mux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/Delays 1/pd{2,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4078"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4079_1__4086_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/netsum",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4086"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4080_1__4083_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/ad{2,1}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4083"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4081_1__4083_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/IW{2,1}(1,:)'",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4083"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4082_1__4084_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/Mux",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/lz{2,1}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4084"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4083:395_1__4083:403_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1/In1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1/Dot Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4083:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4083:397_1__4083:403_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1/In2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1/Dot Product",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4083:403"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4083:403_1__4083:396_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1/Dot Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4083:396"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4083_1__4082_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/dotprod1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/LW{2,1}/Mux",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4082"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4085_1__4086_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/b{2}",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/netsum",
+      "port": 2,
+      "kind": "inport",
+      "sid": "4086"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4086_1__4087_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/netsum",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/purelin",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4087"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4087:293_1__4087:294_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/purelin/n",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/purelin/a",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4087:294"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4087_1__4088_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/purelin",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/a{2}",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4088"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4089_1__4029_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4029"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4090_1__4091_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/x",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4091"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4091:845_1__4091:847_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax/x",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax/Subtract min x",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4091:847"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4091:846_1__4091:849_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax/Add min y",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax/y",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4091:849"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4091:847_1__4091:848_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax/Subtract min x",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax/range y // range x",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4091:848"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4091:848_1__4091:846_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax/range y // range x",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax/Add min y",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4091:846"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4091_1__4092_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/mapminmax",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1/p",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4092"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4093_1__4171_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Output",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4171"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4094_1__4095_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/a",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4095"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4095:850_1__4095:853_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse/y",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse/Subtract min y",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4095:853"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4095:851_1__4095:854_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse/Add min x",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse/x",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4095:854"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4095:852_1__4095:851_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse/Divide by range y",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse/Add min x",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4095:851"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4095:853_1__4095:852_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse/Subtract min y",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse/Divide by range y",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4095:852"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4095_1__4096_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/mapminmax_reverse",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Output 1/y",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4096"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4106_1__224_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Sum3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "224"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4107_1__4089_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Input",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Process Input 1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4089"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E4332_1__231_inport1",
+    "kind": "endpoint",
+    "source": "Fs",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem",
+      "port": 1,
+      "kind": "inport",
+      "sid": "231"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E97_1__233_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Bus\nSelector1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Out1",
+      "port": 1,
+      "kind": "inport",
+      "sid": "233"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E97_2__234_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Bus\nSelector1",
+    "port": 2,
+    "destinations": {
+      "path": "Subsystem/Out2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "234"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E97_3__235_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Bus\nSelector1",
+    "port": 3,
+    "destinations": {
+      "path": "Subsystem/Out3",
+      "port": 1,
+      "kind": "inport",
+      "sid": "235"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E97_4__223_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Bus\nSelector1",
+    "port": 4,
+    "destinations": {
+      "path": "Subsystem/Sum2",
+      "port": 1,
+      "kind": "inport",
+      "sid": "223"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E97_4__236_inport1",
+    "kind": "endpoint",
+    "source": "Subsystem/Bus\nSelector1",
+    "port": 4,
+    "destinations": {
+      "path": "Subsystem/Out4",
+      "port": 1,
+      "kind": "inport",
+      "sid": "236"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "E98_1__224_inport2",
+    "kind": "endpoint",
+    "source": "Subsystem/Input Step Test1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Sum3",
+      "port": 2,
+      "kind": "inport",
+      "sid": "224"
+    },
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      1
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O203",
+    "kind": "operator",
+    "source": "Subsystem/Steam Condenser1/Divide",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/Sum",
+        "port": 2,
+        "kind": "inport",
+        "sid": "215"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+        "port": 3,
+        "kind": "inport",
+        "sid": "202"
+      }
+    ],
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O210",
+    "kind": "operator",
+    "source": "Subsystem/Steam Condenser1/Product",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/R//V",
+      "port": 1,
+      "kind": "inport",
+      "sid": "213"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O211",
+    "kind": "operator",
+    "source": "Subsystem/Steam Condenser1/Product1",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Sum3",
+      "port": 2,
+      "kind": "inport",
+      "sid": "217"
+    },
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O212",
+    "kind": "operator",
+    "source": "Subsystem/Steam Condenser1/Product2",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/1//Cp",
+        "port": 1,
+        "kind": "inport",
+        "sid": "199"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Divide",
+        "port": 2,
+        "kind": "inport",
+        "sid": "203"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+        "port": 4,
+        "kind": "inport",
+        "sid": "202"
+      }
+    ],
+    "operandCount": 2,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "p2s"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O215",
+    "kind": "operator",
+    "source": "Subsystem/Steam Condenser1/Sum",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Product",
+      "port": 1,
+      "kind": "inport",
+      "sid": "210"
+    },
+    "operandCount": 2,
+    "originalOperator": "+-",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O216",
+    "kind": "operator",
+    "source": "Subsystem/Steam Condenser1/Sum2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Product1",
+      "port": 2,
+      "kind": "inport",
+      "sid": "211"
+    },
+    "operandCount": 2,
+    "originalOperator": "+-",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O217",
+    "kind": "operator",
+    "source": "Subsystem/Steam Condenser1/Sum3",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/1//Mcw",
+      "port": 1,
+      "kind": "inport",
+      "sid": "200"
+    },
+    "operandCount": 2,
+    "originalOperator": "++",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O218",
+    "kind": "operator",
+    "source": "Subsystem/Steam Condenser1/Sum6",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1/Saturation",
+      "port": 1,
+      "kind": "inport",
+      "sid": "214"
+    },
+    "operandCount": 2,
+    "originalOperator": "++",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O223",
+    "kind": "operator",
+    "source": "Subsystem/Sum2",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4106"
+    },
+    "operandCount": 2,
+    "originalOperator": "+-",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O224",
+    "kind": "operator",
+    "source": "Subsystem/Sum3",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Steam Condenser1",
+      "port": 3,
+      "kind": "inport",
+      "sid": "195"
+    },
+    "operandCount": 2,
+    "originalOperator": "++",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "O4086",
+    "kind": "operator",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/netsum",
+    "port": 1,
+    "destinations": {
+      "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2/purelin",
+      "port": 1,
+      "kind": "inport",
+      "sid": "4087"
+    },
+    "operandCount": 2,
+    "originalOperator": "++",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "asr",
+      "s2p"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T197_1",
+    "kind": "stem",
+    "source": "Subsystem/Steam Condenser1/Tcw",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/Sum2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "216"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Mux",
+        "port": 1,
+        "kind": "inport",
+        "sid": "208"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      2,
+      1,
+      1
+    ],
+    "sampleTime": [
+      null,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T201_1",
+    "kind": "stem",
+    "source": "Subsystem/Steam Condenser1/Actuator",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/Product1",
+        "port": 1,
+        "kind": "inport",
+        "sid": "211"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/U",
+        "port": 1,
+        "kind": "inport",
+        "sid": "219"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+        "port": 6,
+        "kind": "inport",
+        "sid": "202"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T203_1",
+    "kind": "stem",
+    "source": "Subsystem/Steam Condenser1/Divide",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/Sum",
+        "port": 2,
+        "kind": "inport",
+        "sid": "215"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+        "port": 3,
+        "kind": "inport",
+        "sid": "202"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T205_1",
+    "kind": "stem",
+    "source": "Subsystem/Steam Condenser1/Integrator",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/sensor",
+        "port": 1,
+        "kind": "inport",
+        "sid": "221"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Lambda",
+        "port": 1,
+        "kind": "inport",
+        "sid": "207"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/P-T",
+        "port": 1,
+        "kind": "inport",
+        "sid": "209"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T206_1",
+    "kind": "stem",
+    "source": "Subsystem/Steam Condenser1/Integrator1",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/Sum2",
+        "port": 2,
+        "kind": "inport",
+        "sid": "216"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Mux",
+        "port": 2,
+        "kind": "inport",
+        "sid": "208"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+        "port": 5,
+        "kind": "inport",
+        "sid": "202"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T209_1",
+    "kind": "stem",
+    "source": "Subsystem/Steam Condenser1/P-T",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/Product",
+        "port": 2,
+        "kind": "inport",
+        "sid": "210"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Mux",
+        "port": 3,
+        "kind": "inport",
+        "sid": "208"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+        "port": 2,
+        "kind": "inport",
+        "sid": "202"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T212_1",
+    "kind": "stem",
+    "source": "Subsystem/Steam Condenser1/Product2",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Steam Condenser1/1//Cp",
+        "port": 1,
+        "kind": "inport",
+        "sid": "199"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Divide",
+        "port": 2,
+        "kind": "inport",
+        "sid": "203"
+      },
+      {
+        "path": "Subsystem/Steam Condenser1/Bus\nCreator1",
+        "port": 4,
+        "kind": "inport",
+        "sid": "202"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T4029_1",
+    "kind": "stem",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4029"
+      },
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "4073"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      3
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T4041_1",
+    "kind": "stem",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn3",
+        "port": 1,
+        "kind": "inport",
+        "sid": "4044"
+      },
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux",
+        "port": 3,
+        "kind": "inport",
+        "sid": "4039"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T4042_1",
+    "kind": "stem",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn1",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn4",
+        "port": 1,
+        "kind": "inport",
+        "sid": "4045"
+      },
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4039"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T4043_1",
+    "kind": "stem",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn2",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Transfer Fcn5",
+        "port": 1,
+        "kind": "inport",
+        "sid": "4046"
+      },
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/Delays 2/Mux",
+        "port": 1,
+        "kind": "inport",
+        "sid": "4039"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T4050_1",
+    "kind": "stem",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/pd{1,1}",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod1",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4055"
+      },
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod2",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4056"
+      },
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/IW{1,1}/dotprod3",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4057"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T4060_1",
+    "kind": "stem",
+    "source": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/ad{1,1}",
+    "port": 1,
+    "destinations": [
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod1",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4065"
+      },
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod2",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4066"
+      },
+      {
+        "path": "Subsystem/Layer Recurrent Neural Network 3 layers\n/Layer 1/LW{1,1}/dotprod3",
+        "port": 2,
+        "kind": "inport",
+        "sid": "4067"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      6
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert"
+    ],
+    "reason": ""
+  },
+  {
+    "id": "T97_4",
+    "kind": "stem",
+    "source": "Subsystem/Bus\nSelector1",
+    "port": 4,
+    "destinations": [
+      {
+        "path": "Subsystem/Out4",
+        "port": 1,
+        "kind": "inport",
+        "sid": "236"
+      },
+      {
+        "path": "Subsystem/Sum2",
+        "port": 1,
+        "kind": "inport",
+        "sid": "223"
+      }
+    ],
+    "operandCount": 0,
+    "originalOperator": "",
+    "dataType": "double",
+    "dimensions": [
+      1,
+      1
+    ],
+    "sampleTime": [
+      0,
+      0
+    ],
+    "faults": [
+      "bias",
+      "gain",
+      "negate",
+      "absolute",
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
+    ],
+    "reason": ""
+  }
+]
