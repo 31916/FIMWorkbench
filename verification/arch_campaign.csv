@@ -1,0 +1,13 @@
+model,distinct_sites,fault_cases,scalar_values_with_baseline,max_error
+AT,2,4,37140,0
+AFC,2,4,234072,0
+NN,2,4,220030,0
+CC,2,4,108210,0
+SC,2,4,7260,0
+PM,2,4,150015,0
+SB1,2,4,125,0
+SB2,2,4,125,0
+SB3,2,4,125,0
+SB4,2,4,250,0
+SB5,2,4,250,0
+F16,1,4,7505,0

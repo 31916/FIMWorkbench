@@ -8,7 +8,7 @@ benchmarks=uipanel(layout,'Title','ARCH-COMP benchmarks');
 benchGrid=uigridlayout(benchmarks,[1 2]);
 benchGrid.ColumnWidth={'1x',160};
 models={'AT','AFC','NN','CC','SC','PM','F16','SB1','SB2','SB3','SB4','SB5'};
-benchmark=uidropdown(benchGrid,'Items',models,'Tag','benchmark');
+benchmark=uidropdown(benchGrid,'Items',models,'Value','PM','Tag','benchmark');
 uibutton(benchGrid,'Text','Open benchmark','Tag','openBenchmark', ...
     'ButtonPushedFcn',@(~,~) openModel('benchmark'));
 
@@ -27,7 +27,12 @@ uibutton(buttons,'Text','Create working copy','Tag','build', ...
     'ButtonPushedFcn',@(~,~) openModel('build'));
 uibutton(buttons,'Text','Open saved copy...','Tag','reopen', ...
     'ButtonPushedFcn',@(~,~) openModel('reopen'));
-status=uilabel(layout,'Text','','Tag','status');
+footer=uigridlayout(layout,[1 2],'Padding',0,'ColumnWidth',{'1x',155});
+status=uilabel(footer,'Text','','Tag','status');
+if ~isfolder(fullfile(fileparts(mfilename('fullpath')),'verification','all_sites','AT'))
+    uihyperlink(footer,'Text','Get benchmark data (.zip)','Tag','benchmarkDownload', ...
+        'URL','https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.2.0.zip');
+end
 
     function browseSource()
         [name,folder]=uigetfile({'*.slx;*.mdl','Simulink (*.slx, *.mdl)'},'Select a source model');
@@ -55,6 +60,14 @@ status=uilabel(layout,'Text','','Tag','status');
         try
             switch action
                 case 'benchmark'
+                    try
+                        fimwb.benchmarkFolder(benchmark.Value);
+                    catch err
+                        if ~strcmp(err.identifier,'fimwb:BenchmarkFolder'),rethrow(err);end
+                        folder=uigetdir(pwd,'Select the extracted FIM Workbench checkout containing verification');
+                        if isequal(folder,0),return;end
+                        fimwb.benchmarkFolder(benchmark.Value,folder);
+                    end
                     try
                         [~,file]=fimwb.openBenchmark(benchmark.Value);
                     catch err

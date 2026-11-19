@@ -1,0 +1,5 @@
+tool,task,scripted_setup_s,scalar_values,direct_max_error,instance_correction,final_max_error,healthy_control_error
+FIM,A,12.766155,2002,8,1,1.77635683940025e-15,2
+Workbench,B,1.822063,2002,1.77635683940025e-15,0,1.77635683940025e-15,3
+Workbench,A,0.515501,2002,1.77635683940025e-15,0,1.77635683940025e-15,2
+FIM,B,11.345844,2002,13,1,1.77635683940025e-15,3

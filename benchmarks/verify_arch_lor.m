@@ -37,7 +37,7 @@ for k=1:numel(sites)
         set_param(block,'Inputs',num2str(site.operandCount),'Operator',op);
         picker.Value=op;feval(picker.ValueChangedFcn,picker,[]);
         setCell(grid,k,4,true);
-        status=findall(window,'Type','uilabel');
+        status=findall(window,'Tag','status');
         assert(strcmp(grid.Data{k,5},op)&&grid.Data{k,4},'%s %s: %s',site.id,op,status.Text);
         [expected,refSignal]=benchSim(ref,T,u,'fimwb_logic_trace');
         [actual,slotSignal]=benchSim(variant,T,u,'fimwb_logic_trace');

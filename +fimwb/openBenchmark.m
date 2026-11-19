@@ -2,9 +2,9 @@ function [win,file]=openBenchmark(id,workingDir,visible)
 %OPENBENCHMARK Open the fault editor on a reusable working copy of a tested model.
 root=fileparts(fileparts(mfilename('fullpath')));
 id=upper(char(id));
-assert(ismember(id,{'AT','AFC','NN','CC','SC','PM','F16','SB1','SB2','SB3','SB4','SB5'}),'Unknown benchmark.');
+dataRoot=fimwb.benchmarkFolder(id);
 if nargin<3,visible='on';end
-verified=fullfile(root,'verification','all_sites',id);
+verified=fullfile(dataRoot,'verification','all_sites',id);
 pattern=['all_' lower(id) '_*'];
 models=[dir(fullfile(verified,[pattern '.mdl']));dir(fullfile(verified,[pattern '.slx']))];
 assert(isscalar(models),'Expected exactly one verified all-sites model in %s.',verified);
@@ -26,7 +26,7 @@ if ~isfolder(workingDir),mkdir(workingDir);end
 file=fullfile(workingDir,[name ext]);
 if bdIsLoaded(name),assert(strcmp(get_param(name,'FileName'),file),'Another working copy with this model name is open.');end
 addpath(root,fullfile(root,'benchmarks'));
-[~,horizon,input]=benchSource(id,root,workingDir,true);
+[~,horizon,input]=benchSource(id,dataRoot,workingDir,true);
 inputName=['fimwb_' lower(id) '_input'];assignin('base',inputName,input);
 if ~isfile(file)
     % Stage first-use setup so a failed initialization can be retried.

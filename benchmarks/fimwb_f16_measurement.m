@@ -1,7 +1,7 @@
 function data=fimwb_f16_measurement()
 % Evaluate the official ODE with the project's release compatibility adapter.
 % Only its published scalar measurement is exposed as a Simulink signal.
-root=fileparts(fileparts(mfilename('fullpath')));
+root=fimwb.benchmarkFolder('F16');
 assets=fullfile(root,'verification','sources');
 compat=fullfile(assets,'compat_f16');
 if ~isfolder(compat),compat=fullfile(fileparts(root),'Falsify','arch2025_compat','f16');end
