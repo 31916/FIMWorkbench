@@ -68,6 +68,18 @@ for k=ops(:)'
         add_line(parent,get_param(ln,'SrcPortHandle'),target.Inport(j+1),'autorouting','on');
     end
 end
+% Resolve companion MAT files and classes relative to the final working copy.
+metadata=get_param(name,'Metadata');
+if isempty(metadata),metadata=struct();end
+origin=java.io.File(source).toPath();
+target=java.io.File(folder).toPath();
+if origin.getRoot().equals(target.getRoot())
+    ref=char(target.relativize(origin).toString());
+else
+    ref=source;
+end
+metadata.FIMWorkbenchSourceModel=strrep(ref,filesep,'/');
+set_param(name,'Metadata',metadata);
 staged=fullfile(work,[name ext]);
 save_system(name,staged);
 close_system(name,0);

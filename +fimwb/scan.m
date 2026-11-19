@@ -22,7 +22,7 @@ compiled = onCleanup(@() feval(model,[],[],[],'term')); %#ok<NASGU>
 blocks = find_system(model,'SearchUnderMasks','all','SearchInsideLibraryLinks','on',...
     'MatchFilter',@Simulink.match.activeVariants,'Type','Block');
 empty = struct('id','','kind','','source','','port',0,'destinations',[],...
-    'operandCount',0,'originalOperator','','replacementOperators',{{}},...
+    'operandCount',0,'booleanOperands',[],'originalOperator','','replacementOperators',{{}},...
     'dataType','','dimensions',[],'sampleTime',[],'faults',{{}},'reason','');
 rows = {};
 for b = 1:numel(blocks)
@@ -74,6 +74,9 @@ for b = 1:numel(blocks)
             site=base;site.kind='operator';site.id=['O' char(sid)];site.destinations=destinations;
             site.operandCount=numel(ports.Inport);site.faults=operatorFaults(block,ports,site);
             if ~isempty(site.faults)
+                if strcmp(site.faults{1},'p2s')
+                    site.booleanOperands=find(arrayfun(@(p)strcmp(get_param(p,'CompiledPortDataType'),'boolean'),ports.Inport));
+                end
                 if ismember(get_param(block,'BlockType'),{'RelationalOperator','Logic'})
                     site.originalOperator=get_param(block,'Operator');
                 elseif strcmp(get_param(block,'BlockType'),'Sum')
@@ -139,10 +142,21 @@ type=get_param(block,'BlockType');
 if ~ismember(type,{'Logic','RelationalOperator','Sum','Product'}) || isempty(ports.Inport) || ...
         ~all(strcmp({site.destinations.kind},'inport')),return;end
 numericTypes={'double','single','boolean','int8','uint8','int16','uint16','int32','uint32','int64','uint64'};
-for input=ports.Inport(:)'
-    dt=get_param(input,'CompiledPortDataType');
-    if get_param(input,'Line')<0 || get_param(input,'CompiledPortComplexSignal') || ~ismember(dt,numericTypes),return;end
-    if ismember(type,{'Sum','Product'}) && (get_param(input,'CompiledPortWidth')~=1 || ~ismember(dt,{'double','single'})),return;end
+inputs=ports.Inport(:)';
+types=arrayfun(@(p)get_param(p,'CompiledPortDataType'),inputs,'UniformOutput',false);
+for input=inputs
+    if get_param(input,'Line')<0 || get_param(input,'CompiledPortComplexSignal'),return;end
+end
+if ~all(ismember(types,numericTypes))
+    sameEnum=strcmp(type,'RelationalOperator') && all(strcmp(types,types{1})) && Simulink.data.isSupportedEnumClass(types{1});
+    if ~sameEnum,return;end
+end
+if ismember(type,{'Sum','Product'})
+    if any(arrayfun(@(p)get_param(p,'CompiledPortWidth')~=1,inputs)),return;end
+    floating={'double','single'};
+    mixedProduct=strcmp(type,'Product') && ismember(site.dataType,floating) && ...
+        any(strcmp(types,'boolean')) && any(strcmp(types,site.dataType)) && all(ismember(types,{site.dataType,'boolean'}));
+    if ~all(ismember(types,floating)) && ~mixedProduct,return;end
 end
 if strcmp(type,'Logic')
     % A one-port non-NOT operator reduces a vector, whereas NOT is elementwise.

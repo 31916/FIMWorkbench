@@ -105,7 +105,7 @@ filterRows('');
             rows(selected,3:9)=faultCells(f);meta(selected).fault=f;
             status.Text=sprintf('Updated slot %d.',rows{selected,1});
         catch err
-            status.Text=err.message;
+            status.Text=fimwb.internal.diagnosticText(err);
         end
         grid.Data=rows(shown,:);status.Tooltip=status.Text;refresh();
     end
@@ -126,7 +126,7 @@ filterRows('');
             for h=marked,hilite_system(h,'find');end
             status.Text=rows{selected,10};
         catch err
-            status.Text=err.message;
+            status.Text=fimwb.internal.diagnosticText(err);
         end
         status.Tooltip=status.Text;
     end
@@ -147,7 +147,7 @@ filterRows('');
             values{selected}=v;toggles(selected)=toggle.Value;
             status.Text=sprintf('Updated campaign axes for slot %d.',rows{selected,1});
         catch err
-            status.Text=err.message;
+            status.Text=fimwb.internal.diagnosticText(err);
         end
         refresh();
     end
@@ -174,12 +174,15 @@ filterRows('');
         dialog=uiprogressdlg(win,'Title','Running experiment','Message','Preparing simulations...','Cancelable','on');
         reset=onCleanup(@()close(dialog));
         try
-            result=fimwb.experiment(name,folder,axes,@(done,total)progress(dialog,done,total));
+            result=fimwb.experiment(name,folder,axes,@(done,total)progress(dialog,done,total),'record');
             clear reset
             status.Text=sprintf('Saved %d case(s) and baseline to %s',result.caseCount,result.folder);
+            if result.failedCases>0
+                status.Text=sprintf('%d completed, %d failed. Results in %s',result.completedCases,result.failedCases,result.folder);
+            end
             fimwb.plotComparison(result.folder);
         catch err
-            status.Text=err.message;
+            status.Text=fimwb.internal.diagnosticText(err);
         end
         status.Tooltip=status.Text;
     end
@@ -189,7 +192,7 @@ filterRows('');
             save_system(name);
             status.Text='Model saved.';
         catch err
-            status.Text=err.message;
+            status.Text=fimwb.internal.diagnosticText(err);
         end
     end
 end

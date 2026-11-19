@@ -2,6 +2,7 @@ function setting = setFault(model,slot,changes)
 %SETFAULT Change one generated slot between simulations. save_system persists it.
 assert(bdIsLoaded(model)&&strcmp(get_param(model,'SimulationStatus'),'stopped'),...
     'Load the generated model and stop simulation before editing.');
+loadWorkingModel(model);
 validateattributes(slot,{'numeric'},{'scalar','integer','positive'});
 assert(isstruct(changes)&&isscalar(changes)&&all(ismember(fieldnames(changes),...
     {'type','enabled','value','start','stop','seed','period'})),'Invalid setting change.');

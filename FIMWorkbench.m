@@ -1,9 +1,9 @@
 function window = FIMWorkbench()
 %FIMWorkbench Open a benchmark or create a fault-enabled copy of a Simulink model.
 % Open FIMWorkbench from the MATLAB Apps tab or the Command Window.
-window=uifigure('Name','FIM Workbench','Position',[120 120 640 300]);
+window=uifigure('Name','FIM Workbench','Position',[120 120 680 335]);
 layout=uigridlayout(window,[3 1]);
-layout.RowHeight={68,150,'1x'};
+layout.RowHeight={68,185,'1x'};
 benchmarks=uipanel(layout,'Title','ARCH-COMP benchmarks');
 benchGrid=uigridlayout(benchmarks,[1 2]);
 benchGrid.ColumnWidth={'1x',160};
@@ -13,7 +13,7 @@ uibutton(benchGrid,'Text','Open benchmark','Tag','openBenchmark', ...
     'ButtonPushedFcn',@(~,~) openModel('benchmark'));
 
 custom=uipanel(layout,'Title','Your Simulink model');
-form=uigridlayout(custom,[3 3]);
+form=uigridlayout(custom,[4 3]);
 form.ColumnWidth={100,'1x',110};
 uilabel(form,'Text','Source model');
 source=uieditfield(form,'text','Tag','source','ValueChangedFcn',@(~,~) suggestOutput());
@@ -21,6 +21,9 @@ uibutton(form,'Text','Browse...','ButtonPushedFcn',@(~,~) browseSource());
 uilabel(form,'Text','Working copy');
 output=uieditfield(form,'text','Tag','output');
 uibutton(form,'Text','Save as...','ButtonPushedFcn',@(~,~) browseOutput());
+uilabel(form,'Text','Fault profile');
+profile=uieditfield(form,'text','Tag','profile','Placeholder','Optional JSON file (all compatible sites when blank)');
+uibutton(form,'Text','Browse...','ButtonPushedFcn',@(~,~) browseProfile());
 buttons=uigridlayout(form,[1 2],'Padding',0);
 buttons.Layout.Column=[1 3];
 uibutton(buttons,'Text','Create working copy','Tag','build', ...
@@ -31,7 +34,7 @@ footer=uigridlayout(layout,[1 2],'Padding',0,'ColumnWidth',{'1x',155});
 status=uilabel(footer,'Text','','Tag','status');
 if ~isfolder(fullfile(fileparts(mfilename('fullpath')),'verification','all_sites','AT'))
     uihyperlink(footer,'Text','Get benchmark data (.zip)','Tag','benchmarkDownload', ...
-        'URL','https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.2.0.zip');
+        'URL','https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.2.1.zip');
 end
 
     function browseSource()
@@ -39,6 +42,12 @@ end
         if isequal(name,0),return;end
         source.Value=fullfile(folder,name);
         suggestOutput();
+    end
+
+    function browseProfile()
+        examples=fullfile(fileparts(mfilename('fullpath')),'examples');
+        [name,folder]=uigetfile({'*.json','Fault configurations (*.json)'},'Select a fault configuration',examples);
+        if ~isequal(name,0),profile.Value=fullfile(folder,name);end
     end
 
     function suggestOutput()
@@ -82,7 +91,11 @@ end
                     assert(~isempty(file),'Choose where to save the working copy.');
                     status.Text='Finding injection sites and creating the working copy...';
                     drawnow limitrate nocallbacks
-                    fimwb.build(source.Value,file);
+                    if isempty(strtrim(profile.Value))
+                        fimwb.build(source.Value,file);
+                    else
+                        fimwb.build(source.Value,profile.Value,file);
+                    end
                     fimwb.editor(file);
                 case 'reopen'
                     [name,folder]=uigetfile({'*.slx;*.mdl','Simulink (*.slx, *.mdl)'}, ...
@@ -95,9 +108,9 @@ end
             status.Text=file;
             status.Tooltip=file;
         catch err
-            status.Text=err.message;
-            status.Tooltip=err.message;
-            uialert(window,err.message,'Could not open model');
+            status.Text=fimwb.internal.diagnosticText(err);
+            status.Tooltip=status.Text;
+            uialert(window,status.Text,'Could not open model');
         end
     end
 end

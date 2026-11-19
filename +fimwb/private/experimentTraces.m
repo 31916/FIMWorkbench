@@ -1,7 +1,11 @@
-function experimentTraces(dataset,file)
+function sources=experimentTraces(dataset,file)
 % Keep each component on the time grid Simulink actually returned.
+sources=repmat(struct('block','','port',[]),1,dataset.numElements);
 for port = 1:dataset.numElements
     element = dataset{port};
+    path=element.BlockPath.convertToCell();
+    sources(port).block=strjoin(path,' > ');
+    sources(port).port=element.PortIndex;
     label = string(element.Name);
     if strlength(label)==0 && element.BlockPath.getLength>0
         block = element.BlockPath.getBlock(element.BlockPath.getLength);

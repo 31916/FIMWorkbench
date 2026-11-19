@@ -70,8 +70,22 @@ catch err
     assert(~strcmp(err.identifier,'fimwb:TestInvalid'));
 end
 assert(~isfolder(failure) && received==2);
+% A rejected simulation between two valid levels keeps both neighboring results.
+callback=sprintf("if get_param('%s','UserData').fault.enabled && get_param('%s','UserData').fault.value==3, error('fimwb:TestCase','Requested test failure.'); end",paths{2},paths{2});
+set_param(name,'StartFcn',char(callback));
+axis=struct('slot',2,'field','value','levels',[1 3 2]);
+recorded=fimwb.experiment(name,fullfile(scratch,'recorded'),axis,[],'record');
+assert(recorded.completedCases==2 && recorded.failedCases==1);
+runs=readtable(fullfile(recorded.folder,'runs.csv'),'TextType','string');
+assert(isequal(runs.status,["completed";"completed";"failed";"completed"]));
+assert(contains(runs.diagnostic(3),'Requested test failure') && ~isfile(fullfile(recorded.folder,'case_0002.csv')));
+plotWin=fimwb.plotComparison(recorded.folder,'off');plotGuard=onCleanup(@()delete(plotWin));
+casePicker=findall(plotWin,'Tag','casePicker');casePicker.Value='case_0002';feval(casePicker.ValueChangedFcn,casePicker,[]);
+assert(numel(findall(plotWin,'Type','line'))==1 && contains(findall(plotWin,'Tag','caseStatus').Text,'Requested test failure'));
+assert(isequaln(saved,cellfun(@(p)get_param(p,'UserData'),paths)));
 result=array2table(results,'VariableNames',{'case_index','scalar_values','max_error'});
 writetable(result,outputCsv);fprintf('EXPERIMENT_PASS 8 cases and baseline, one input evaluation\n');
+clear removeInput closed
 
     function data=inputData()
         received=received+1;

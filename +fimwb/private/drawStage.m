@@ -73,7 +73,16 @@ if f.enabled
                 case 'lor',op('simulink/Logic and Bit Operations/Logical Operator','Mutation',...
                         'Operator',f.value,'Inputs',num2str(meta.operandCount),'AllPortsSameDT','off','OutDataTypeStr','boolean');
             end
-            for k=1:meta.operandCount,wire(sprintf('Operand%d/1',k),sprintf('Mutation/%d',k));end
+            for k=1:meta.operandCount
+                operand=sprintf('Operand%d/1',k);
+                if strcmp(f.type,'p2s') && isfield(site,'booleanOperands') && ismember(k,site.booleanOperands)
+                    cast=sprintf('NumericOperand%d',k);y=85+30*k;
+                    add_block('simulink/Signal Attributes/Data Type Conversion',[stage '/' cast], ...
+                        'OutDataTypeStr',site.dataType,'Position',[65 y 104 y+22]);
+                    wire(operand,[cast '/1']);operand=[cast '/1'];
+                end
+                wire(operand,sprintf('Mutation/%d',k));
+            end
             changed='Mutation/1';
     end
     if ~strcmp(changed,healthy)

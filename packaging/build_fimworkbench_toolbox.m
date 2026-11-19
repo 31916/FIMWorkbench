@@ -4,7 +4,7 @@ root=fileparts(fileparts(mfilename('fullpath')));
 if nargin<1,outputFolder=fullfile(fileparts(root),'outputs');end
 if ~isfolder(outputFolder),mkdir(outputFolder);end
 [ok,info]=fileattrib(outputFolder);assert(ok);outputFolder=info.Name;
-release="2.2.0";
+release="2.2.1";
 output=fullfile(outputFolder,"FIMWorkbench-"+release+".mltbx");
 stage=tempname;
 mkdir(fullfile(stage,'verification'));
@@ -12,7 +12,7 @@ cleanup=onCleanup(@()rmdir(stage,'s')); %#ok<NASGU>
 % Only copy release inputs. Never package a recipient's models or new runs.
 for item=["FIMWorkbench.m","README.md","LICENSE","THIRD_PARTY.md","+fimwb","benchmarks","examples","study", ...
         "verification/all_sites/PM","verification/arch2026/PM","verification/sources/PM", ...
-        "verification/results.csv","verification/editor.csv","verification/lor.csv","verification/campaign.csv","verification/arch_campaign.csv","verification/fim_comparison.csv"]
+        "verification/results.csv","verification/editor.csv","verification/lor.csv","verification/campaign.csv","verification/arch_campaign.csv","verification/fim_comparison.csv","verification/fim_paper"]
     dest=fullfile(stage,item);
     if ~isfolder(fileparts(dest)),mkdir(fileparts(dest));end
     [ok,msg]=copyfile(fullfile(root,item),dest);assert(ok,'%s',msg);

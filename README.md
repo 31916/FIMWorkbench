@@ -6,18 +6,18 @@ For example, an automatic transmission model takes throttle and brake commands a
 
 ## Install and run
 
-1. Download `FIMWorkbench-2.2.0.mltbx`. Double-click it in the MATLAB Files panel and select **Install**. [Download the installer](https://github.com/31916/FIMWorkbench/releases/download/v2.2.0/FIMWorkbench-2.2.0.mltbx)
+1. Download `FIMWorkbench-2.2.1.mltbx`. Double-click it in the MATLAB Files panel and select **Install**. [Download the installer](https://github.com/31916/FIMWorkbench/releases/download/v2.2.1/FIMWorkbench-2.2.1.mltbx)
 2. Open **FIMWorkbench** from the **Apps** tab, or enter `FIMWorkbench` in the MATLAB Command Window.
-3. Select **PM** and **Open benchmark** to try the included pacemaker model. To use your own, open its usual Simulink project or run its initialization script. Choose the **Source model**, give the **Working copy** a new filename, and select **Create working copy**.
+3. Select **PM** and **Open benchmark** to try the included pacemaker model. To use your own, open its usual Simulink project or run its initialization script. Choose the **Source model**, give the **Working copy** a new filename and optionally select a **Fault profile** JSON. Leave the profile blank to instrument all compatible sites. Select **Create working copy**.
 4. In **Fault settings**, search by block name, signal name, port or site ID. Select a row and choose **Show in model** to highlight the installed block and its outgoing signal. The **Fault type** menu shows the choices for that row. Edit the value, time window and **On** switch. Choose **Compare off / on** and a results directory to run both simulations and open their waveforms. Choose **Save model** to keep your edits. Use **Open saved copy...** to return to your own model.
 
 FIM Workbench requires **MATLAB R2026a or later and Simulink**. Install any additional products the model uses, such as Stateflow or Deep Learning Toolbox. The verification results below were obtained on Linux with R2026a. When the installation path contains non-ASCII characters, Workbench loads the SB network weights from a temporary copy for the current MATLAB session. To uninstall, remove **FIM Workbench** in MATLAB's Add-Ons manager. Working copies live in your own working folder. [MathWorks add-on installation guide](https://www.mathworks.com/help/matlab/matlab_env/get-add-ons.html)
 
 ### Benchmark data
 
-PM works directly from the installer. For the other 11 research models, extract the matching source checkout and select its top-level folder the first time **Open benchmark** prompts for it. MATLAB remembers that folder. A source checkout can use all 12 in place. The installer contains the PM authors' MIT notice. Check the contributor terms for the other models and weights before sharing copies. [v2.2.0 source ZIP](https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.2.0.zip) · [Third-party terms](THIRD_PARTY.md)
+PM works directly from the installer. For the other 11 research models, extract the matching source checkout and select its top-level folder the first time **Open benchmark** prompts for it. MATLAB remembers that folder. A source checkout can use all 12 in place. The installer contains the PM authors' MIT notice. Check the contributor terms for the other models and weights before sharing copies. [v2.2.1 source ZIP](https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.2.1.zip) · [Third-party terms](THIRD_PARTY.md)
 
-From the command line, register the data once with `fimwb.benchmarkFolder('AT','/path/to/FIMWorkbench-2.2.0')`. To try a comparison using PM alone, open **PM**, search for `PACE_COUNT`, select the connection ending at the root output (`E623_1__621_inport1`), choose `bias`, enter `2`, enable it and select **Compare off / on**. Select the PACE_COUNT output in the plot to see its two-count offset.
+From the command line, register the data once with `fimwb.benchmarkFolder('AT','/path/to/FIMWorkbench-2.2.1')`. To try a comparison using PM alone, open **PM**, search for `PACE_COUNT`, select the connection ending at the root output (`E623_1__621_inport1`), choose `bias`, enter `2`, enable it and select **Compare off / on**. Select the PACE_COUNT output in the plot to see its two-count offset.
 
 ## Try the automatic transmission example
 
@@ -129,16 +129,17 @@ run = fimwb.experiment(file,fullfile(pwd,'AT_six_cases'),axesToTry);
 fimwb.plotComparison(run.folder)
 ~~~
 
-Omit the third argument for a single off/on comparison. Choose a fresh output folder for each experiment. The first axis changes fastest. A simulation error or cancellation restores the fault settings and discards the incomplete results.
+Omit the third argument for a single off/on comparison. Choose a fresh output folder for each experiment. The first axis changes fastest. The editor records a fault case that fails to simulate, keeps its diagnostic and continues with the remaining cases. In the plot, a failed case shows the baseline and its diagnostic. The MATLAB API defaults to stopping on an error. Pass `fimwb.experiment(file,folder,axesToTry,[],'record')` to use the editor's behavior. A failed baseline or cancellation discards the incomplete experiment. The model's fault settings are restored in each mode.
 
 | Output | Contents |
 |---|---|
 | `baseline.csv`, `case_0001.csv`, … | One row per output component and native sample time. Columns are `time_s`, `signal`, `component`, `value` and `imaginary`. Each run keeps its solver time grid. |
 | Matching `.mat` files | Simulink datasets with native data types, dimensions and precision. The comparison uses root Outports, or logged signals for a model without root Outports. |
-| `experiment.json`, `baseline.json`, `case_*.json` | Model name and on-disk file hash, MATLAB release, initial slot settings, axes and per-case overrides. |
+| `experiment.json`, `baseline.json`, `case_*.json` | Model name and on-disk file hash, MATLAB release, initial slot settings, axes and per-case overrides. Each case maps its signal numbers to the logged block path and port. Search for a signal or block in the comparison window. |
+| `runs.csv` | Completion status and diagnostic for each simulation. Successful cases have CSV and MAT traces. |
 | `inputs.mat` | Root external inputs evaluated once before simulation and the MATLAB random generator state replayed for each case. |
 
-The experiment uses the loaded model's settings and a finite stop time. Keep model dependencies available. Inputs supplied by external hardware, the wall clock, or side effects in custom callbacks must be recorded or made deterministic by the model owner for a repeatable comparison.
+The experiment uses the loaded model's settings and a finite stop time. New working copies record a relative link to the source model when both files are on the same drive. Opening the copy through Workbench makes its companion MAT files and classes in the original folder available for the lifetime of the model. Keep the relative layout when moving a project. For older copies, open the original Simulink project or add its model folder to the MATLAB path. Inputs supplied by external hardware, the wall clock, or side effects in custom callbacks must be recorded or made deterministic by the model owner for a repeatable comparison.
 
 ## Generate single-fault model files
 
@@ -161,7 +162,7 @@ addpath(fullfile(pwd,'packaging'))
 installer = build_fimworkbench_toolbox(fullfile(pwd,'dist'))
 ~~~
 
-Distribute the `.mltbx` file from `dist/`. The source for this release is tagged `v2.2.0`.
+Distribute the `.mltbx` file from `dist/`. The source for this release is tagged `v2.2.1`.
 
 Install an update the same way as a new release. **Open saved copy...** reopens models with their saved settings. To pick up injection sites added since a working copy was created, generate a fresh copy from the source with a new filename. For a fresh AFC benchmark, close any open AFC working copy and run `fimwb.openBenchmark('AFC',fullfile(pwd,'AFC_new'))` with a new folder. Scripts written for 1.0.0 should use the `FIMWorkbench` launcher and the `fimwb.` function prefix.
 
@@ -192,6 +193,10 @@ To reproduce the checks, add the benchmark scripts to your MATLAB path with `add
 | `verify_arch_lor(outputCsv)` | Every applicable LOR setting against a direct block replacement |
 
 The source lock records the upstream commits and SHA-256 hashes. From a source checkout, run `python3 benchmarks/fetch_sources.py` to verify the bundled files. When fetching missing project-specific inputs, use `--project /path/to/project` to point to the project containing the original dependencies. [Source lock](benchmarks/source-lock.json)
+
+## Run the original FIM paper model
+
+The evaluation in Section 4 and Table 2 of Bartocci et al. uses the Aircraft Elevator Control System (AECS). With the authors' pinned checkout, select `Aircraft_fault_injector/sf_aircraft_model/Aircraft.slx` as the source and `examples/fim-paper-aecs.json` as the fault profile. This creates one editable working copy containing all 45 locations from the paper. The included verification runs each location individually and compares the observed waveform with its expected transformation. [Reproduction and measured results](verification/fim_paper/README.md) · [Authors' source](https://gitlab.com/DrishtiYadav/fimtool/-/tree/a110acf2b718eab4cdf65f938203f60009fa0510) · [Paper](https://doi.org/10.1145/3540250.3558932)
 
 ## Evaluating usability and reusing the code
 

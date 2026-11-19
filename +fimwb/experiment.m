@@ -1,7 +1,10 @@
-function report = experiment(file,folder,axes,onProgress)
+function report = experiment(file,folder,axes,onProgress,failureMode)
 %EXPERIMENT Compare all faults off with the editor settings or a factorial campaign.
 % Each axis is a struct with slot, field ('enabled' or 'value'), and levels.
 % A value axis enables its slot unless an enabled axis also controls that slot.
+% Pass 'record' as the fifth argument to keep failed fault cases and continue.
+if nargin<5,failureMode='abort';end
+assert(ismember(failureMode,{'abort','record'}),'Failure mode must be abort or record.');
 if nargin<4
     onProgress=[];
 end
@@ -14,10 +17,10 @@ model = loadWorkingModel(file);
 if opened
     closeModel=onCleanup(@()close_system(model,0));
 end
-report=execute(model,folder,axes,onProgress);
+report=execute(model,folder,axes,onProgress,failureMode);
 end
 
-function report=execute(model,folder,axes,onProgress)
+function report=execute(model,folder,axes,onProgress,failureMode)
 assert(strcmp(get_param(model,'SimulationStatus'),'stopped') && strcmp(get_param(model,'FastRestart'),'off'), ...
     'Stop the simulation and turn off Fast Restart before running an experiment.');
 [paths,meta] = modelSlots(model);
@@ -75,7 +78,8 @@ forceOn = reshape(setdiff(indices(strcmp({axes.field},'value')),indices(strcmp({
 baseline = original;
 [baseline.enabled] = deal(false);
 if ~isempty(onProgress),onProgress(0,total+1);end
-runCase(baseline,'baseline');
+runCase(baseline,'baseline',false);
+failed=0;
 if ~isempty(onProgress),onProgress(1,total+1);end
 for n = 1:total
     settings = original;
@@ -88,15 +92,16 @@ for n = 1:total
     for slotIndex=forceOn
         settings(slotIndex).enabled=true;
     end
-    runCase(settings,sprintf('case_%04d',n));
+    passed=runCase(settings,sprintf('case_%04d',n),strcmp(failureMode,'record'));
+    failed=failed+~passed;
     if ~isempty(onProgress),onProgress(n+1,total+1);end
 end
 restoreSlots(model,paths,meta,touched,dirty);
 clear restoreOnExit
 java.nio.file.Files.move(java.io.File(work).toPath(),java.io.File(folder).toPath(),javaArray('java.nio.file.CopyOption',0));
-report = struct('folder',folder,'caseCount',total,'baseline',fullfile(folder,'baseline.csv'));
+report = struct('folder',folder,'caseCount',total,'completedCases',total-failed,'failedCases',failed,'baseline',fullfile(folder,'baseline.csv'));
 
-    function runCase(settings,id)
+    function passed=runCase(settings,id,allowFailure)
         for i=1:numel(meta)
             if isequaln(current(i),settings(i)),continue;end
             changed=meta(i);changed.fault=settings(i);touched(i)=true;
@@ -105,21 +110,35 @@ report = struct('folder',folder,'caseCount',total,'baseline',fullfile(folder,'ba
             if isequaln(current(i),original(i)),remove(touched,i);end
         end
         rng(rngState);
-        output=sim(input);
-        times=output.get('fimwb_time');
-        assert(~isempty(times) && abs(times(end)-horizon)<=1e-9*max(1,abs(horizon)), ...
-            'Simulation stopped before the requested horizon (%g s).',horizon);
-        assert(ismember(outputName,output.who),'The model has no root outputs or logged signals.');
-        dataset=output.get(outputName);
-        assert(isa(dataset,'Simulink.SimulationData.Dataset'),'Expected a logged signal dataset.');
-        experimentTraces(dataset,fullfile(work,[id '.csv']));
-        save(fullfile(work,[id '.mat']),'dataset');
+        passed=true;diagnostic='';sources=[];
+        try
+            output=sim(input);
+            times=output.get('fimwb_time');
+            assert(~isempty(times) && abs(times(end)-horizon)<=1e-9*max(1,abs(horizon)), ...
+                'Simulation stopped before the requested horizon (%g s).',horizon);
+        catch err
+            if ~allowFailure,rethrow(err);end
+            passed=false;diagnostic=fimwb.internal.diagnosticText(err);
+        end
+        if passed
+            assert(ismember(outputName,output.who),'The model has no root outputs or logged signals.');
+            dataset=output.get(outputName);
+            assert(isa(dataset,'Simulink.SimulationData.Dataset'),'Expected a logged signal dataset.');
+            sources=experimentTraces(dataset,fullfile(work,[id '.csv']));
+            save(fullfile(work,[id '.mat']),'dataset');
+        end
         changed=find(~arrayfun(@(a,b)isequaln(a,b),original,settings));
         overrides=struct('slot',{},'fault',{});
         if ~isempty(changed)
             overrides=struct('slot',num2cell([meta(changed).slot]),'fault',num2cell(settings(changed)));
         end
-        writeJSON(fullfile(work,[id '.json']),struct('id',id,'overrides',{overrides}));
+        if passed,status="completed";else,status="failed";end
+        writeJSON(fullfile(work,[id '.json']),struct('id',id,'status',status,'diagnostic',diagnostic, ...
+            'overrides',{overrides},'sources',{sources}));
+        manifest=fullfile(work,'runs.csv');
+        row=table(string(id),status,string(diagnostic),'VariableNames',{'run','status','diagnostic'});
+        if isfile(manifest),writetable(row,manifest,'WriteMode','append','WriteVariableNames',false);
+        else,writetable(row,manifest);end
     end
 
 end
