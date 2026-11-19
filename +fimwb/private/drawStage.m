@@ -16,7 +16,8 @@ healthy='Original/1';
 changed=healthy;
 if f.enabled
     input=healthy;
-    if contains(site.dataType,'int') && ismember(f.type,{'bias','gain'})
+    if (contains(site.dataType,'int') && ismember(f.type,{'bias','gain'})) || ...
+            (strcmp(site.dataType,'single') && strcmp(f.type,'noise'))
         add_block('simulink/Signal Attributes/Data Type Conversion',[stage '/ToDouble'],...
             'OutDataTypeStr','double','Position',[65 35 105 62]);
         wire(healthy,'ToDouble/1');input='ToDouble/1';
@@ -36,13 +37,19 @@ if f.enabled
             wire(healthy,'Not/1');changed='Not/1';
         case {'stuck_at','package_drop','zero'}
             v=f.value;if strcmp(f.type,'zero'),v=0;end
-            op('simulink/Sources/Constant','Replacement','Value',number(v),'OutDataTypeStr',site.dataType,...
+            literal=number(v);dims=site.dimensions;
+            if prod(dims(2:end))>1
+                shape=dims(2:end);if dims(1)==1,shape=[1 shape];end
+                literal=sprintf('repmat(%s,%s)',literal,mat2str(shape));
+            end
+            vector1D='off';if dims(1)==1,vector1D='on';end
+            op('simulink/Sources/Constant','Replacement','Value',literal,'VectorParams1D',vector1D,'OutDataTypeStr',site.dataType,...
                 'SampleTime',replacementTime(site.sampleTime));changed='Replacement/1';
         case 'noise'
             op('simulink/Sources/Band-Limited White Noise','Noise','Cov',number(f.value),...
                 'Ts',number(f.period),'seed',number(f.seed));
             op('simulink/Math Operations/Sum','AddNoise','Inputs','++');
-            wire(healthy,'AddNoise/1');wire('Noise/1','AddNoise/2');changed='AddNoise/1';
+            wire(input,'AddNoise/1');wire('Noise/1','AddNoise/2');changed='AddNoise/1';
         case 'hold_last'
             if site.sampleTime(1)>0,lib='simulink/Discrete/Unit Delay';else,lib='simulink/Discrete/Memory';end
             add_block(lib,[stage '/Previous'],'InitialCondition',number(f.value),'Position',[210 130 264 158]);
@@ -57,12 +64,14 @@ if f.enabled
                 end
                 wire(healthy,'Delay/1');changed='Delay/1';
             end
-        case {'asr','s2p','p2s','ror'}
+        case {'asr','s2p','p2s','ror','lor'}
             switch f.type
                 case 'asr',op('simulink/Math Operations/Sum','Mutation','Inputs',f.value);
                 case 'p2s',op('simulink/Math Operations/Sum','Mutation','Inputs',repmat('+',1,meta.operandCount));
                 case 's2p',op('simulink/Math Operations/Product','Mutation','Inputs',repmat('*',1,meta.operandCount));
                 case 'ror',op('simulink/Logic and Bit Operations/Relational Operator','Mutation','Operator',f.value);
+                case 'lor',op('simulink/Logic and Bit Operations/Logical Operator','Mutation',...
+                        'Operator',f.value,'Inputs',num2str(meta.operandCount),'AllPortsSameDT','off','OutDataTypeStr','boolean');
             end
             for k=1:meta.operandCount,wire(sprintf('Operand%d/1',k),sprintf('Mutation/%d',k));end
             changed='Mutation/1';
@@ -72,7 +81,7 @@ if f.enabled
             'RndMeth','Round','SaturateOnIntegerOverflow','on');
         wire(changed,'OutputType/1');changed='OutputType/1';
     end
-    if f.start>0 || ~isempty(f.stop)
+    if f.start>0 || ~isempty(f.stop) || (strcmp(f.type,'hold_last') && prod(site.dimensions(2:end))>1)
         op('simulink/Sources/Step','Start','Time',number(f.start),'Before','0','After','1');
         gate='Start/1';
         if ~isempty(f.stop)

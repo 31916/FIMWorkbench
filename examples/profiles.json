@@ -14,5 +14,6 @@
   {"type":"asr","values":["++","+-","-+","--"]},
   {"type":"s2p"},
   {"type":"p2s"},
-  {"type":"ror","values":["<","<=",">",">=","==","~="]}
+  {"type":"ror","values":["<","<=",">",">=","==","~="]},
+  {"type":"lor","values":["AND","OR","NAND","NOR","XOR","NXOR"]}
 ]

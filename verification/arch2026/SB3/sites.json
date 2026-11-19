@@ -12,6 +12,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "double",
     "dimensions": [
       1,
@@ -26,7 +27,13 @@
       "gain",
       "negate",
       "absolute",
-      "invert"
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
     ],
     "reason": ""
   },
@@ -43,6 +50,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "double",
     "dimensions": [
       1,
@@ -80,6 +88,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "double",
     "dimensions": [
       1,
@@ -117,6 +126,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "double",
     "dimensions": [
       1,
@@ -131,7 +141,13 @@
       "gain",
       "negate",
       "absolute",
-      "invert"
+      "invert",
+      "stuck_at",
+      "zero",
+      "package_drop",
+      "noise",
+      "delay",
+      "hold_last"
     ],
     "reason": ""
   },
@@ -148,6 +164,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "double",
     "dimensions": [
       1,
@@ -173,6 +190,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "fcn_call",
     "dimensions": [
       1,
@@ -198,6 +216,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "single",
     "dimensions": [
       1,
@@ -223,6 +242,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "fcn_call",
     "dimensions": [
       1,
@@ -248,6 +268,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "single",
     "dimensions": [
       1,
@@ -285,6 +306,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "single",
     "dimensions": [
       1,

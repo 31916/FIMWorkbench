@@ -12,6 +12,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "double",
     "dimensions": [
       1,
@@ -49,6 +50,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "double",
     "dimensions": [
       1,
@@ -86,6 +88,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "double",
     "dimensions": [
       1,
@@ -111,6 +114,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "fcn_call",
     "dimensions": [
       1,
@@ -136,6 +140,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "single",
     "dimensions": [
       1,
@@ -161,6 +166,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "fcn_call",
     "dimensions": [
       1,
@@ -186,6 +192,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "single",
     "dimensions": [
       1,
@@ -223,6 +230,7 @@
     },
     "operandCount": 0,
     "originalOperator": "",
+    "replacementOperators": [],
     "dataType": "single",
     "dimensions": [
       1,

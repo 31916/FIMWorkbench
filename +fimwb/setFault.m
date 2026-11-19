@@ -8,7 +8,10 @@ assert(isstruct(changes)&&isscalar(changes)&&all(ismember(fieldnames(changes),..
 paths=faultStages(model,slot);
 assert(numel(paths)==1,'Expected exactly one generated fault slot %d.',slot);
 block=paths{1};old=get_param(block,'UserData');next=old.fault;
-if isfield(changes,'type'),assert(ismember(char(changes.type),old.site.faults),'This fault type is unavailable at %s.',old.site.id);end
+if isfield(changes,'type')
+    changes.type=faultType(changes.type);
+    assert(ismember(changes.type,old.site.faults),'This fault type is unavailable at %s.',old.site.id);
+end
 if isfield(changes,'type') && ~strcmp(changes.type,next.type)
     next.value=defaultFaultValue(char(changes.type),old.site);
     if strcmp(changes.type,'noise') && isnumeric(old.site.sampleTime) && old.site.sampleTime(1)>0 && isfinite(old.site.sampleTime(1))

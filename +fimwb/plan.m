@@ -8,8 +8,7 @@ sites=fimwb.scan(modelFile); cases=struct('site',{},'type',{},'enabled',{},'valu
 excluded=struct('site',{},'type',{},'value',{},'reason',{});
 for k=1:numel(profiles)
     p=profiles{k};assert(isstruct(p)&&isfield(p,'type'),'Missing profile type.');
-    assert(ismember(string(p.type),["bias","gain","noise","delay","stuck_at","zero","invert","bit_flip","negate","absolute","package_drop","hold_last","asr","s2p","p2s","ror"]),...
-        'Unknown fault type.');
+    p.type=faultType(p.type);
     values={[]};
     if isfield(p,'values')
         v=p.values;p=rmfield(p,'values');

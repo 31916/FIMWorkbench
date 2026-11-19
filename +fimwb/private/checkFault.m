@@ -9,7 +9,7 @@ f=struct('site',site.id,'type',char(raw.type),'enabled',true,'value',[],...
 for k=fieldnames(raw)'
     key=k{1};f.(key)=raw.(key);
 end
-f.type=char(f.type);
+f.type=faultType(f.type);
 assert(ismember(f.type,site.faults),'Fault %s unavailable at %s (%s).',f.type,site.id,site.dataType);
 assert(islogical(f.enabled)&&isscalar(f.enabled),'enabled must be true or false.');
 validateattributes(f.start,{'numeric'},{'real','scalar','finite','nonnegative'});
@@ -18,6 +18,16 @@ if ~isempty(f.stop)
 end
 ts=site.sampleTime;
 if iscell(ts)||isempty(ts),sample=-1;else,sample=ts(1);end
+if ismember(f.type,{'asr','lor','ror'})
+    choices=operatorChoices(f.type);
+    if isnumeric(f.value) && ~isempty(f.value)
+        validateattributes(f.value,{'numeric'},{'scalar','integer','>=',1,'<=',numel(choices)});
+        f.value=choices{f.value};
+    elseif ischar(f.value)||isStringScalar(f.value)
+        index=find(strcmp(string(f.value),string(1:numel(choices))),1);
+        if ~isempty(index),f.value=choices{index};end
+    end
+end
 switch f.type
     case {'bias','gain','stuck_at','package_drop','noise','delay','hold_last'}
         if strcmp(f.type,'hold_last')&&isempty(f.value),f.value=0;end
@@ -49,13 +59,23 @@ switch f.type
         f.value=char(f.value);
         assert(~isempty(f.value)&&all(ismember(f.value,'+-')),'Invalid ASR sign string.');
         assert(numel(f.value)==site.operandCount,'fimwb:IncompatibleValue','ASR needs one sign per operand.');
-    case 'ror'
-        assert(ismember(string(f.value),["<","<=",">",">=","==","~="]),'Invalid relational operator.');
+    case {'lor','ror'}
+        assert((ischar(f.value)&&isrow(f.value))||isStringScalar(f.value),'Expected a replacement operator name.');
         f.value=char(f.value);
+        if strcmp(f.type,'lor')
+            f.value=upper(strtrim(f.value));
+            if strcmp(f.value,'XNOR'),f.value='NXOR';end
+        end
+        choices=operatorChoices(f.type);
+        assert(ismember(f.value,choices),'Invalid %s operator. Choose from %s.',upper(f.type),strjoin(choices,', '));
     otherwise
         assert(isempty(f.value),'Fault %s has no adjustable numerical value.',f.type);
 end
-if ismember(f.type,{'asr','ror'}) && isfield(site,'originalOperator')
+if ismember(f.type,{'asr','ror','lor'}) && isfield(site,'originalOperator')
     assert(~strcmp(f.value,site.originalOperator),'fimwb:IncompatibleValue','Replacement equals the original operator.');
+end
+if strcmp(f.type,'lor')
+    choices=operatorChoices('lor',site);
+    assert(ismember(f.value,choices),'fimwb:IncompatibleValue','This input shape permits %s.',strjoin(choices,', '));
 end
 end

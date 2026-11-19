@@ -1,5 +1,5 @@
 function sites = scan(modelFile)
-%SCAN List compiled signal endpoints, common stems and arithmetic operators.
+%SCAN List compiled signal endpoints, common stems and replaceable operators.
 [model,~,loaded] = openSource(modelFile); %#ok<ASGLU>
 sites=scanNormal(model);
 end
@@ -22,7 +22,8 @@ compiled = onCleanup(@() feval(model,[],[],[],'term')); %#ok<NASGU>
 blocks = find_system(model,'SearchUnderMasks','all','SearchInsideLibraryLinks','on',...
     'MatchFilter',@Simulink.match.activeVariants,'Type','Block');
 empty = struct('id','','kind','','source','','port',0,'destinations',[],...
-    'operandCount',0,'originalOperator','','dataType','','dimensions',[],'sampleTime',[],'faults',{{}},'reason','');
+    'operandCount',0,'originalOperator','','replacementOperators',{{}},...
+    'dataType','','dimensions',[],'sampleTime',[],'faults',{{}},'reason','');
 rows = {};
 for b = 1:numel(blocks)
     block = blocks{b};
@@ -43,7 +44,8 @@ for b = 1:numel(blocks)
         base.dimensions = get_param(output,'CompiledPortDimensions');
         base.sampleTime = get_param(output,'CompiledSampleTime');
         width = get_param(output,'CompiledPortWidth');
-        [base.faults,base.reason] = signalFaults(base,width,get_param(output,'CompiledPortComplexSignal'));
+        [base.faults,base.reason] = signalFaults(base,width,get_param(output,'CompiledPortComplexSignal'),...
+            get_param(output,'CompiledPortDimensionsMode'));
         if transient && ~isempty(base.faults)
             base.faults={};base.reason='prediction block regenerates this MATLAB Function implementation wire; use the boundary port';
         end
@@ -72,12 +74,22 @@ for b = 1:numel(blocks)
             site=base;site.kind='operator';site.id=['O' char(sid)];site.destinations=destinations;
             site.operandCount=numel(ports.Inport);site.faults=operatorFaults(block,ports,site);
             if ~isempty(site.faults)
-                if strcmp(get_param(block,'BlockType'),'RelationalOperator')
+                if ismember(get_param(block,'BlockType'),{'RelationalOperator','Logic'})
                     site.originalOperator=get_param(block,'Operator');
                 elseif strcmp(get_param(block,'BlockType'),'Sum')
                     pattern=strrep(get_param(block,'Inputs'),'|','');
                     if all(isstrprop(pattern,'digit')),pattern=repmat('+',1,numel(ports.Inport));end
                     site.originalOperator=pattern;
+                end
+                if strcmp(site.faults{1},'lor')
+                    choices=operatorChoices('lor');
+                    if site.operandCount==1 && (get_param(ports.Inport(1),'CompiledPortWidth')==1 || ...
+                            get_param(ports.Inport(1),'CompiledPortDimensionsMode'))
+                        choices={'AND','OR'};
+                    end
+                    site.replacementOperators=choices(~strcmp(choices,site.originalOperator));
+                else
+                    site.replacementOperators=operatorChoices(site.faults{1},site);
                 end
                 site.reason='';rows{end+1}=site; %#ok<AGROW>
             end
@@ -91,16 +103,10 @@ sites=sites(order);
 assert(numel(unique({sites.id}))==numel(sites),'Duplicate site identifiers in %s.',model);
 end
 
-function [kinds,reason]=signalFaults(site,width,complex)
+function [kinds,reason]=signalFaults(site,width,complex,variableSize)
 kinds={};reason='';
 if width<1 || complex
     reason='requires a real signal of known width';return
-end
-if width>1
-    if ismember(site.dataType,{'double','single'}), kinds={'bias','gain','negate','absolute','invert'};
-    elseif strcmp(site.dataType,'boolean'),kinds={'invert','bit_flip'};
-    else,reason='unsupported vector data type';end
-    return
 end
 switch site.dataType
     case 'boolean'
@@ -108,11 +114,15 @@ switch site.dataType
     case {'double','single'}
         kinds={'bias','gain','negate','absolute','invert','stuck_at','zero','package_drop'};
     case {'int8','uint8','int16','uint16','int32','uint32'}
-        kinds={'bias','gain','stuck_at','zero','package_drop'};
+        kinds={'bias','gain','invert','stuck_at','zero','package_drop'};
     case {'int64','uint64'}
-        kinds={'stuck_at','zero','package_drop'};
+        kinds={'invert','stuck_at','zero','package_drop'};
     otherwise
         reason=['unsupported signal type: ' site.dataType];return
+end
+if variableSize
+    kinds=kinds(~ismember(kinds,{'zero','stuck_at','package_drop'}));
+    return
 end
 ts=site.sampleTime;
 if isnumeric(ts) && numel(ts)==2 && isfinite(ts(1)) && ts(1)>=0
@@ -125,12 +135,23 @@ end
 
 function kinds=operatorFaults(block,ports,site)
 kinds={};
-if numel(ports.Inport)<2 || ~all(strcmp({site.destinations.kind},'inport')),return;end
+type=get_param(block,'BlockType');
+if ~ismember(type,{'Logic','RelationalOperator','Sum','Product'}) || isempty(ports.Inport) || ...
+        ~all(strcmp({site.destinations.kind},'inport')),return;end
+numericTypes={'double','single','boolean','int8','uint8','int16','uint16','int32','uint32','int64','uint64'};
 for input=ports.Inport(:)'
-    if get_param(input,'CompiledPortWidth')~=1 || get_param(input,'CompiledPortComplexSignal') || ...
-            ~ismember(get_param(input,'CompiledPortDataType'),{'double','single'}),return;end
+    dt=get_param(input,'CompiledPortDataType');
+    if get_param(input,'Line')<0 || get_param(input,'CompiledPortComplexSignal') || ~ismember(dt,numericTypes),return;end
+    if ismember(type,{'Sum','Product'}) && (get_param(input,'CompiledPortWidth')~=1 || ~ismember(dt,{'double','single'})),return;end
 end
-switch get_param(block,'BlockType')
+if strcmp(type,'Logic')
+    % A one-port non-NOT operator reduces a vector, whereas NOT is elementwise.
+    if strcmp(get_param(block,'Operator'),'NOT') && (get_param(ports.Inport(1),'CompiledPortWidth')~=1 || ...
+            get_param(ports.Inport(1),'CompiledPortDimensionsMode')),return;end
+    kinds={'lor'};return
+end
+if numel(ports.Inport)<2,return;end
+switch type
     case 'Sum', kinds={'asr','s2p'};
     case 'Product', kinds={'p2s'};
     case 'RelationalOperator'

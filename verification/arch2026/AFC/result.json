@@ -7,8 +7,8 @@
   "source_sha256": "fc36ae6ea8ddac95e4addfe8305172e36504c2d4c838e0c812c4a22f70bd1875",
   "variant": "fi_afc.slx",
   "horizon": 51,
-  "candidates": 369,
-  "compatible": 360,
+  "candidates": 374,
+  "compatible": 365,
   "sink_site": "E1865_1__1396_inport1",
   "internal_site": "E1862_1__1594_inport2",
   "checks": [

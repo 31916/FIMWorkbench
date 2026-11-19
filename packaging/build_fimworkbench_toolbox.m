@@ -4,7 +4,7 @@ root=fileparts(fileparts(mfilename('fullpath')));
 if nargin<1,outputFolder=fullfile(fileparts(root),'outputs');end
 if ~isfolder(outputFolder),mkdir(outputFolder);end
 [ok,info]=fileattrib(outputFolder);assert(ok);outputFolder=info.Name;
-release="2.0.0";
+release="2.1.0";
 output=fullfile(outputFolder,"FIMWorkbench-"+release+".mltbx");
 stage=tempname;
 mkdir(fullfile(stage,'verification'));
@@ -12,7 +12,7 @@ cleanup=onCleanup(@()rmdir(stage,'s')); %#ok<NASGU>
 % Only copy release inputs. Never package a recipient's models or new runs.
 for item=["FIMWorkbench.m","README.md","+fimwb","benchmarks","examples", ...
         "verification/all_sites","verification/arch2026","verification/fault_types", ...
-        "verification/sources","verification/results.csv","verification/editor.csv"]
+        "verification/sources","verification/results.csv","verification/editor.csv","verification/lor.csv"]
     [ok,msg]=copyfile(fullfile(root,item),fullfile(stage,item));assert(ok,'%s',msg);
 end
 % MLTBX text parts use UTF-8. Transcode legacy upstream text before packaging
@@ -34,7 +34,7 @@ opts=matlab.addons.toolbox.ToolboxOptions(stage,"f8182e0c-2ba3-4033-89d4-2c82c5d
 opts.ToolboxName="FIM Workbench";
 opts.ToolboxVersion=release;
 opts.AuthorName="31916";
-opts.Summary="FIMの故障定義と演算子置換に基づいてSimulinkモデルに故障を注入し、故障量・適用時間を設定できます。";
+opts.Summary="FIMの全15種類の信号故障・演算子置換をSimulinkモデルに注入し、故障ごとにON/OFF・値・適用時間を設定できます。";
 opts.Description="インストール後に「アプリ」タブで FIMWorkbench を開くか、同名のコマンドを実行してください。"+ ...
     "ARCH-COMP 2026の12モデルを同梱。MATLABとSimulinkが必要です。モデルによってはStateflow、Deep Learning Toolboxなども使用します。";
 opts.MinimumMatlabRelease="R2026a";

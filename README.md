@@ -6,11 +6,11 @@ Simulinkモデルの配線と演算ブロックを調べ、選んだ箇所に故
 
 FIM Workbenchは、Ezio Bartocci、Leonardo Mariani、Dejan Ničković、Drishti Yadavによる **FIM（Fault Injection and Mutation for Simulink）** の故障定義を採用した独立のMATLABアドオンです。これらの故障をSimulinkの標準ブロックで生成し、注入箇所の探索、設定画面、保存をWorkbench側で実装しています。配布アドオンと対象モデルが使うMathWorks製品で実行できます。[FIMの原著論文（ESEC/FSE 2022）](https://doi.org/10.1145/3540250.3558932)・[著者によるFIMの実装](https://gitlab.com/DrishtiYadav/fimtool/-/tree/a110acf2b718eab4cdf65f938203f60009fa0510)
 
-FIMの信号故障10種類と、加減算の符号置換（ASR）、和から積（S2P）、積から和（P2S）、比較演算子置換（ROR）を実装しています。例えばFIMの「Stuck-at」は故障直前の値を保持する `hold_last` に対応します。Workbenchでは、指定値に固定する `stuck_at` と、倍率を指定する `gain` も選べます。[FIMの故障・演算子の定義](https://gitlab.com/DrishtiYadav/fimtool/-/blob/a110acf2b718eab4cdf65f938203f60009fa0510/FaultInjector_Master/Readme.txt)
+FIMが定義する**全15種類**（信号故障10種類、演算子置換5種類）を実装しています。さらにWorkbench独自の `gain` と `stuck_at` を加えた計17種類を指定できます。FIMでいう「Stuck-at」は故障直前の値を保持する `hold_last` です。[FIMの故障・演算子の定義](https://gitlab.com/DrishtiYadav/fimtool/-/blob/a110acf2b718eab4cdf65f938203f60009fa0510/FaultInjector_Master/Readme.txt)
 
 ## インストールして使う
 
-1. `FIMWorkbench-2.0.0.mltbx` をダウンロードし、MATLABの「ファイル」パネルでダブルクリックして「インストール」を選びます。[v2.0.0 のインストーラー](https://github.com/31916/FIMWorkbench/releases/download/v2.0.0/FIMWorkbench-2.0.0.mltbx)
+1. `FIMWorkbench-2.1.0.mltbx` をダウンロードし、MATLABの「ファイル」パネルでダブルクリックして「インストール」を選びます。[v2.1.0 のインストーラー](https://github.com/31916/FIMWorkbench/releases/download/v2.1.0/FIMWorkbench-2.1.0.mltbx)
 2. 「アプリ」タブの `FIMWorkbench` を開きます。コマンドウィンドウに `FIMWorkbench` と入力しても同じ画面が開きます。
 3. 同梱モデルは、一覧から `AT` などを選び「ベンチマークを開く」を押します。自分のモデルは、普段使うSimulinkプロジェクトや初期化スクリプトを開いた状態で「元モデル」と新しい「作業用コピー」の保存先を指定し、「作業用コピーを作成」を押します。対応する各箇所に1つずつ、初期状態がOFFの故障を設定します。
 4. 故障設定画面で種類・ON/OFF・値・時間を選び、Simulinkの「実行」を押します。「モデルを保存」で変更を保存します。同梱モデルは同じ一覧から、自分のコピーは「保存したコピーを開く」から再開できます。
@@ -26,9 +26,9 @@ addpath(fullfile(pwd,'packaging'))
 installer = build_fimworkbench_toolbox(fullfile(pwd,'dist'))
 ~~~
 
-`dist/` に生成された `.mltbx` を他の利用者に渡せます。配布版のソースはGitタグ `v2.0.0` で取得できます。
+`dist/` に生成された `.mltbx` を他の利用者に渡せます。配布版のソースはGitタグ `v2.1.0` で取得できます。
 
-1.0.0から更新する場合も、同じ手順で2.0.0をインストールします。保存済みのベンチマークは初回起動時に新しい個人フォルダへコピーします。自分で作成したモデルは「保存したコピーを開く」から再開できます。既存スクリプトでは起動コマンドを `FIMWorkbench`、関数の接頭辞を `fimwb.` に変更します。
+旧版からの更新も同じ手順です。保存済みモデルは「保存したコピーを開く」から再開できます。**新しい種類・箇所を使うときは、元モデルから別名で作業用コピーを生成**してください。同梱のAFCで新しい故障枠を試すには、AFCの作業用モデルを閉じ、`fimwb.openBenchmark('AFC',fullfile(pwd,'AFC_2_1'))` で新しいフォルダを指定します。1.0.0用のスクリプトでは起動コマンドを `FIMWorkbench`、関数の接頭辞を `fimwb.` に変更します。
 
 ## テスト済みモデルを開く
 
@@ -96,28 +96,41 @@ results = fimwb.sweep(src,profiles,fullfile(out,'sweep'));
 
 ## 指定できる故障
 
-| 種類 | 指定する値・動作 |
-|---|---|
-| `bias`、`gain` | 加算量、倍率。単位は注入点の信号に従う |
-| `noise` | `value` はSimulinkの帯域制限付きホワイトノイズのパワー。`period` は標本周期（秒）、`seed` は乱数seed |
-| `delay` | 遅延秒数。初期出力は0。離散信号では元の周期の整数倍 |
-| `package_drop`、`stuck_at`、`zero` | 期間中に指定値へ置換、設定値への固着、0への固定 |
-| `hold_last` | 開始直前の値を保持。時刻0から有効な場合の初期値は `value`。連続系では直前のソルバーの主要ステップを参照 |
-| `negate`、`absolute`、`invert`、`bit_flip` | 符号反転、絶対値、ゼロ判定による0/1反転、論理信号のビット反転 |
-| `asr`、`s2p`、`p2s`、`ror` | 加減算の符号列（例 `"+-"`）、和から積、積から和、比較演算子の置換（例 `">="`） |
+| FIMでの名称 | 設定の `type` | 動作・値 |
+|---|---|---|
+| Negate | `negate` | 符号を反転 |
+| Invert | `invert` | 0なら1、非ゼロなら0 |
+| Stuck-at 0 | `zero` | 0に固定 |
+| Absolute | `absolute` | 絶対値を出力 |
+| Noise | `noise` | 帯域制限付きホワイトノイズを加算。`value` はパワー、`period` は標本周期（秒）、`seed` は乱数のシード |
+| Bias/Offset | `bias` | 指定した正または負の値を加算 |
+| Stuck-at | `hold_last` | 開始直前の値を保持。時刻0から有効なら初期値は `value`。連続系では直前のソルバーの主要ステップの値 |
+| Time Delay | `delay` | 指定秒数の遅延。初期出力は0。離散信号では元の周期の整数倍 |
+| Bit Flip | `bit_flip` | ブール信号の真偽を反転 |
+| Package Drop | `package_drop` | 指定した値で出力を置換 |
+| ROR | `ror` | 比較演算子を `>`、`<`、`<=`、`>=`、`==`、`~=` から選択 |
+| LOR | `lor` | 論理演算子を `AND`、`OR`、`NAND`、`NOR`、`XOR`、`NXOR`（排他的論理和の否定）から選択 |
+| S2P | `s2p` | 和を積に置換 |
+| P2S | `p2s` | 積を和に置換 |
+| ASR | `asr` | 入力ごとの符号を置換。2入力では `+-`、`--`、`++`、`-+` |
 
-有効期間の既定はシミュレーション開始から終了までです。`start` と `stop` は秒単位で、終了の空欄は期限なしです。整数へのバイアス・ゲインは32ビットまでの整数型で扱い、計算後に元の型へ丸めて飽和させます。実数ベクトルはバイアス・ゲインなどの要素ごとの変換に対応します。スキャンは現在アクティブなSimulink階層の配線を扱います。サブシステムの入出力、マスクやリンク内の編集可能な配線、分岐前、接続先ごとの枝を区別します。モデル参照先の内部を試す場合は、その参照モデルを入力に指定します。
+JSONやMATLABでは表のFIM名をそのまま `type` に指定できます。演算子は名前に加えて原版の番号でも指定できます。例えば `{"type":"LOR","value":6}` の置換先は `NXOR` です。番号は上表の並びの左から順に1から始まります。Workbench独自の `gain` は信号に指定の倍率を掛け、`stuck_at` は指定した値に固定します。
+
+LORを試すには、AFCの故障設定画面で `O1688` の行を選び、画面下の置換先で `XOR` を選んで「ON」にします。JSONでは `{"site":"O1688","type":"lor","enabled":true,"value":"XOR","start":5,"stop":10}` で同じ箇所を5秒以上10秒未満だけ切り替えられます。画面には、その入力で使えて元の演算子と異なる置換先が表示されます。例えば1入力・スカラーの `NOT` は `AND` または `OR` に置換できます。1入力のベクトルを論理集約するブロックでは、出力形状を保てる置換を選べます。
+
+有効期間の既定はシミュレーション開始から終了までです。`start` と `stop` は秒単位で、終了の空欄は期限なしです。一定の時間だけ注入するときは、終了に開始時刻と持続時間の和を指定します。整数へのバイアス・ゲインは32ビットまでの整数型で扱い、計算後に元の型へ丸めて飽和させます。実数ベクトルはバイアス・ゲインなどの要素ごとの変換に対応します。スキャンは現在アクティブなSimulink階層の配線を扱います。サブシステムの入出力、マスクやリンク内の編集可能な配線、分岐前、接続先ごとの枝を区別します。モデル参照先の内部を試す場合は、その参照モデルを入力に指定します。
 
 ## ARCH-COMPでの検証
 
 検証対象はARCH-COMP 2026の反例探索部門です。8系統のうちSBを5モデルに展開した計12モデルです。PMは原著者が公開した単一LRL入力・PACE_COUNT出力の `Model1_Scenario1_Faulty` を比較元に使いました。SB1～SB5は大会向けに選定された5つのSimulinkモデルと対応する学習済み重みを使い、検証コピーでは著者環境の絶対パスを同梱した重みのファイル名に張り替えています。F16の公式実行入口はMATLABのODEなので、シミュレーションごとにODEを呼ぶSimulinkブロックを用い、その観測出力1箇所を検証しました。[2026年部門報告](https://easychair.org/publications/paper/DtZ3/open)・[公式モデル](https://gitlab.com/goranf/ARCH-COMP/-/tree/2238327987e2e3b81f9bcc38b2ad250013deba04/models/FALS)・[PMの配布元](https://github.com/3MD3/3MD3/blob/5a1688de66b1974f6f07362495ccc0cfba957124/Model1/Scenario1.m)・[大会用SBの配布元](https://github.com/lyudeyun/FalBenchGen_ARCHCOMP25/tree/4d4729f428780a8a01bc0173873506c8d71a9f38)
 
-- **全箇所の設置確認**　抽出した962候補中、設定を保存・再コンパイルしても残る918箇所にそれぞれ独立した故障枠を設置しました。モデルごとに全枠を同時にOFFにし、規定時間の全出力と時刻列を元モデルと照合しました。制御用の接続など34箇所と、SBの予測ブロックが再生成する内部配線10箇所を対象外としました。各除外理由と、各箇所に割り当てた枠番号・モデルファイル名は `verification/all_sites/<モデル>/sites.csv` にあります。
+- **全箇所の設置確認**　抽出した967候補中、設定を保存・再コンパイルしても残る923箇所にそれぞれ独立した故障枠を設置しました。モデルごとに全枠を同時にOFFにし、規定時間の全出力と時刻列を元モデルと照合しました。制御用の接続など34箇所と、SBの予測ブロックが再生成する内部配線10箇所を対象外としました。各除外理由と、各箇所に割り当てた枠番号・モデルファイル名は `verification/all_sites/<モデル>/sites.csv` にあります。
 - **ON時の波形確認**　各モデルで同一入力を使い、全OFF、バイアスのみ、ゲインのみ、2故障同時、数値変更、再び全OFFを検証しました。ネイティブSimulinkの11モデルでは内部の接続先だけへの注入と、内部・出力の同時注入も検証しました。比較は指定した故障変換式と時刻列に対して行っています。全105比較の最大絶対誤差は0でした。[モデル別の結果](verification/results.csv)
 - **編集画面の確認**　12モデルそれぞれで作業用コピーを開き、故障種類の切替、チェックボックス、数値変更、入力エラーの取り消し、シミュレーション、保存後の再読込を確認しました。[画面操作の結果](verification/editor.csv)
-- **設定の列挙**　同梱のプロファイルで12,100件の単一故障設定を列挙しました。各モデルの `fault_plan.csv` が設定の一覧、`verification/arch2026/<モデル>/traces.mat` が代表設定で実際に比較した波形です。
-- **故障別の確認**　合成テストモデルで全16種類、同一箇所での適用順、分岐前・個別枝・演算子を併用した場合を検証しました。離散・連続それぞれの遅延と保持を含む20比較の最大絶対誤差はノイズ強度を変更した試験の約2.22×10⁻¹⁶でした。[故障別の結果](verification/fault_types/results.csv)
+- **設定の列挙**　同梱のプロファイルで12,957件の単一故障設定を列挙しました。各モデルの `fault_plan.csv` が設定の一覧、`verification/arch2026/<モデル>/traces.mat` が代表設定で実際に比較した波形です。
+- **論理演算子の置換**　12モデルのうち、AFCの5箇所で計22通りのLORを適用できました。各設定を編集画面からONにして実行し、元のSimulinkブロックを直接置換した参照モデルと比較しました。置換箇所の出力112,200点とモデル出力1,072,588点はすべて一致しました。[LORの全設定と比較結果](verification/lor.csv)
+- **故障別の確認**　合成モデルでFIMの15種類とWorkbench独自の2種類を検証しました。LORは6演算子を2入力の全真理値で、RORは6演算子を、ASRは2入力の4符号列を検証しました。故障の併用、時間窓、配列信号も含む53比較の最大絶対誤差は、単精度のノイズ強度試験の約4.77×10⁻⁷でした。[故障別の結果](verification/fault_types/results.csv)
 
 検証環境はLinux上のMATLAB R2026a・Simulinkです。Stateflow、Deep Learning Toolboxなど、各ベンチマークが使う製品も必要です。F16には本プロジェクトのR2026a互換処理を使用します。モデルを一から再取得する場合は、シェルで `python3 benchmarks/fetch_sources.py --project /path/to/project` を実行します。取得元のコミットとSHA-256を固定してあり、付属済みのファイルは同じコマンドで照合できます。
 
-新しい保存先で再試験するには、MATLABで `addpath(fullfile(fileparts(which('FIMWorkbench')),'benchmarks'))` を実行し、`run_arch_suite(新しい保存先)` で代表設定、`check_all_sites(新しい保存先)` で全箇所の設置と全OFF、`test_fault_types(新しい保存先)` で故障の種類と順序を検証できます。各試験には別々の保存先を指定します。
+新しい保存先で再試験するには、MATLABで `addpath(fullfile(fileparts(which('FIMWorkbench')),'benchmarks'))` を実行し、`run_arch_suite(新しい保存先)` で代表設定、`check_all_sites(新しい保存先)` で全箇所の設置と全OFF、`test_fault_types(新しい保存先)` で故障の種類と順序を検証できます。`verify_arch_lor(出力CSVのパス)` は各LOR設定を元のブロックを直接変更したモデルと照合します。各試験には別々の保存先を指定します。

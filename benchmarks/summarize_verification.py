@@ -15,6 +15,7 @@ def read_csv(file):
 def main():
     output = []
     editors = {r["model"]: r for r in read_csv(ROOT / "editor.csv")}
+    replacements = read_csv(ROOT / "lor.csv")
     for model in MODELS:
         run = ROOT / "arch2026" / model
         coverage = ROOT / "all_sites" / model
@@ -36,13 +37,19 @@ def main():
         assert len({(r["model"], r["slot"]) for r in valid}) == len(valid)
         assert (run / "traces.mat").is_file()
         assert all(c["samples_compared"] > 0 for c in result["checks"])
+        planned_lor = {(p["site"], json.loads(p["value"])) for p in plans if p["type"] == "lor"}
+        tested_lor = [r for r in replacements if r["model"] == model]
+        assert len(planned_lor) == len(tested_lor)
+        assert planned_lor == {(r["site"], r["replacement"]) for r in tested_lor}
+        assert all(int(r["local_samples"]) > 0 and int(r["output_samples"]) > 0
+                   and float(r["max_error"]) == 0 for r in tested_lor)
         output.append(dict(model=model, horizon_seconds=result["horizon"], candidates=len(rows),
                            installed_off_verified=len(valid), excluded=len(excluded), planned_settings=len(plans),
                            trace_checks=len(result["checks"]), maximum_absolute_error=max(c["max_abs_error"] for c in result["checks"]),
-                           editor_verified="PASS", active_test="PASS", tested_scope=result["scope"],
+                           lor_settings_verified=len(tested_lor), editor_verified="PASS", active_test="PASS", tested_scope=result["scope"],
                            ready_model=(coverage / valid[0]["model"]).relative_to(ROOT.parent).as_posix()))
     with (ROOT / "results.csv").open("w", newline="", encoding="utf-8") as stream:
-        writer=csv.DictWriter(stream, fieldnames=output[0])
+        writer=csv.DictWriter(stream, fieldnames=output[0], lineterminator="\n")
         writer.writeheader()
         writer.writerows(output)
     print("Models:", len(output), "verified sites:", sum(r["installed_off_verified"] for r in output),

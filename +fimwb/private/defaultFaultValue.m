@@ -15,6 +15,9 @@ switch kind
     case 'ror'
         value='==';
         if isfield(site,'originalOperator') && strcmp(value,site.originalOperator),value='~=';end
+    case 'lor'
+        choices=operatorChoices(kind,site);
+        value=choices{1};
     otherwise
         value=[];
 end

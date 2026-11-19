@@ -33,6 +33,8 @@ assert(all(strcmp({batch.status},'compiled')));
 repeat=fimwb.sweep(file,profiles,fullfile(folder,'sweep'),[1 numel(cases)]);
 assert(all(strcmp({repeat.status},'reused')));
 types={'bias','gain','negate','absolute','invert','stuck_at','zero','package_drop','delay','hold_last','bit_flip','asr','s2p','p2s','ror','noise'};
+names={'Bias/Offset','gain','Negate','Absolute','Invert','stuck_at','Stuck-at 0','Package Drop',...
+    'Time Delay','Stuck-at','Bit Flip','ASR','S2P','P2S','ROR','Noise'};
 results=struct('test',{},'max_error',{});
 for q=1:numel(types)
     kind=types{q};s=edge('Y1');column=1;val=[];start=0;stop=[];expected=x;
@@ -54,7 +56,7 @@ for q=1:numel(types)
         case 'ror',s=op('Compare');column=5;val='>';expected=double(x>2);
         case 'noise',val=.01;
     end
-    fault=struct('site',s,'type',kind,'enabled',true,'value',val,'start',start,'stop',stop);
+    fault=struct('site',s,'type',names{q},'enabled',true,'value',val,'start',start,'stop',stop);
     name=['demo_' kind];gen=fullfile(folder,[name '.slx']);fimwb.build(file,struct('faults',fault),gen);
     load_system(gen);clean=onCleanup(@()close_system(name,0));
     got=runOpen(name);
@@ -111,6 +113,7 @@ fimwb.setFault(variant,1,struct('type','hold_last','value',0,'start',.5,'stop',.
 sample=runOpen(variant);expected=original;expected(original>=.5 & original<.8)=.4;
 e=max(abs(sample-expected));assert(e<1e-10);
 results(end+1)=struct('test','continuous_hold_last','max_error',e);clear release;
+results=[results checkFimReplacements(folder,fullfile(root,'examples','profiles.json')) checkArrayFaults(folder)];
 writetable(struct2table(results),fullfile(folder,'results.csv'));disp(struct2table(results));
     function w(from,to),add_line(model,from,to,'autorouting','on');end
 end

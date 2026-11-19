@@ -11,6 +11,7 @@
   },
   "operandCount": 0,
   "originalOperator": "",
+  "replacementOperators": [],
   "dataType": "double",
   "dimensions": [
     1,
