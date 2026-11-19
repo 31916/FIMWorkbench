@@ -5,7 +5,7 @@ assert(bdIsLoaded(model)&&strcmp(get_param(model,'SimulationStatus'),'stopped'),
 validateattributes(slot,{'numeric'},{'scalar','integer','positive'});
 assert(isstruct(changes)&&isscalar(changes)&&all(ismember(fieldnames(changes),...
     {'type','enabled','value','start','stop','seed','period'})),'Invalid setting change.');
-paths=find_system(model,'SearchUnderMasks','all','Tag',sprintf('grfi.fault.%d',slot));
+paths=faultStages(model,slot);
 assert(numel(paths)==1,'Expected exactly one generated fault slot %d.',slot);
 block=paths{1};old=get_param(block,'UserData');next=old.fault;
 if isfield(changes,'type'),assert(ismember(char(changes.type),old.site.faults),'This fault type is unavailable at %s.',old.site.id);end

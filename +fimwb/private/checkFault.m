@@ -27,7 +27,7 @@ switch f.type
         end
         if strcmp(f.type,'delay') && sample>0
             ratio=f.value/sample;
-            assert(abs(ratio-round(ratio))<=1e-9*max(1,ratio),'grfi:IncompatibleValue','Delay must be an integer number of source samples.');
+            assert(abs(ratio-round(ratio))<=1e-9*max(1,ratio),'fimwb:IncompatibleValue','Delay must be an integer number of source samples.');
         end
         if strcmp(f.type,'noise')
             validateattributes(f.seed,{'numeric'},{'scalar','integer','>=',1,'<=',2147483646});
@@ -35,20 +35,20 @@ switch f.type
             if sample>0
                 ratio=f.period/sample;
                 assert(ratio>=1 && abs(ratio-round(ratio))<=1e-9*max(1,ratio),...
-                    'grfi:IncompatibleValue','Noise period must be a positive integer multiple of the source period.');
+                    'fimwb:IncompatibleValue','Noise period must be a positive integer multiple of the source period.');
             end
         end
         if strcmp(site.dataType,'boolean')
-            assert(ismember(f.value,[0,1]),'grfi:IncompatibleValue','A boolean replacement must be 0 or 1.');
+            assert(ismember(f.value,[0,1]),'fimwb:IncompatibleValue','A boolean replacement must be 0 or 1.');
         elseif contains(site.dataType,'int') && ismember(f.type,{'stuck_at','package_drop','hold_last'})
             assert(f.value==fix(f.value) && f.value>=double(intmin(site.dataType)) && ...
-                f.value<=double(intmax(site.dataType)), 'grfi:IncompatibleValue','Integer replacement is outside the signal type.');
+                f.value<=double(intmax(site.dataType)), 'fimwb:IncompatibleValue','Integer replacement is outside the signal type.');
         end
     case 'asr'
         assert(ischar(f.value)||isStringScalar(f.value),'ASR needs a sign string, e.g. "+-".');
         f.value=char(f.value);
         assert(~isempty(f.value)&&all(ismember(f.value,'+-')),'Invalid ASR sign string.');
-        assert(numel(f.value)==site.operandCount,'grfi:IncompatibleValue','ASR needs one sign per operand.');
+        assert(numel(f.value)==site.operandCount,'fimwb:IncompatibleValue','ASR needs one sign per operand.');
     case 'ror'
         assert(ismember(string(f.value),["<","<=",">",">=","==","~="]),'Invalid relational operator.');
         f.value=char(f.value);
@@ -56,6 +56,6 @@ switch f.type
         assert(isempty(f.value),'Fault %s has no adjustable numerical value.',f.type);
 end
 if ismember(f.type,{'asr','ror'}) && isfield(site,'originalOperator')
-    assert(~strcmp(f.value,site.originalOperator),'grfi:IncompatibleValue','Replacement equals the original operator.');
+    assert(~strcmp(f.value,site.originalOperator),'fimwb:IncompatibleValue','Replacement equals the original operator.');
 end
 end

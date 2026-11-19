@@ -4,7 +4,7 @@ function [cases, excluded] = plan(modelFile,profiles)
 if ischar(profiles)||isStringScalar(profiles),profiles=jsondecode(fileread(profiles));end
 if isstruct(profiles),profiles=num2cell(profiles);end
 assert(iscell(profiles),'Expected an array of profiles.');
-sites=grfi.scan(modelFile); cases=struct('site',{},'type',{},'enabled',{},'value',{},'seed',{},'period',{},'start',{},'stop',{});
+sites=fimwb.scan(modelFile); cases=struct('site',{},'type',{},'enabled',{},'value',{},'seed',{},'period',{},'start',{},'stop',{});
 excluded=struct('site',{},'type',{},'value',{},'reason',{});
 for k=1:numel(profiles)
     p=profiles{k};assert(isstruct(p)&&isfield(p,'type'),'Missing profile type.');
@@ -23,7 +23,7 @@ for k=1:numel(profiles)
             try
                 cases(end+1)=checkFault(p,sites(n)); %#ok<AGROW>
             catch err
-                if ~strcmp(err.identifier,'grfi:IncompatibleValue'),rethrow(err);end
+                if ~strcmp(err.identifier,'fimwb:IncompatibleValue'),rethrow(err);end
                 excluded(end+1)=struct('site',p.site,'type',p.type,'value',p.value,'reason',err.message); %#ok<AGROW>
             end
         end

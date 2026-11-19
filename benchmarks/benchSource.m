@@ -37,11 +37,11 @@ switch id
         % simulation and independently obtain the reference returned by that ODE.
         file='';u=[];
         if ~inputsOnly
-            u=grfi_f16_measurement();
+            u=fimwb_f16_measurement();
             name='bench_f16_observation';file=fullfile(work,[name '.slx']);
             new_system(name);c=onCleanup(@() close_system(name,0)); %#ok<NASGU>
             add_block('simulink/Sources/From Workspace',[name '/Measurement'],...
-                'VariableName','grfi_f16_measurement()','SampleTime','0.01','Interpolate','on','OutputAfterFinalValue','Holding final value');
+                'VariableName','fimwb_f16_measurement()','SampleTime','0.01','Interpolate','on','OutputAfterFinalValue','Holding final value');
             add_block('built-in/Outport',[name '/RecordedValue']);
             add_line(name,'Measurement/1','RecordedValue/1');
             set_param(name,'SolverType','Fixed-step','Solver','FixedStepDiscrete','FixedStep','0.01');

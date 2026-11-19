@@ -1,4 +1,4 @@
-function data=grfi_f16_measurement()
+function data=fimwb_f16_measurement()
 % Evaluate the official ODE with the project's release compatibility adapter.
 % Only its published scalar measurement is exposed as a Simulink signal.
 root=fileparts(fileparts(mfilename('fullpath')));

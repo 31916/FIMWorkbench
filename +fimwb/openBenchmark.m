@@ -9,14 +9,16 @@ pattern=['all_' lower(id) '_*'];
 models=[dir(fullfile(verified,[pattern '.mdl']));dir(fullfile(verified,[pattern '.slx']))];
 assert(isscalar(models),'Expected exactly one verified all-sites model in %s.',verified);
 [~,~,ext]=fileparts(models.name);name=['edit_' lower(id)];
+template=fullfile(verified,models.name);source=template;
 if nargin<2 || isempty(workingDir)
-    % Reopen saved models from an earlier ZIP installation.
-    workingDir=fullfile(root,'work',id);
-    if ~isfile(fullfile(workingDir,[name ext]))
-        folders=strsplit(userpath,pathsep);
-        personal=folders{1};
-        if isempty(personal),personal=prefdir;end
-        workingDir=fullfile(personal,'GRFaultInjector',id);
+    folders=strsplit(userpath,pathsep);personal=folders{1};
+    if isempty(personal),personal=prefdir;end
+    workingDir=fullfile(personal,'FIMWorkbench',id);
+    % On the first open, import a saved personal or ZIP working copy.
+    previous={fullfile(personal,'GRFaultInjector',id),fullfile(root,'work',id)};
+    for k=1:numel(previous)
+        saved=fullfile(previous{k},[name ext]);
+        if isfile(saved),source=saved;break;end
     end
 end
 if ~isfolder(workingDir),mkdir(workingDir);end
@@ -25,20 +27,36 @@ file=fullfile(workingDir,[name ext]);
 if bdIsLoaded(name),assert(strcmp(get_param(name,'FileName'),file),'Another working copy with this model name is open.');end
 addpath(root,fullfile(root,'benchmarks'));
 [~,horizon,input]=benchSource(id,root,workingDir,true);
-inputName=['grfi_' lower(id) '_input'];assignin('base',inputName,input);
+inputName=['fimwb_' lower(id) '_input'];assignin('base',inputName,input);
 if ~isfile(file)
     % Stage first-use setup so a failed initialization can be retried.
     newFolder=tempname(workingDir);mkdir(newFolder);guard=onCleanup(@()clean(newFolder,name));
-    staged=fullfile(newFolder,[name char(ext)]);copyfile(fullfile(verified,models.name),staged);
+    staged=fullfile(newFolder,[name char(ext)]);copyfile(source,staged);
     assert(java.io.File(staged).setWritable(true),'Cannot make the working copy writable: %s',staged);
     load_system(staged);
-    set_param(name,'SimulationMode','normal','StopTime',num2str(horizon));
-    if ~strcmp(id,'F16'),set_param(name,'LoadExternalInput','on','ExternalInput',inputName);end
+    if strcmp(source,template)
+        set_param(name,'SimulationMode','normal','StopTime',num2str(horizon));
+        if ~strcmp(id,'F16'),set_param(name,'LoadExternalInput','on','ExternalInput',inputName);end
+    else
+        updateInput(name,id,inputName);upgradeMeasurement(name);
+    end
     save_system(name);close_system(name,0);
-    java.nio.file.Files.move(java.io.File(staged).toPath(),java.io.File(file).toPath(),javaArray('java.nio.file.CopyOption',0));
+    try
+        java.nio.file.Files.move(java.io.File(staged).toPath(),java.io.File(file).toPath(),javaArray('java.nio.file.CopyOption',0));
+    catch err
+        if ~isfile(file),rethrow(err);end
+    end
     clear guard;
 end
-win=grfi.editor(file,visible);
+if ~bdIsLoaded(name),load_system(file);end
+updateInput(name,id,inputName);
+win=fimwb.editor(file,visible);
+end
+
+function updateInput(model,id,inputName)
+if strcmp(get_param(model,'ExternalInput'),['grfi_' lower(id) '_input'])
+    set_param(model,'ExternalInput',inputName);
+end
 end
 
 function clean(folder,name)

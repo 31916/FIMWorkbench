@@ -27,8 +27,8 @@ end
 function res=checkModel(id,root,folder)
 [file,T,u,scope]=benchSource(id,root,folder);
 [~,model,ext]=fileparts(file);
-initialHash=grfi.fileHash(file);
-sites=grfi.scan(file);writeJSON(fullfile(folder,'sites.json'),sites);
+initialHash=fimwb.fileHash(file);
+sites=fimwb.scan(file);writeJSON(fullfile(folder,'sites.json'),sites);
 load_system(file);sourceRelease=onCleanup(@() closeIfLoaded(model));
 baseline=benchSim(model,T,u,false);
 if strcmp(id,'F16')
@@ -46,48 +46,55 @@ config=struct('sourceSha256',initialHash,'faults',{cfg});
 % scan and simulate might load model-specific init callbacks; close the read-only source.
 clear sourceRelease;
 name=['fi_' lower(id)];generated=fullfile(folder,[name ext]);
-grfi.build(file,config,generated);load_system(generated);
+fimwb.build(file,config,generated);load_system(generated);
 done=onCleanup(@() closeIfLoaded(name)); %#ok<NASGU>
 off=benchSim(name,T,u,false);
 checks=benchCompare(baseline,off,outIndex,0,1,'all_off');
-grfi.setFault(name,1,struct('enabled',true));
+fimwb.setFault(name,1,struct('enabled',true));
 single=benchSim(name,T,u,false);
 checks(end+1)=benchCompare(baseline,single,outIndex,b1,1,'bias_only');
-grfi.setFault(name,1,struct('enabled',false));grfi.setFault(name,2,struct('enabled',true));
+fimwb.setFault(name,1,struct('enabled',false));fimwb.setFault(name,2,struct('enabled',true));
 singleGain=benchSim(name,T,u,false);
 checks(end+1)=benchCompare(baseline,singleGain,outIndex,0,2,'gain_only');
-grfi.setFault(name,1,struct('enabled',true));
+fimwb.setFault(name,1,struct('enabled',true));
 combined=benchSim(name,T,u,false);
 checks(end+1)=benchCompare(baseline,combined,outIndex,b1,2,'bias_then_gain');
-grfi.setFault(name,1,struct('value',b2));grfi.setFault(name,2,struct('value',1.5));
+fimwb.setFault(name,1,struct('value',b2));fimwb.setFault(name,2,struct('value',1.5));
 tuned=benchSim(name,T,u,false);
 checks(end+1)=benchCompare(baseline,tuned,outIndex,b2,1.5,'retuned_both');
-grfi.setFault(name,1,struct('enabled',false));grfi.setFault(name,2,struct('enabled',false));
+fimwb.setFault(name,1,struct('enabled',false));fimwb.setFault(name,2,struct('enabled',false));
 again=benchSim(name,T,u,false);
 checks(end+1)=benchCompare(baseline,again,outIndex,0,1,'disabled_again');
 if ~isempty(inner.id)
-    grfi.setFault(name,3,struct('enabled',true));
-    slots=find_system(name,'SearchUnderMasks','all','Tag','grfi.fault.3');stage=slots{1};
+    fimwb.setFault(name,3,struct('enabled',true));
+    slots=find_system(name,'SearchUnderMasks','all','Tag','fimwb.fault.3');stage=slots{1};
     ph=get_param(stage,'PortHandles');incoming=get_param(get_param(ph.Inport(1),'Line'),'SrcPortHandle');
-    setLog(incoming,'grfi_original');setLog(ph.Outport(1),'grfi_faulty');
+    setLog(incoming,'fimwb_original');setLog(ph.Outport(1),'fimwb_faulty');
     [internal,log1]=benchSim(name,T,u,true);
     checks(end+1)=compareLocal(log1,'internal_only',ib);
-    grfi.setFault(name,1,struct('enabled',true));grfi.setFault(name,2,struct('enabled',true));
+    fimwb.setFault(name,1,struct('enabled',true));fimwb.setFault(name,2,struct('enabled',true));
     [mixed,log2]=benchSim(name,T,u,true);
     checks(end+1)=compareLocal(log2,'internal_and_output_local',ib);
     checks(end+1)=benchCompare(internal,mixed,outIndex,b2,1.5,'internal_and_output');
     set_param(incoming,'DataLogging','off');set_param(ph.Outport(1),'DataLogging','off');
     cfg{3}.enabled=true;
 else
-    grfi.setFault(name,1,struct('enabled',true));grfi.setFault(name,2,struct('enabled',true));
+    fimwb.setFault(name,1,struct('enabled',true));fimwb.setFault(name,2,struct('enabled',true));
 end
 cfg{1}.enabled=true;cfg{1}.value=b2;cfg{2}.enabled=true;cfg{2}.value=1.5;
 config.faults=cfg;writeJSON(fullfile(folder,'combination.json'),config);
 save_system(name);
-assert(strcmp(initialHash,grfi.fileHash(file)),'Source hash changed!');
+assert(strcmp(initialHash,fimwb.fileHash(file)),'Source hash changed!');
 save(fullfile(folder,'traces.mat'),'u','baseline','off','single','singleGain','combined','tuned','again','-v7');
 if ~isempty(inner.id),save(fullfile(folder,'traces.mat'),'internal','mixed','log1','log2','-append');end
-res=struct('id',id,'status','PASS','scope',scope,'source',file,'source_sha256',initialHash,'variant',generated,...
+if strcmp(fileparts(file),folder)
+    sourceBase='result';sourcePath=[model ext];
+else
+    sourceBase='toolbox';assert(startsWith(file,[root filesep]));
+    sourcePath=strrep(file(numel(root)+2:end),filesep,'/');
+end
+res=struct('id',id,'status','PASS','scope',scope,'source',sourcePath,'source_base',sourceBase,...
+    'source_sha256',initialHash,'variant',[name ext],...
     'horizon',T,'candidates',numel(sites),'compatible',sum(~cellfun(@isempty,{sites.faults})),...
     'sink_site',sink.id,'internal_site',inner.id,'checks',checks,'matlab',version);
 end

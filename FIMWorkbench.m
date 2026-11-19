@@ -1,7 +1,7 @@
-function window = GRFaultInjector()
-%GRFaultInjector Open a benchmark or create a fault-enabled copy of a Simulink model.
-% MATLABの「アプリ」タブまたは GRFaultInjector コマンドで起動します。
-window=uifigure('Name','GR Fault Injector','Position',[120 120 640 300]);
+function window = FIMWorkbench()
+%FIMWorkbench Open a benchmark or create a fault-enabled copy of a Simulink model.
+% MATLABの「アプリ」タブまたは FIMWorkbench コマンドで起動します。
+window=uifigure('Name','FIM Workbench','Position',[120 120 640 300]);
 layout=uigridlayout(window,[3 1]);
 layout.RowHeight={68,150,'1x'};
 benchmarks=uipanel(layout,'Title','ARCH-COMP ベンチマーク');
@@ -56,12 +56,12 @@ status=uilabel(layout,'Text','','Tag','status');
             switch action
                 case 'benchmark'
                     try
-                        [~,file]=grfi.openBenchmark(benchmark.Value);
+                        [~,file]=fimwb.openBenchmark(benchmark.Value);
                     catch err
-                        if ~strcmp(err.identifier,'grfi:SbWeightsPath'),rethrow(err);end
+                        if ~strcmp(err.identifier,'fimwb:SbWeightsPath'),rethrow(err);end
                         folder=uigetdir(pwd,'SB用に英数字のパスを持つ作業フォルダを選択');
                         if isequal(folder,0),return;end
-                        [~,file]=grfi.openBenchmark(benchmark.Value,folder);
+                        [~,file]=fimwb.openBenchmark(benchmark.Value,folder);
                     end
                 case 'build'
                     assert(isfile(source.Value),'元モデルを選択してください。');
@@ -69,14 +69,14 @@ status=uilabel(layout,'Text','','Tag','status');
                     assert(~isempty(file),'作業用コピーの保存先を指定してください。');
                     status.Text='注入箇所を調べて作業用コピーを作成しています。';
                     drawnow limitrate nocallbacks
-                    grfi.build(source.Value,file);
-                    grfi.editor(file);
+                    fimwb.build(source.Value,file);
+                    fimwb.editor(file);
                 case 'reopen'
                     [name,folder]=uigetfile({'*.slx;*.mdl','Simulink (*.slx, *.mdl)'}, ...
                         '故障を設定した作業用コピーを選択');
                     if isequal(name,0),return;end
                     file=fullfile(folder,name);
-                    grfi.editor(file);
+                    fimwb.editor(file);
             end
             open_system(file);
             status.Text=file;

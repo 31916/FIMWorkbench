@@ -1,7 +1,7 @@
 function stages = build(modelFile, configuration, outputFile)
 %BUILD Generate and compile a new Simulink model with editable fault slots.
-% grfi.build(source,output) installs one disabled fault at every eligible site.
-% grfi.build(source,configuration,output) accepts a struct or JSON file.
+% fimwb.build(source,output) installs one disabled fault at every eligible site.
+% fimwb.build(source,configuration,output) accepts a struct or JSON file.
 if nargin==2,outputFile=configuration;end
 [~,source,sourceCleanup]=openSource(modelFile); %#ok<ASGLU>
 [folder,name,ext]=fileparts(char(outputFile));
@@ -14,10 +14,10 @@ assert(isvarname(name)&&~strcmp(name,original)&&~bdIsLoaded(name),...
     'Choose a distinct, unused MATLAB model name.');
 assert(ismember(lower(ext),{'.mdl','.slx'}),'Output extension must be .mdl or .slx.');
 outputFile=fullfile(folder,[name ext]);
-assert(~isfile(outputFile),'Output already exists. Use grfi.setFault to edit it, or choose a new file.');
+assert(~isfile(outputFile),'Output already exists. Use fimwb.setFault to edit it, or choose a new file.');
 if nargin==2
-    sites=grfi.scan(source);
-    raw=grfi.defaultFaults(sites);
+    sites=fimwb.scan(source);
+    raw=fimwb.defaultFaults(sites);
     assert(~isempty(raw),'このモデルには適用可能な故障注入箇所がありません。');
 else
     if ischar(configuration)||isStringScalar(configuration)
@@ -26,9 +26,9 @@ else
     assert(isstruct(configuration)&&isscalar(configuration)&&isfield(configuration,'faults')&&...
         all(ismember(fieldnames(configuration),{'faults','sourceSha256'})),'Expected a configuration object containing faults.');
     if isfield(configuration,'sourceSha256')
-        assert(strcmpi(configuration.sourceSha256,grfi.fileHash(source)),'Source SHA-256 differs from configuration.');
+        assert(strcmpi(configuration.sourceSha256,fimwb.fileHash(source)),'Source SHA-256 differs from configuration.');
     end
-    sites=grfi.scan(source);
+    sites=fimwb.scan(source);
     raw=configuration.faults;
 end
 if isstruct(raw),raw=num2cell(raw);end
@@ -75,7 +75,7 @@ load_system(staged);
 set_param(name,'SimulationCommand','update');
 for k=1:numel(stages)
     h=getSimulinkBlockHandle(stages{k});
-    assert(h~=-1 && strcmp(get_param(h,'Tag'),sprintf('grfi.fault.%d',k)),...
+    assert(h~=-1 && strcmp(get_param(h,'Tag'),sprintf('fimwb.fault.%d',k)),...
         'Simulink regenerated the injection site %s during compilation.',settings{k}.site);
     m=get_param(h,'UserData');
     assert(isequaln(m.fault,settings{k}),'Fault configuration did not survive reload: %s',settings{k}.site);
@@ -106,11 +106,11 @@ for t=targets'
     assert(get_param(get_param(t,'Line'),'SrcPortHandle')==src,'Destination no longer shares the expected signal.');
 end
 originalName=get_param(get_param(src,'Line'),'Name');
-stage=[parent '/' sprintf('GRFI_%03d',k)];
+stage=[parent '/' sprintf('FIMWB_%03d',k)];
 assert(getSimulinkBlockHandle(stage)==-1,'Generated block name is already in use: %s',stage);
 xy=get_param(block,'Position');pos=[xy(3)+25 xy(2)+35];
 add_block('built-in/Subsystem',stage,'Position',[pos pos+[80 36]],...
-    'Tag',sprintf('grfi.fault.%d',k));
+    'Tag',sprintf('fimwb.fault.%d',k));
 add_block('built-in/Inport',[stage '/Original'],'Port','1','Position',[20 48 48 62]);
 operandCount=0;
 if strcmp(site.kind,'operator')

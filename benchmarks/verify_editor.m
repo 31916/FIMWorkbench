@@ -9,7 +9,7 @@ for k=1:numel(ids)
     id=ids{k};suite=fullfile(root,'verification','arch2026',id);
     r=jsondecode(fileread(fullfile(suite,'result.json')));
     before=load(fullfile(suite,'traces.mat'),'baseline','u');
-    [fig,file]=grfi.openBenchmark(id,fullfile(scratch,id),'off');
+    [fig,file]=fimwb.openBenchmark(id,fullfile(scratch,id),'off');
     [~,name]=fileparts(file);closeBoth=onCleanup(@()closeUI(fig,name));
     grid=findall(fig,'Type','uitable');
     assert(size(grid.Data,1)==r.compatible,'The editor is missing verified fault slots.');
@@ -26,7 +26,7 @@ for k=1:numel(ids)
     dst=[name '/' s(idx).destinations.path];port=str2double(get_param(dst,'Port'));
     check=benchCompare(before.baseline,actual,port,2,1,'editor_on');
     button=findall(fig,'Type','uibutton');feval(button.ButtonPushedFcn,button,[]);
-    stages=find_system(name,'SearchUnderMasks','all','Tag',sprintf('grfi.fault.%d',grid.Data{slot,1}));path=stages{1};
+    stages=find_system(name,'SearchUnderMasks','all','Tag',sprintf('fimwb.fault.%d',grid.Data{slot,1}));path=stages{1};
     close_system(name,0);load_system(file);metadata=get_param(path,'UserData');
     assert(metadata.fault.enabled&&metadata.fault.value==2&&strcmp(metadata.fault.type,'bias'),'Edit was not persisted.');
     row(end+1)=struct('model',id,'editable_slots',size(grid.Data,1),'saved_slot',slot,'max_error',check.max_abs_error); %#ok<AGROW>

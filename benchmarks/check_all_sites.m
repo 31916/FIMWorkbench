@@ -8,8 +8,8 @@ if ~isfolder(outDir),mkdir(outDir);end
 for i=1:numel(ids)
     id=ids{i};folder=fullfile(outDir,id);assert(~isfolder(folder),'Choose a fresh directory.');mkdir(folder);cd(folder);
     [file,T,u]=benchSource(id,root,folder);
-    sites=grfi.scan(file);
-    [planned,excluded]=grfi.plan(file,fullfile(root,'examples','profiles.json'));
+    sites=fimwb.scan(file);
+    [planned,excluded]=fimwb.plan(file,fullfile(root,'examples','profiles.json'));
     exportPlan(folder,planned,excluded);
     usable=sites(~cellfun(@isempty,{sites.faults}));
     [~,model,ext]=fileparts(file);load_system(file);
@@ -29,15 +29,15 @@ end
     function probe(indices)
         if isempty(indices),return;end
         variant=sprintf('all_%s_%04d_%04d',lower(id),indices(1),indices(end));
-        output=fullfile(folder,[variant ext]);entries=num2cell(grfi.defaultFaults(usable(indices)));
+        output=fullfile(folder,[variant ext]);entries=num2cell(fimwb.defaultFaults(usable(indices)));
         reason='';
         try
-            stages=grfi.build(file,struct('faults',{entries}),output);
+            stages=fimwb.build(file,struct('faults',{entries}),output);
             load_system(output);release=onCleanup(@()close_system(variant,0));
             off=benchSim(variant,T,u,false);benchCompare(base,off,1,0,1,'all_slots_off');
             for z=1:numel(stages)
                 h=getSimulinkBlockHandle(stages{z});
-                assert(h~=-1 && strcmp(get_param(h,'Tag'),sprintf('grfi.fault.%d',z)),...
+                assert(h~=-1 && strcmp(get_param(h,'Tag'),sprintf('fimwb.fault.%d',z)),...
                     'Fault slot did not persist through simulation: %s',entries{z}.site);
             end
             clear release;

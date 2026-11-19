@@ -13,12 +13,12 @@ if isempty(cache) || ~isfolder(cache)
         [ok,~]=mkdir(folder);
         if ok,cache=folder;break;end
     end
-    assert(~isempty(cache),'grfi:SbWeightsPath', ...
+    assert(~isempty(cache),'fimwb:SbWeightsPath', ...
         'SBの重みを読み込むため、英数字のパスにある書き込み可能な作業フォルダを選んでください。');
     cleanCache=onCleanup(@()removeCache(folder));
 end
 source=fullfile(sourceFolder,filename);target=fullfile(cache,filename);
-if ~isfile(target) || ~strcmp(grfi.fileHash(source),grfi.fileHash(target))
+if ~isfile(target) || ~strcmp(fimwb.fileHash(source),fimwb.fileHash(target))
     % Private per-session directory. Publish only a complete copy for loading.
     staged=tempname(cache);
     [ok,msg]=copyfile(source,staged);assert(ok,'%s',msg);

@@ -12,8 +12,9 @@ else
         load_system(a.Name);
     end
 end
-stages=find_system(name,'SearchUnderMasks','all','Regexp','on','Tag','^grfi\.fault\.[0-9]+$');
+stages=faultStages(name);
 assert(~isempty(stages),'This model contains no generated fault slots.');
+upgradeMeasurement(name);
 meta=cellfun(@(p)get_param(p,'UserData'),stages,'UniformOutput',false);
 [~,ix]=sort(cellfun(@(m)m.slot,meta));meta=meta(ix);
 kinds={};for k=1:numel(meta),kinds=union(kinds,meta{k}.site.faults);end
@@ -40,7 +41,7 @@ saveButton=uibutton(g,'Text','モデルを保存','ButtonPushedFcn',@persist);
             if ismember(key,{'seed','period'}),assert(strcmp(kind,'noise'),'乱数seedと周期はnoiseで使用します。');end
             if strcmp(key,'value') && ~ismember(kind,{'asr','ror'}),v=parseValue(v);end
             if strcmp(key,'stop'),v=parseValue(v);end
-            f=grfi.setFault(name,rows{row,1},struct(key,v));
+            f=fimwb.setFault(name,rows{row,1},struct(key,v));
             data(row,3:9)={f.type,f.enabled,displayValue(f.value),f.start,displayValue(f.stop),f.seed,f.period};
             grid.Data=data;rows=data;status.Text=sprintf('番号 %d の設定を変更しました。',rows{row,1});
         catch err

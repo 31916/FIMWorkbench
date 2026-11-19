@@ -85,7 +85,7 @@ def fetch_github(key):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project", type=Path, default=TOOL.parent,
-                        help="GR directory containing Falsify and the previous AT experiment")
+                        help="Project directory containing Falsify and the previous AT experiment")
     args = parser.parse_args()
     missing = {key for key, sha in LOCK["sha256"].items() if not matches(TARGET / key, sha)}
     arch = {key for key in missing if key.startswith("ARCH/")}
@@ -97,7 +97,7 @@ def main():
         if not matches(TARGET / key, spec["sha256"]):
             source = args.project / spec["path"]
             if not source.is_file():
-                raise FileNotFoundError(f"Required project asset: {source}. Use --project to select GR.")
+                raise FileNotFoundError(f"Required project asset: {source}. Use --project to select the project directory.")
             install(key, source.read_bytes(), spec["sha256"])
     print(f"Verified {len(LOCK['sha256'])} upstream files and {len(LOCK['project_support'])} project files.")
 

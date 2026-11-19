@@ -59,7 +59,7 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2019-01-24T05:42:25Z</dcterms:created>
   <dc:creator>yoriyuki</dc:creator>
   <cp:lastModifiedBy>harry_31916</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-11-19T06:48:58Z</dcterms:modified>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2026-11-19T09:00:55Z</dcterms:modified>
   <cp:revision>16.1</cp:revision>
   <cp:version>R2026a</cp:version>
 </cp:coreProperties>
@@ -75,7 +75,7 @@ __MWOPC_PART_BEGIN__ /metadata/mwcoreProperties.xml
 __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesExtension.xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <mwcoreProperties xmlns="http://schemas.mathworks.com/package/2014/corePropertiesExtension">
-  <uuid>3cfd3da0-1515-4d00-8f42-b50005e0b45b</uuid>
+  <uuid>0cf281cd-0504-4e60-b2f8-ee82a4b2d08a</uuid>
 </mwcoreProperties>
 
 __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
@@ -285,7 +285,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInformation Version="1.0">
   <Model>
-    <P Name="ModelUUID">4cad6899-e9c5-4fa8-92b1-d31555da52ff</P>
+    <P Name="ModelUUID">61ebdcc0-e21a-4ff2-a808-25a6cd2d9671</P>
     <P Name="LastSavedArchitecture">glnxa64</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
@@ -587,64 +587,64 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.json
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2025a_20251111">
-  <System type="System" uuid="b4542c4a-8fc6-4d83-8e11-fa02315f3b4a">
-    <Interface type="Interface" uuid="01364e3d-38c6-47a8-8d17-0616a5b9b378"/>
+  <System type="System" uuid="cff6dcaf-650c-49d9-91f8-69292059a16f">
+    <Interface type="Interface" uuid="448767ac-0904-4a21-81e4-f19a18b8c224"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2025b_202504071000">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="24aad43c-8439-401b-9584-878af24959fd">
-    <globalData type="sltp.mm.core.GlobalData" uuid="bfcfdef7-3bdc-436b-8122-be8602e1f6c0">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="7fa484d5-7349-40cd-a570-edf585514d16">
+    <globalData type="sltp.mm.core.GlobalData" uuid="7f8e95ae-3307-4282-b131-b70170164321">
       <dataName>portIn1</dataName>
       <type>RootInport</type>
     </globalData>
-    <globalData type="sltp.mm.core.GlobalData" uuid="ca130b26-190e-4629-9238-1cb5f5f8b9a2">
+    <globalData type="sltp.mm.core.GlobalData" uuid="bff6d6ed-85bf-4346-840c-3cfbebc173f8">
       <dataName>portIn2</dataName>
       <type>RootInport</type>
     </globalData>
-    <globalData type="sltp.mm.core.GlobalData" uuid="8130f969-2bbf-43d7-b555-dc2c2cf5dade">
+    <globalData type="sltp.mm.core.GlobalData" uuid="96d2274a-a95d-4257-8453-bf059c416d47">
       <dataName>portOut1</dataName>
       <type>RootOutport</type>
     </globalData>
-    <globalData type="sltp.mm.core.GlobalData" uuid="3d8d69ae-e5fd-48a9-81c6-5b264796b7ac">
+    <globalData type="sltp.mm.core.GlobalData" uuid="2d507fd1-2804-4cb9-902c-8600f2869f58">
       <dataName>portOut2</dataName>
       <type>RootOutport</type>
     </globalData>
-    <globalData type="sltp.mm.core.GlobalData" uuid="2a644872-c210-44fa-b874-ea54c9b1bebc">
+    <globalData type="sltp.mm.core.GlobalData" uuid="03238366-1437-4bd1-98b0-4f5b9d43fec1">
       <dataName>portOut3</dataName>
       <type>RootOutport</type>
     </globalData>
-    <globalData type="sltp.mm.core.GlobalData" uuid="7f669230-4695-492b-a501-084cefa4938d">
+    <globalData type="sltp.mm.core.GlobalData" uuid="8f9bc2e3-d647-4382-a530-af625129ae77">
       <dataName>portOut4</dataName>
       <type>RootOutport</type>
     </globalData>
-    <globalData type="sltp.mm.core.GlobalData" uuid="7a8d12ad-17b2-42ac-ace1-8893c22145ba">
+    <globalData type="sltp.mm.core.GlobalData" uuid="5ea4aa15-228b-465f-8a5c-77889f5e1f60">
       <dataName>portOut5</dataName>
       <type>RootOutport</type>
     </globalData>
     <priorityDirection>HighNumberLast</priorityDirection>
-    <defaultBarrierBehavior type="sltp.mm.core.BarrierBehavior" uuid="ca55822f-dace-472c-b000-2fd6ccf49c46"/>
-    <defaultEventBehavior type="sltp.mm.core.EventBehavior" uuid="b31bb372-9bfb-4f93-a528-b53e76810897"/>
-    <editorState type="sltp.mm.core.EditorState" uuid="9b4bb54a-5f31-4581-aff3-408ade1f0b2b">
+    <defaultBarrierBehavior type="sltp.mm.core.BarrierBehavior" uuid="d9036240-5e4b-4215-b21e-e98c29958f85"/>
+    <defaultEventBehavior type="sltp.mm.core.EventBehavior" uuid="456dd082-67ce-402e-8e4a-ddae91813a3b"/>
+    <editorState type="sltp.mm.core.EditorState" uuid="2ddefbc2-2e76-481d-9697-2ada6854a9bc">
       <isSynchronized>true</isSynchronized>
-      <panelState type="sltp.mm.core.EditorPanelState" uuid="de3f87b5-4f95-450b-a524-8ba2423a4e2e"/>
+      <panelState type="sltp.mm.core.EditorPanelState" uuid="5842ce5e-f55c-47ce-91c8-0d88a7903d18"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="0ede4e1d-b71e-498b-bb8a-07e52394be1d">
-      <context type="sltp.mm.core.Context" uuid="24aad43c-8439-401b-9584-878af24959fd"/>
+    <rootTask type="sltp.mm.core.Task" uuid="97ee4da0-8943-4bbb-8c0a-2fb1def30ab7">
+      <context type="sltp.mm.core.Context" uuid="7fa484d5-7349-40cd-a570-edf585514d16"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="071085d5-3e77-4fba-89ad-d3cbb5b023db">
-        <tasks type="sltp.mm.core.Task" uuid="c2c8371b-c191-4feb-b906-b7c8a5705e1f">
+      <subgraph type="sltp.mm.core.Graph" uuid="5256a667-5586-4118-b06f-b86f61e14e9d">
+        <tasks type="sltp.mm.core.Task" uuid="45bfd3d7-e069-415d-94a8-4973cbdca9bd">
           <baseTask>true</baseTask>
-          <context type="sltp.mm.core.Context" uuid="24aad43c-8439-401b-9584-878af24959fd"/>
+          <context type="sltp.mm.core.Context" uuid="7fa484d5-7349-40cd-a570-edf585514d16"/>
           <explicit>false</explicit>
           <id>1</id>
           <isTimed>true</isTimed>
           <name>Cont</name>
           <priority>40</priority>
-          <rates type="sltp.mm.core.Rate" uuid="2faeb18a-e456-4225-a0f5-360ad5338c9c">
+          <rates type="sltp.mm.core.Rate" uuid="5f0afff4-4c06-4731-bc88-58414f3652b6">
             <annotation>Cont</annotation>
             <color>255</color>
             <hasBlocks>true</hasBlocks>
@@ -655,7 +655,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>0</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="1bed3d5e-928f-4ec2-9188-1a0724a50ddd">
+          <rates type="sltp.mm.core.Rate" uuid="8c0bd3ef-26d2-477a-8de5-203acc3e3144">
             <annotation>FiM</annotation>
             <color>2105376255</color>
             <rateIndex>1</rateIndex>
@@ -673,55 +673,37 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_editor version="1.1" packageUris="http://schema.mathworks.com/mf0/DiagramEditor/R2019a_20181107 http://schema.mathworks.com/mf0/SltpSyntax/R2025a_202406271400">
-  <diagram.editor.model.Diagram type="diagram.editor.model.Diagram" uuid="019db799-b605-4c89-8baa-0c4bc90ecef7">
-    <entities type="diagram.editor.model.Entity" uuid="582a2396-275b-4bec-b7f8-6907f34a67f5">
-      <position>0,0</position>
-      <size>0,0,0,0</size>
-      <syntaxElement type="sltp.mm.syntax.Node" uuid="e15151e5-15ea-443e-91b1-14b6367e8516"/>
-      <title>Cont</title>
-      <type>base</type>
-      <subDiagram type="diagram.editor.model.Diagram" uuid="95271a62-c3c2-46a5-a3a2-643f3004131d">
-        <position>0,0</position>
-        <syntaxElement type="sltp.mm.syntax.Graph" uuid="dcc95ef3-e3f4-49b8-8a7a-dbab4394b119"/>
-        <title>Cont</title>
-        <type>graph.Graph</type>
-      </subDiagram>
-    </entities>
-    <syntaxElement type="sltp.mm.syntax.Graph" uuid="c83f5fc5-f26f-4839-8c0d-7a2f724b96e2"/>
-    <title>Default</title>
-    <type>graph.Graph</type>
-  </diagram.editor.model.Diagram>
-  <sltp.mm.syntax.Context type="sltp.mm.syntax.Context" uuid="feffa94e-0dce-40cc-ad17-f21a4fd43dc1">
-    <globalData type="sltp.mm.syntax.GlobalData" uuid="d52111a0-7ea4-43db-afba-2814fe839941">
+  <sltp.mm.syntax.Context type="sltp.mm.syntax.Context" uuid="64e311c3-3f1a-4b38-b164-185c6a6849d6">
+    <globalData type="sltp.mm.syntax.GlobalData" uuid="6acbeda2-8ddb-4442-9a1d-198d812f30c5">
       <dataName>portIn1</dataName>
       <type>RootInport</type>
     </globalData>
-    <globalData type="sltp.mm.syntax.GlobalData" uuid="e9b138ec-ed72-4105-bd68-2490b7bef30c">
+    <globalData type="sltp.mm.syntax.GlobalData" uuid="a4592312-dc8d-4ff9-9875-08011a4b5a4f">
       <dataName>portIn2</dataName>
       <type>RootInport</type>
     </globalData>
-    <globalData type="sltp.mm.syntax.GlobalData" uuid="cae1c761-ec54-41dc-8849-93b23766a269">
+    <globalData type="sltp.mm.syntax.GlobalData" uuid="ff934f1c-e1e7-4687-8274-c35f0fd4c817">
       <dataName>portOut1</dataName>
       <type>RootOutport</type>
     </globalData>
-    <globalData type="sltp.mm.syntax.GlobalData" uuid="39ba0652-189d-474d-a940-cd8bdf310202">
+    <globalData type="sltp.mm.syntax.GlobalData" uuid="a04c8e6a-df5f-408a-88eb-f0c8e9f085c5">
       <dataName>portOut2</dataName>
       <type>RootOutport</type>
     </globalData>
-    <globalData type="sltp.mm.syntax.GlobalData" uuid="70fade97-2022-4611-8f42-f5f2c433d1ad">
+    <globalData type="sltp.mm.syntax.GlobalData" uuid="8e13b90c-0e80-4cc1-9c87-374c5c23d069">
       <dataName>portOut3</dataName>
       <type>RootOutport</type>
     </globalData>
-    <globalData type="sltp.mm.syntax.GlobalData" uuid="a2d7d2d1-1895-43af-ac44-8868c59cea8c">
+    <globalData type="sltp.mm.syntax.GlobalData" uuid="2945e247-d239-4c11-9453-503f5a3465be">
       <dataName>portOut4</dataName>
       <type>RootOutport</type>
     </globalData>
-    <globalData type="sltp.mm.syntax.GlobalData" uuid="93559aaa-6c14-449b-b79a-c20bc6cd84b3">
+    <globalData type="sltp.mm.syntax.GlobalData" uuid="a44ed5b9-564b-4ae8-8ccc-2781d5cb070e">
       <dataName>portOut5</dataName>
       <type>RootOutport</type>
     </globalData>
-    <rootGraph type="sltp.mm.syntax.Graph" uuid="c83f5fc5-f26f-4839-8c0d-7a2f724b96e2">
-      <children type="sltp.mm.syntax.Node" uuid="e15151e5-15ea-443e-91b1-14b6367e8516">
+    <rootGraph type="sltp.mm.syntax.Graph" uuid="f5b052ab-a84d-4c58-8b98-a14516c175f7">
+      <children type="sltp.mm.syntax.Node" uuid="d0432922-2066-4c35-aae9-94bdbab644ba">
         <priority>40</priority>
         <rates type="sltp.mm.syntax.RateData">
           <color>#000000</color>
@@ -736,16 +718,34 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
         </rates>
         <title>Cont</title>
         <type>base</type>
-        <diagramElement type="diagram.editor.model.Entity" uuid="582a2396-275b-4bec-b7f8-6907f34a67f5"/>
-        <subgraph type="sltp.mm.syntax.Graph" uuid="dcc95ef3-e3f4-49b8-8a7a-dbab4394b119">
+        <diagramElement type="diagram.editor.model.Entity" uuid="f0785ac4-31f6-47d2-a920-95f4e0a1ef89"/>
+        <subgraph type="sltp.mm.syntax.Graph" uuid="74a790ea-683f-484a-a1cb-29e4f36498c4">
           <title>Cont</title>
-          <diagramElement type="diagram.editor.model.Diagram" uuid="95271a62-c3c2-46a5-a3a2-643f3004131d"/>
+          <diagramElement type="diagram.editor.model.Diagram" uuid="df34d666-3f9f-4dc6-87de-95ef5d3ade9d"/>
         </subgraph>
       </children>
       <title>Default</title>
-      <diagramElement type="diagram.editor.model.Diagram" uuid="019db799-b605-4c89-8baa-0c4bc90ecef7"/>
+      <diagramElement type="diagram.editor.model.Diagram" uuid="de3db02b-9800-4cfb-845d-61bdb4aa377b"/>
     </rootGraph>
   </sltp.mm.syntax.Context>
+  <diagram.editor.model.Diagram type="diagram.editor.model.Diagram" uuid="de3db02b-9800-4cfb-845d-61bdb4aa377b">
+    <entities type="diagram.editor.model.Entity" uuid="f0785ac4-31f6-47d2-a920-95f4e0a1ef89">
+      <position>0,0</position>
+      <size>0,0,0,0</size>
+      <syntaxElement type="sltp.mm.syntax.Node" uuid="d0432922-2066-4c35-aae9-94bdbab644ba"/>
+      <title>Cont</title>
+      <type>base</type>
+      <subDiagram type="diagram.editor.model.Diagram" uuid="df34d666-3f9f-4dc6-87de-95ef5d3ade9d">
+        <position>0,0</position>
+        <syntaxElement type="sltp.mm.syntax.Graph" uuid="74a790ea-683f-484a-a1cb-29e4f36498c4"/>
+        <title>Cont</title>
+        <type>graph.Graph</type>
+      </subDiagram>
+    </entities>
+    <syntaxElement type="sltp.mm.syntax.Graph" uuid="f5b052ab-a84d-4c58-8b98-a14516c175f7"/>
+    <title>Default</title>
+    <type>graph.Graph</type>
+  </diagram.editor.model.Diagram>
 </sltp_editor>
 __MWOPC_PART_BEGIN__ /simulink/stateflow/_rels/machine.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
@@ -2509,7 +2509,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <PortProperties>
       <Port Type="out" Index="1">
         <P Name="DataLoggingNameMode">Custom</P>
-        <P Name="DataLoggingName">grfi_original</P>
+        <P Name="DataLoggingName">fimwb_original</P>
       </Port>
     </PortProperties>
   </Block>
@@ -2598,8 +2598,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     </PortProperties>
     <System Ref="system_25"/>
   </Block>
-  <Block BlockType="SubSystem" Name="GRFI_001" SID="38">
-    <P Name="Tag">grfi.fault.1</P>
+  <Block BlockType="SubSystem" Name="FIMWB_001" SID="38">
+    <P Name="Tag">fimwb.fault.1</P>
     <PortCounts in="1" out="1"/>
     <P Name="Position">[100, 117, 180, 153]</P>
     <P Name="ZOrder">141</P>
@@ -2608,8 +2608,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="ContentPreviewEnabled">on</P>
     <System Ref="system_38"/>
   </Block>
-  <Block BlockType="SubSystem" Name="GRFI_002" SID="41">
-    <P Name="Tag">grfi.fault.2</P>
+  <Block BlockType="SubSystem" Name="FIMWB_002" SID="41">
+    <P Name="Tag">fimwb.fault.2</P>
     <PortCounts in="1" out="1"/>
     <P Name="Position">[100, 117, 180, 153]</P>
     <P Name="ZOrder">142</P>
@@ -2618,8 +2618,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="ContentPreviewEnabled">on</P>
     <System Ref="system_41"/>
   </Block>
-  <Block BlockType="SubSystem" Name="GRFI_003" SID="44">
-    <P Name="Tag">grfi.fault.3</P>
+  <Block BlockType="SubSystem" Name="FIMWB_003" SID="44">
+    <P Name="Tag">fimwb.fault.3</P>
     <PortCounts in="1" out="1"/>
     <P Name="Position">[5, 117, 85, 153]</P>
     <P Name="ZOrder">143</P>
@@ -2629,7 +2629,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <PortProperties>
       <Port Type="out" Index="1">
         <P Name="DataLoggingNameMode">Custom</P>
-        <P Name="DataLoggingName">grfi_faulty</P>
+        <P Name="DataLoggingName">fimwb_faulty</P>
       </Port>
     </PortProperties>
     <System Ref="system_44"/>
@@ -2814,7 +2814,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char"/>
     </Object>
-    <P Name="BDUuid" Class="char">d1311d3f-1e43-49e0-bee8-c7abd900fa71</P>
+    <P Name="BDUuid" Class="char">a59c2e34-641a-415d-96ce-7bae02c20b19</P>
   </Object>
 </WindowsInfo>
 
