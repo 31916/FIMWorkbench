@@ -69,12 +69,11 @@ metadata = struct('model',model,'matlabRelease',version('-release'),'stopTime',h
     'onDiskModelSHA256',fimwb.fileHash(get_param(model,'FileName')),'modelDirty',get_param(model,'Dirty'), ...
     'solver',get_param(model,'Solver'),'externalInputExpression',expression, ...
     'slots',[meta.slot],'settings',original,'axes',{axes},'caseCount',total);
-writeJSON(fullfile(work,'experiment.json'),metadata);
+writeConfiguration(fullfile(work,'experiment.json'),metadata);
 dirty = get_param(model,'Dirty');
 current = original;
 touched = containers.Map('KeyType','double','ValueType','logical');
 restoreOnExit = onCleanup(@()restoreSlots(model,paths,meta,touched,dirty));
-forceOn = reshape(setdiff(indices(strcmp({axes.field},'value')),indices(strcmp({axes.field},'enabled'))),1,[]);
 baseline = original;
 [baseline.enabled] = deal(false);
 if ~isempty(onProgress),onProgress(0,total+1);end
@@ -82,16 +81,7 @@ runCase(baseline,'baseline',false);
 failed=0;
 if ~isempty(onProgress),onProgress(1,total+1);end
 for n = 1:total
-    settings = original;
-    position = n-1;
-    for a=1:numel(axes)
-        level = 1+mod(position,counts(a));
-        position = floor(position/counts(a));
-        settings(indices(a)).(axes(a).field) = axes(a).levels{level};
-    end
-    for slotIndex=forceOn
-        settings(slotIndex).enabled=true;
-    end
+    settings = campaignSettings(original,axes,counts,indices,n);
     passed=runCase(settings,sprintf('case_%04d',n),strcmp(failureMode,'record'));
     failed=failed+~passed;
     if ~isempty(onProgress),onProgress(n+1,total+1);end
@@ -133,7 +123,7 @@ report = struct('folder',folder,'caseCount',total,'completedCases',total-failed,
             overrides=struct('slot',num2cell([meta(changed).slot]),'fault',num2cell(settings(changed)));
         end
         if passed,status="completed";else,status="failed";end
-        writeJSON(fullfile(work,[id '.json']),struct('id',id,'status',status,'diagnostic',diagnostic, ...
+        writeConfiguration(fullfile(work,[id '.json']),struct('id',id,'status',status,'diagnostic',diagnostic, ...
             'overrides',{overrides},'sources',{sources}));
         manifest=fullfile(work,'runs.csv');
         row=table(string(id),status,string(diagnostic),'VariableNames',{'run','status','diagnostic'});
@@ -151,36 +141,6 @@ for j=1:numel(indices)
     remove(touched,i);
 end
 set_param(model,'Dirty',dirty);
-end
-
-function [axes,counts,indices] = validateAxes(axes,meta)
-assert(isstruct(axes) && all(isfield(axes,{'slot','field','levels'})),'Each axis needs slot, field and levels.');
-axes=reshape(axes,1,[]);counts=zeros(size(axes));indices=zeros(size(axes));
-keys=strings(size(axes));
-for a=1:numel(axes)
-    validateattributes(axes(a).slot,{'numeric'},{'scalar','positive','integer'});
-    i=find([meta.slot]==axes(a).slot);
-    assert(isscalar(i),'Unknown slot %d.',axes(a).slot);
-    field=char(axes(a).field);
-    assert(ismember(field,{'enabled','value'}),'Axis field must be enabled or value.');
-    levels=axes(a).levels;
-    if isstring(levels),levels=cellstr(levels);end
-    if ~iscell(levels),assert(isnumeric(levels)||islogical(levels),'Supply an array of levels.');levels=num2cell(levels);end
-    assert(isvector(levels)&&~isempty(levels),'Each axis needs at least one level.');
-    for k=1:numel(levels)
-        setting=meta(i).fault;setting.(field)=levels{k};
-        setting=checkFault(setting,meta(i).site);levels{k}=setting.(field);
-    end
-    axes(a).field=field;axes(a).levels=reshape(levels,1,[]);
-    counts(a)=numel(levels);indices(a)=i;keys(a)=string(axes(a).slot)+"/"+field;
-end
-assert(numel(unique(keys))==numel(keys),'Use each slot and field only once.');
-end
-
-function writeJSON(file,data)
-[fid,msg]=fopen(file,'w','n','UTF-8');assert(fid~=-1,'%s',msg);
-closeFile=onCleanup(@()fclose(fid));
-fprintf(fid,'%s\n',jsonencode(data,'PrettyPrint',true));
 end
 
 function discard(folder)

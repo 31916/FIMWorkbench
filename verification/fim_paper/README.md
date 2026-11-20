@@ -6,7 +6,7 @@ Section 4 and Table 2 of Bartocci et al. evaluate fault generation on the Aircra
 
 1. Install FIM Workbench in MATLAB and enter `FIMWorkbench`.
 2. Under **Your Simulink model**, browse to the authors' `Aircraft.slx`. Choose a new working-copy filename, for example `fim_paper_aecs.slx`.
-3. Beside **Fault profile**, click **Browse...** and choose `fim-paper-aecs.json` from the examples folder that opens. Click **Create working copy**. The editor lists 45 slots, all off.
+3. Beside **Configuration**, click **Load...** and choose `fim-paper-aecs.json` from the examples folder that opens. Click **Create working copy**. The editor lists 45 slots, all off.
 4. Select the first row and enable **On**. Click **Compare off / on** and choose a results folder. In the plot, search for `Direct Link Control Law/Gain` to see the difference. Search for `Plant/Left Elevator` to examine a downstream output. You can edit the offset or the time window, enable multiple rows and run another comparison.
 
 ## What was exercised

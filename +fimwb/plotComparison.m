@@ -4,7 +4,7 @@ if nargin<2,visible='on';end
 baseline=readTrace(folder,'baseline');
 manifest=fullfile(folder,'runs.csv');
 if isfile(manifest)
-    runs=readtable(manifest,'TextType','string');
+    runs=readtable(manifest,'Delimiter',',','ReadVariableNames',true,'TextType','string');
     cases=cellstr(runs.run(runs.run~="baseline"));
 else
     files=dir(fullfile(folder,'case_*.csv'));cases=erase({files.name},'.csv');
@@ -64,7 +64,7 @@ loadCase();
 end
 
 function trace=readTrace(folder,id)
-trace=readtable(fullfile(folder,[id '.csv']),'TextType','string');
+trace=readtable(fullfile(folder,[id '.csv']),'Delimiter',',','ReadVariableNames',true,'TextType','string');
 file=fullfile(folder,[id '.json']);
 if ~isfile(file),return;end
 info=jsondecode(fileread(file));

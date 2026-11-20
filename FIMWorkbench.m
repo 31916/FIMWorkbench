@@ -21,9 +21,9 @@ uibutton(form,'Text','Browse...','ButtonPushedFcn',@(~,~) browseSource());
 uilabel(form,'Text','Working copy');
 output=uieditfield(form,'text','Tag','output');
 uibutton(form,'Text','Save as...','ButtonPushedFcn',@(~,~) browseOutput());
-uilabel(form,'Text','Fault profile');
-profile=uieditfield(form,'text','Tag','profile','Placeholder','Optional JSON file (all compatible sites when blank)');
-uibutton(form,'Text','Browse...','ButtonPushedFcn',@(~,~) browseProfile());
+uilabel(form,'Text','Configuration');
+profile=uieditfield(form,'text','Tag','profile','Placeholder','Optional saved configuration (all compatible sites when blank)');
+uibutton(form,'Text','Load...','ButtonPushedFcn',@(~,~) browseProfile());
 buttons=uigridlayout(form,[1 2],'Padding',0);
 buttons.Layout.Column=[1 3];
 uibutton(buttons,'Text','Create working copy','Tag','build', ...
@@ -34,7 +34,7 @@ footer=uigridlayout(layout,[1 2],'Padding',0,'ColumnWidth',{'1x',155});
 status=uilabel(footer,'Text','','Tag','status');
 if ~isfolder(fullfile(fileparts(mfilename('fullpath')),'verification','all_sites','AT'))
     uihyperlink(footer,'Text','Get benchmark data (.zip)','Tag','benchmarkDownload', ...
-        'URL','https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.2.1.zip');
+        'URL','https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.3.0.zip');
 end
 
     function browseSource()

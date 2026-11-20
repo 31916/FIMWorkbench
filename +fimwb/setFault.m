@@ -26,6 +26,14 @@ try
     set_param(model,'SimulationCommand','update');
     persisted=get_param(block,'UserData');
     assert(isequaln(persisted.fault,setting),'Simulink rebuilt the edited fault slot.');
+    if ~strcmp(old.fault.type,setting.type)
+        metadata=get_param(model,'Metadata');
+        if isstruct(metadata) && isfield(metadata,'FIMWorkbenchAxes') && ~isempty(metadata.FIMWorkbenchAxes)
+            axes=metadata.FIMWorkbenchAxes;
+            axes([axes.slot]==slot & strcmp({axes.field},'value'))=[];
+            metadata.FIMWorkbenchAxes=axes;set_param(model,'Metadata',metadata);
+        end
+    end
 catch err
     if getSimulinkBlockHandle(block)~=-1
         try

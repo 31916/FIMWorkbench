@@ -24,7 +24,7 @@ else
         configuration=jsondecode(fileread(configuration));
     end
     assert(isstruct(configuration)&&isscalar(configuration)&&isfield(configuration,'faults')&&...
-        all(ismember(fieldnames(configuration),{'faults','sourceSha256'})),'Expected a configuration object containing faults.');
+        all(ismember(fieldnames(configuration),{'faults','sourceSha256','axes'})),'Expected a configuration object containing faults.');
     if isfield(configuration,'sourceSha256')
         assert(strcmpi(configuration.sourceSha256,fimwb.fileHash(source)),'Source SHA-256 differs from configuration.');
     end
@@ -69,16 +69,12 @@ for k=ops(:)'
     end
 end
 % Resolve companion MAT files and classes relative to the final working copy.
-metadata=get_param(name,'Metadata');
-if isempty(metadata),metadata=struct();end
-origin=java.io.File(source).toPath();
-target=java.io.File(folder).toPath();
-if origin.getRoot().equals(target.getRoot())
-    ref=char(target.relativize(origin).toString());
-else
-    ref=source;
+metadata=sourceLink(name,source,folder);
+metadata.FIMWorkbenchSourceSHA256=fimwb.fileHash(source);
+if nargin==3 && isfield(configuration,'axes') && ~isempty(configuration.axes)
+    [~,installed]=modelSlots(name);
+    metadata.FIMWorkbenchAxes=validateAxes(configuration.axes,installed);
 end
-metadata.FIMWorkbenchSourceModel=strrep(ref,filesep,'/');
 set_param(name,'Metadata',metadata);
 staged=fullfile(work,[name ext]);
 save_system(name,staged);
