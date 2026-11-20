@@ -4,6 +4,8 @@ FIM Workbench is a MATLAB add-on for testing how faults affect a Simulink model.
 
 For example, an automatic transmission model takes throttle and brake commands and outputs vehicle speed, engine RPM, and gear. You can run the same driving inputs twice, with and without a throttle fault, to measure its effect.
 
+**Start with the [illustrated aircraft tutorial](docs/tutorials/aecs-gui.md):** use the original FIM model, stack two faults at one connection, and generate four model variants from the desktop editor. Includes model downloads, six screenshots, and expected results; no handwritten JSON or MATLAB commands are needed.
+
 ## Install and run
 
 1. Download `FIMWorkbench-2.3.0.mltbx`. Double-click it in the MATLAB Files panel and select **Install**. [Download the installer](https://github.com/31916/FIMWorkbench/releases/download/v2.3.0/FIMWorkbench-2.3.0.mltbx)
@@ -203,6 +205,8 @@ To reproduce the checks, add the benchmark scripts to your MATLAB path with `add
 The source lock records the upstream commits and SHA-256 hashes. From a source checkout, run `python3 benchmarks/fetch_sources.py` to verify the bundled files. When fetching missing project-specific inputs, use `--project /path/to/project` to point to the project containing the original dependencies. [Source lock](benchmarks/source-lock.json)
 
 ## Run the original FIM paper model
+
+Follow the [step-by-step GUI tutorial with screenshots](docs/tutorials/aecs-gui.md) to reproduce the Bias/Negate example and generate four separate aircraft models.
 
 The desktop workflow also checks stacking, configuration reuse, generation failures and cancellation. The synthetic and aircraft checks simulate 19 generated models and compare their outputs with the expected operations. [Desktop checks and results](verification/desktop/README.md)
 

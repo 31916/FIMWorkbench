@@ -1,0 +1,5 @@
+case_index,bias,negate,start_s,stop_s,max_abs_error,model
+1,0.125,0,1,1.05,6.7762635780344e-21,fi_aecs_demo_550f7830_0001.slx
+2,0.25,0,1,1.05,0,fi_aecs_demo_550f7830_0002.slx
+3,0.125,1,1,1.05,6.7762635780344e-21,fi_aecs_demo_550f7830_0003.slx
+4,0.25,1,1,1.05,0,fi_aecs_demo_550f7830_0004.slx

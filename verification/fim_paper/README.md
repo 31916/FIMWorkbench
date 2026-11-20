@@ -1,10 +1,12 @@
 # Reproduce the original FIM aircraft example
 
-Section 4 and Table 2 of Bartocci et al. evaluate fault generation on the Aircraft Elevator Control System (AECS). The model is `Aircraft_fault_injector/sf_aircraft_model/Aircraft.slx` in the authors' repository at commit `a110acf2b718eab4cdf65f938203f60009fa0510`. Its SHA-256 is `33774ba8e9eeda22dbcedb3ad960352552984f402d6e559cacf7474fa0180b9c`. Keep the model and its companion files together. [Paper, p. 1719](https://doi.org/10.1145/3540250.3558932) · [Download the pinned authors' checkout](https://gitlab.com/DrishtiYadav/fimtool/-/archive/a110acf2b718eab4cdf65f938203f60009fa0510/fimtool-a110acf2b718eab4cdf65f938203f60009fa0510.zip)
+Section 4 and Table 2 of Bartocci et al. evaluate fault generation on the Aircraft Elevator Control System (AECS). The model is `Aircraft_fault_injector/sf_aircraft_model/Aircraft.slx` in the authors' repository at commit `a110acf2b718eab4cdf65f938203f60009fa0510`. Its SHA-256 is `33774ba8e9eeda22dbcedb3ad960352552984f402d6e559cacf7474fa0180b9c`. Keep the model and its companion files together. [Paper, p. 1719](https://doi.org/10.1145/3540250.3558932) · [Download the pinned authors' checkout](https://gitlab.com/api/v4/projects/DrishtiYadav%2Ffimtool/repository/archive.zip?sha=a110acf2b718eab4cdf65f938203f60009fa0510)
 
 ## Use the installer
 
-1. Install FIM Workbench in MATLAB and enter `FIMWorkbench`.
+For screenshots of fault stacking and four-model generation, follow the [desktop aircraft tutorial](../../docs/tutorials/aecs-gui.md).
+
+1. Install FIM Workbench in MATLAB and open **FIMWorkbench** from the **Apps** tab.
 2. Under **Your Simulink model**, browse to the authors' `Aircraft.slx`. Choose a new working-copy filename, for example `fim_paper_aecs.slx`.
 3. Beside **Configuration**, click **Load...** and choose `fim-paper-aecs.json` from the examples folder that opens. Click **Create working copy**. The editor lists 45 slots, all off.
 4. Select the first row and enable **On**. Click **Compare off / on** and choose a results folder. In the plot, search for `Direct Link Control Law/Gain` to see the difference. Search for `Plant/Left Elevator` to examine a downstream output. You can edit the offset or the time window, enable multiple rows and run another comparison.
