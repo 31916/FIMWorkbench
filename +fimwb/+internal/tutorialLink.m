@@ -1,0 +1,6 @@
+function link=tutorialLink(parent)
+%TUTORIALLINK Shared access to the illustrated aircraft walkthrough.
+link=uihyperlink(parent,'Text','Aircraft tutorial','Tag','tutorialLink', ...
+    'URL','https://github.com/31916/FIMWorkbench/blob/main/docs/tutorials/aecs-gui.md', ...
+    'Tooltip','Open the illustrated Bias/Negate walkthrough on GitHub.');
+end

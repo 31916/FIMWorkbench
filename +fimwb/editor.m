@@ -47,10 +47,11 @@ generation=uigridlayout(layout,[1 3],'Padding',0,'ColumnWidth',{115,'1x',220});
 uilabel(generation,'Text','Separate models');
 mode=uidropdown(generation,'Items',{'One enabled fault per model','Campaign combinations'},'ItemsData',{'single','campaign'},'Tag','generationMode','ValueChangedFcn',@(~,~)refresh());
 generate=uibutton(generation,'Text','Generate models','Tag','generateModels','ButtonPushedFcn',@generateModels);
-files=uigridlayout(layout,[1 3],'Padding',0,'ColumnWidth',{195,170,'1x'});
+files=uigridlayout(layout,[1 4],'Padding',0,'ColumnWidth',{195,170,'1x',120});
 uibutton(files,'Text','Save configuration...','Tag','saveConfiguration','ButtonPushedFcn',@saveConfiguration);
 uibutton(files,'Text','Open saved results...','Tag','openResults','ButtonPushedFcn',@openResults);
 uilabel(files,'Text','Additional faults at the same signal are applied in slot order.');
+fimwb.internal.tutorialLink(files);
 status=uilabel(layout,'Text','','Tag','status');
 stored=get_param(name,'Metadata');
 if isstruct(stored) && isfield(stored,'FIMWorkbenchAxes') && ~isempty(stored.FIMWorkbenchAxes)

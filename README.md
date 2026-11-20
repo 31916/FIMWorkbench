@@ -4,11 +4,11 @@ FIM Workbench is a MATLAB add-on for testing how faults affect a Simulink model.
 
 For example, an automatic transmission model takes throttle and brake commands and outputs vehicle speed, engine RPM, and gear. You can run the same driving inputs twice, with and without a throttle fault, to measure its effect.
 
-**Start with the [illustrated aircraft tutorial](docs/tutorials/aecs-gui.md):** use the original FIM model, stack two faults at one connection, and generate four model variants from the desktop editor. Includes model downloads, six screenshots, and expected results; no handwritten JSON or MATLAB commands are needed.
+**Start with the [illustrated aircraft tutorial](docs/tutorials/aecs-gui.md):** use the original FIM model, stack two faults at one connection, and generate four model variants from the desktop editor. Includes model downloads, six screenshots, and expected results; no handwritten JSON or MATLAB commands are needed. Open it from either application window using **Aircraft tutorial**, which launches the guide on GitHub in your web browser.
 
 ## Install and run
 
-1. Download `FIMWorkbench-2.3.0.mltbx`. Double-click it in the MATLAB Files panel and select **Install**. [Download the installer](https://github.com/31916/FIMWorkbench/releases/download/v2.3.0/FIMWorkbench-2.3.0.mltbx)
+1. Download `FIMWorkbench-2.3.1.mltbx`. Double-click it in the MATLAB Files panel and select **Install**. [Download the installer](https://github.com/31916/FIMWorkbench/releases/download/v2.3.1/FIMWorkbench-2.3.1.mltbx)
 2. Open **FIMWorkbench** from the **Apps** tab, or enter `FIMWorkbench` in the MATLAB Command Window.
 3. Select **PM** and **Open benchmark** to try the included pacemaker model. To use your own, open its usual Simulink project or run its initialization script. Choose the **Source model**, give the **Working copy** a new filename and optionally select a saved **Configuration**. Leave the configuration blank to instrument all compatible sites. Select **Create working copy**.
 4. In **Fault settings**, search by block name, signal name, port or site ID. Select a row and choose **Show in model** to highlight the installed block and its outgoing signal. The **Fault type** menu shows the choices for that row. Edit the value, time window and **On** switch. Choose **Compare off / on** and a results directory to run both simulations and open their waveforms. Choose **Save model** to keep your edits. Use **Open saved copy...** to return to your own model.
@@ -17,9 +17,9 @@ FIM Workbench requires **MATLAB R2026a or later and Simulink**. Install any addi
 
 ### Benchmark data
 
-PM works directly from the installer. For the other 11 research models, extract the matching source checkout and select its top-level folder the first time **Open benchmark** prompts for it. MATLAB remembers that folder. A source checkout can use all 12 in place. The installer contains the PM authors' MIT notice. Check the contributor terms for the other models and weights before sharing copies. [v2.3.0 source ZIP](https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.3.0.zip) · [Third-party terms](THIRD_PARTY.md)
+PM works directly from the installer. For the other 11 research models, extract the matching source checkout and select its top-level folder the first time **Open benchmark** prompts for it. MATLAB remembers that folder. A source checkout can use all 12 in place. The installer contains the PM authors' MIT notice. Check the contributor terms for the other models and weights before sharing copies. [v2.3.1 source ZIP](https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.3.1.zip) · [Third-party terms](THIRD_PARTY.md)
 
-From the command line, register the data once with `fimwb.benchmarkFolder('AT','/path/to/FIMWorkbench-2.3.0')`. To try a comparison using PM alone, open **PM**, search for `PACE_COUNT`, select the connection ending at the root output (`E623_1__621_inport1`), choose `bias`, enter `2`, enable it and select **Compare off / on**. Select the PACE_COUNT output in the plot to see its two-count offset.
+From the command line, register the data once with `fimwb.benchmarkFolder('AT','/path/to/FIMWorkbench-2.3.1')`. To try a comparison using PM alone, open **PM**, search for `PACE_COUNT`, select the connection ending at the root output (`E623_1__621_inport1`), choose `bias`, enter `2`, enable it and select **Compare off / on**. Select the PACE_COUNT output in the plot to see its two-count offset.
 
 ## Try the automatic transmission example
 
@@ -169,7 +169,7 @@ addpath(fullfile(pwd,'packaging'))
 installer = build_fimworkbench_toolbox(fullfile(pwd,'dist'))
 ~~~
 
-Distribute the `.mltbx` file from `dist/`. The source for this release is tagged `v2.3.0`.
+Distribute the `.mltbx` file from `dist/`. The source for this release is tagged `v2.3.1`.
 
 Install an update the same way as a new release. **Open saved copy...** reopens models with their saved settings. To pick up injection sites added since a working copy was created, generate a fresh copy from the source with a new filename. For a fresh AFC benchmark, close any open AFC working copy and run `fimwb.openBenchmark('AFC',fullfile(pwd,'AFC_new'))` with a new folder. Scripts written for 1.0.0 should use the `FIMWorkbench` launcher and the `fimwb.` function prefix.
 

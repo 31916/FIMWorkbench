@@ -30,12 +30,13 @@ uibutton(buttons,'Text','Create working copy','Tag','build', ...
     'ButtonPushedFcn',@(~,~) openModel('build'));
 uibutton(buttons,'Text','Open saved copy...','Tag','reopen', ...
     'ButtonPushedFcn',@(~,~) openModel('reopen'));
-footer=uigridlayout(layout,[1 2],'Padding',0,'ColumnWidth',{'1x',155});
+footer=uigridlayout(layout,[1 3],'Padding',0,'ColumnWidth',{'1x',155,120});
 status=uilabel(footer,'Text','','Tag','status');
 if ~isfolder(fullfile(fileparts(mfilename('fullpath')),'verification','all_sites','AT'))
     uihyperlink(footer,'Text','Get benchmark data (.zip)','Tag','benchmarkDownload', ...
-        'URL','https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.3.0.zip');
+        'URL','https://github.com/31916/FIMWorkbench/archive/refs/tags/v2.3.1.zip');
 end
+tutorial=fimwb.internal.tutorialLink(footer);tutorial.Layout.Column=3;
 
     function browseSource()
         [name,folder]=uigetfile({'*.slx;*.mdl','Simulink (*.slx, *.mdl)'},'Select a source model');

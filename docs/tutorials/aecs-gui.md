@@ -4,12 +4,14 @@ This tutorial uses the Aircraft Elevator Control System (AECS) from the original
 
 The screenshots show FIM Workbench **2.3.0** running in MATLAB and Simulink **R2026a on Linux**. Folder names and the desktop theme may differ on your computer.
 
+In **2.3.1 and later**, click **Aircraft tutorial** at the bottom of the launcher or the **Fault settings** editor to open this page in your web browser.
+
 [Back to the main README](../../README.md) · [Original FIM model and reproduction results](../../verification/fim_paper/README.md)
 
 ## Before you start
 
 1. Install **MATLAB R2026a or later, Simulink, and Stateflow**. Stateflow is used by this aircraft model.
-2. [Download the FIM Workbench 2.3.0 installer](https://github.com/31916/FIMWorkbench/releases/download/v2.3.0/FIMWorkbench-2.3.0.mltbx). Double-click the `.mltbx` file in MATLAB's Files panel and select **Install**.
+2. [Download the FIM Workbench 2.3.1 installer](https://github.com/31916/FIMWorkbench/releases/download/v2.3.1/FIMWorkbench-2.3.1.mltbx). Double-click the `.mltbx` file in MATLAB's Files panel and select **Install**.
 3. [Download the authors' pinned model archive](https://gitlab.com/api/v4/projects/DrishtiYadav%2Ffimtool/repository/archive.zip?sha=a110acf2b718eab4cdf65f938203f60009fa0510) and extract it. The archive uses commit `a110acf2b718eab4cdf65f938203f60009fa0510`, which matches the supplied configuration.
 4. In the extracted archive, locate **`Aircraft_fault_injector/sf_aircraft_model/Aircraft.slx`**. Keep the entire extracted folder: its companion MAT files, MATLAB classes, and other support files are needed when the model opens and simulates.
 5. Create a writable folder for your working copy and generated models. Open **FIMWorkbench** from MATLAB's **Apps** tab.

@@ -4,7 +4,7 @@ root=fileparts(fileparts(mfilename('fullpath')));
 if nargin<1,outputFolder=fullfile(fileparts(root),'outputs');end
 if ~isfolder(outputFolder),mkdir(outputFolder);end
 [ok,info]=fileattrib(outputFolder);assert(ok);outputFolder=info.Name;
-release="2.3.0";
+release="2.3.1";
 output=fullfile(outputFolder,"FIMWorkbench-"+release+".mltbx");
 stage=tempname;
 mkdir(fullfile(stage,'verification'));
@@ -28,6 +28,7 @@ opts.ToolboxVersion=release;
 opts.AuthorName="31916";
 opts.Summary="Inject all 15 FIM signal faults and operator mutations into Simulink models. Set each fault's value and active time window.";
 opts.Description="Open FIMWorkbench from the MATLAB Apps tab or the Command Window. "+ ...
+    "Open the illustrated Aircraft tutorial from the launcher or fault editor. "+ ...
     "Stack signal faults, choose sweep values, save configurations and generate separate models from the desktop editor. "+ ...
     "Compare baseline and fault traces and run factorial campaigns. Includes the PM example and supports all 12 ARCH-COMP Falsification models with a local benchmark checkout. Requires MATLAB and Simulink.";
 opts.MinimumMatlabRelease="R2026a";
